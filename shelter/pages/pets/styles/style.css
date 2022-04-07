@@ -267,7 +267,7 @@ button {
 
 .header {
   color: #fafafa;
-  background-image: url(/shelter/assets/images/background.png);
+  background-image: url(../../../assets/images/background.png);
   background-repeat: no-repeat;
   background-position: center 0;
   padding: 60px 40px 0 40px;
@@ -523,7 +523,7 @@ button {
 
 .footer {
   height: 350px;
-  background-image: url(/shelter/assets/images/footer.png);
+  background-image: url(../../../assets/images/footer.png);
   padding: 0 40px;
 }
 
