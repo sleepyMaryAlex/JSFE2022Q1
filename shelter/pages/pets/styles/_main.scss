@@ -1,0 +1,65 @@
+.pets {
+    padding: 0 40px;
+    padding-top: 200px;
+    @extend %column-center;
+    background-color: $gray;
+    h3 {
+        width: 400px;
+        height: 90px;
+        text-align: center;
+    }
+    .cards-container {
+        @extend %space-between;
+        flex-wrap: wrap;
+        margin-top: 45px;
+        .card {
+            margin: 15px 0;
+        }
+    }
+    .navigation {
+        width: 340px;
+        height: 52px;
+        margin-top: 45px;
+        margin-bottom: 100px;
+        padding-bottom: 0;
+        @extend %space-between;
+        .button-round {
+            font-size: 20px;
+            padding-top: 3px;
+            letter-spacing: 0.06em;
+            &:first-child {
+                margin-right: 0;
+            }
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+        .inactive {
+            color: #cdcdcd;
+            border: 2px solid #cdcdcd;
+        }
+        .active {
+            cursor: pointer;
+            transition: all 0.5s;
+            &:hover {
+                background-color: $light-peach;
+                border: 2px solid $light-peach;
+            }
+        }
+        .page-number {
+            cursor: pointer;
+            background-color: $peach;
+            border: none;
+            transition: background-color 0.5s;
+            &:hover {
+                background-color: $light-peach;
+            }
+        }
+    }
+}
+
+.address {
+    .item:first-child {
+        align-self: flex-end;
+    }
+}
