@@ -1,0 +1,76 @@
+.button {
+    width: 207px;
+    height: 52px;
+    background-color: $peach;
+    border-radius: 100px;
+    outline: none;
+    border: none;
+    transition: background-color 0.5s;
+    color: #292929;
+    letter-spacing: 0.06em;
+    line-height: 130%;
+    font-size: 17px;
+    &:hover {
+        background-color: $light-peach;
+        cursor: pointer;
+    }
+}
+
+.primary:hover {
+    background-color: $light-peach;
+}
+
+.button-round {
+    width: 52px;
+    height: 52px;
+    border: 2px solid $peach;
+    border-radius: 100px;
+    background-color: transparent;
+    padding-bottom: 4px;
+    color: #292929;
+    transition: all 0.5s;
+    &:first-child {
+        margin-right: 8px;
+    }
+    &:last-child {
+        margin-left: 8px;
+    }
+}
+
+.arrow {
+    cursor: pointer;
+    &:hover {
+        background-color: $light-peach;
+        border: 2px solid $light-peach;
+    }
+}
+
+.secondary {
+    width: 187px;
+    background-color: transparent;
+    border: 2px solid $peach;
+    letter-spacing: 0.06em;
+    font-size: 17px;
+    color: $dark;
+}
+
+.card {
+    width: 270px;
+    height: 435px;
+    background-color: #fafafa;
+    margin: 0 45px;
+    @extend %column-center;
+    transition: all 0.5s;
+    &:hover {
+        cursor: pointer;
+        background-color: $white;
+        button {
+            border: 2px solid $light-peach;
+            background-color: $light-peach;
+        }
+    }
+    h4 {
+        margin: 30px 0;
+        color: $dark;
+    }
+}
