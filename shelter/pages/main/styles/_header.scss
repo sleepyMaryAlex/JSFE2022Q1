@@ -1,0 +1,55 @@
+.header {
+    color: #fafafa;
+    @extend %space-between;
+    background-image: url(/shelter/assets/images/background.png);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    padding: 60px 40px 0 40px;
+}
+
+.logo {
+    width: 186px;
+    height: 60px;
+    cursor: pointer;
+    h1 {
+        letter-spacing: 0.06em;
+        color: $peach;
+    }
+    p {
+        font-size: 13px;
+        color: $white;
+        letter-spacing: 0.1em;
+        line-height: 15px;
+        margin-left: 4px;
+        margin-top: 8px;
+    }
+}
+
+.nav {
+    ul {
+        @extend %space-between;
+        li {
+            margin: 20px 0;
+            margin-left: 35px;
+            padding-bottom: 2px;
+            list-style: none;
+            a {
+                letter-spacing: 0.05px;
+                color: #cdcdcd;
+                transition: color 0.5s;
+                &:hover {
+                    color: #fafafa;
+                }
+            }
+        }
+        .active-link {
+            border-bottom: 3px solid $peach;
+            a {
+                color: #fafafa;
+            }
+        }
+    }
+}
+
+
+

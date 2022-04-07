@@ -1,0 +1,38 @@
+.header {
+    height: 120px;
+    width: 1280px;
+    position: fixed;
+    background-image: none;
+    background-color: $white;
+    padding-top: 30px;
+    .logo {
+        h1 {
+            color: $dark;
+        }
+        p {
+            color: #292929;
+        }
+    }
+    .nav {
+        ul {
+            li {
+                &:first-child {
+                    border-bottom: none;
+                }
+                a {
+                    color: $dark;
+                    transition: color 0.5s;
+                    &:hover {
+                        color: #292929;
+                    }
+                }
+                &:nth-child(2) {
+                    border-bottom: 3px solid $peach;
+                    a {
+                        color: #292929;
+                    }
+                }
+            }
+        }
+    }
+}
