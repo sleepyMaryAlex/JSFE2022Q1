@@ -190,7 +190,7 @@ template {
           justify-content: space-between;
 }
 
-.about, .help .list, .donation, .donation .donation-content .credit-card-btn {
+.about, .help .list, .donation, .donation .donation-content .credit-card-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -483,7 +483,7 @@ button {
   margin: 20px 0;
 }
 
-.donation .donation-content .credit-card-btn {
+.donation .donation-content .credit-card-link {
   width: 349px;
   height: 43px;
   -webkit-box-align: center;
@@ -496,18 +496,19 @@ button {
   transition: background-color 0.5s;
 }
 
-.donation .donation-content .credit-card-btn:hover {
+.donation .donation-content .credit-card-link:hover {
   background-color: #fddcc4;
   cursor: pointer;
 }
 
-.donation .donation-content .credit-card-btn img {
+.donation .donation-content .credit-card-link img {
   width: 30px;
   height: 23px;
   margin: 0 15px 0 0;
 }
 
-.donation .donation-content .credit-card-btn span {
+.donation .donation-content .credit-card-link span {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
   color: #545454;
   line-height: 115%;

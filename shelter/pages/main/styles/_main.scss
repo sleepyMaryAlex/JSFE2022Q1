@@ -127,7 +127,7 @@
         h5 {
             margin: 20px 0;
         }
-        .credit-card-btn {
+        .credit-card-link {
             width: 349px;
             height: 43px;
             @extend %center;
@@ -146,6 +146,7 @@
                 margin: 0 15px 0 0;
             }
             span {
+                font-family: Georgia, 'Times New Roman', Times, serif;
                 font-size: 20px;
                 color: $dark;
                 line-height: 115%;

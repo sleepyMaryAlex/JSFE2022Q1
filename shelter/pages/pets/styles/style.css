@@ -505,15 +505,10 @@ button {
 }
 
 .pets .navigation .page-number {
-  cursor: pointer;
   background-color: #f1cdb3;
   border: none;
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
-}
-
-.pets .navigation .page-number:hover {
-  background-color: #fddcc4;
 }
 
 .address .item:first-child {

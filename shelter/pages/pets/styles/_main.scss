@@ -47,13 +47,9 @@
             }
         }
         .page-number {
-            cursor: pointer;
             background-color: $peach;
             border: none;
             transition: background-color 0.5s;
-            &:hover {
-                background-color: $light-peach;
-            }
         }
     }
 }
