@@ -177,7 +177,7 @@ template {
   display: none;
 }
 
-.header, .nav ul, .pets .cards-container, .pets .navigation, .footer, .footer .item a {
+.header, .nav ul, .pets .cards-container, .pets .navigation, .footer .footer-content, .footer .item a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -270,7 +270,15 @@ button {
   background-image: url(../../../assets/images/background.png);
   background-repeat: no-repeat;
   background-position: center 0;
+  background-size: 100%;
   padding: 60px 40px 0 40px;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .header {
+    background-image: url(../../../assets/images/background-768.png);
+    padding: 30px 30px 0 30px;
+  }
 }
 
 .logo {
@@ -522,6 +530,43 @@ button {
   padding: 0 40px;
 }
 
+@media (min-width: 768px) and (max-width: 1279px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .footer .footer-content {
+    width: 708px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-column-gap: 60px;
+            column-gap: 60px;
+    row-gap: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .footer {
+    height: 640px;
+    background-image: url(../../../assets/images/footer-768.png);
+    background-size: 100%;
+  }
+}
+
 .footer .puppy-img {
   margin-top: 40px;
   width: 300px;
@@ -534,6 +579,12 @@ button {
   height: 234px;
 }
 
+@media (min-width: 768px) and (max-width: 1279px) {
+  .footer .contacts {
+    margin-top: 30px;
+  }
+}
+
 .footer .contacts .item {
   margin-top: 40px;
 }
@@ -544,8 +595,20 @@ button {
   height: 234px;
 }
 
+@media (min-width: 768px) and (max-width: 1279px) {
+  .footer .address {
+    margin-top: 30px;
+  }
+}
+
 .footer .address h3 {
   margin-bottom: 34px;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .footer .address h3 {
+    margin-bottom: 32px;
+  }
 }
 
 .footer .address .item:last-child {

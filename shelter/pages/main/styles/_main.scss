@@ -3,16 +3,38 @@
     background-repeat: no-repeat;
     background-position: center -120px;
     @extend %space-between;
+    @media (min-width: 768px) and (max-width: 1279px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(../../../assets/images/background-768.png);
+        background-size: 100%;
+        background-position: center 0;
+    }
     img {
         margin-top: 58px;
         margin-right: 40px;
+        @media (min-width: 768px) and (max-width: 1279px) {
+            width: 569px;
+            height: 593px;
+            margin-left: 175px;
+            margin-top: 101px;
+        }
     }
 }
 
 .start-screen-content {
     width: 460px;
     height: 322px;
-    padding: 220px 42px 0 40px;
+    margin: 220px 42px 0 40px;
+    @media (min-width: 768px) and (max-width: 1279px) {
+        margin-top: 57px; 
+    }
+    .primary {
+        @media (min-width: 768px) and (max-width: 1279px) {
+            margin-left: 126px;
+        }
+    }
     .heading {
         line-height: 130%;
         width: 310px;
@@ -33,6 +55,12 @@
     background-color: $white;
     @extend %center;
     column-gap: 120px;
+    @media (min-width: 768px) and (max-width: 1279px) {
+        height: 1048px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
     img {
         width: 300px;
         height: 408px;
@@ -42,6 +70,9 @@
         margin-top: 94px;
         width: 430px;
         height: 380px;
+        @media (min-width: 768px) and (max-width: 1279px) {
+            margin-top: -18px;
+        }
         h3 {
             width: 370px;
             height: 90px;
@@ -73,6 +104,25 @@
         flex-direction: row;
         align-items: center;
         margin-bottom: 60px;
+        @media (min-width: 768px) and (max-width: 1279px) {
+            width: 708px;
+            justify-content: space-between;
+        }
+        .card:nth-child(2) {
+            @media (min-width: 768px) and (max-width: 1279px) {
+                margin: 0 20px 0 0;
+            }
+        }
+        .card:nth-child(3) {
+            @media (min-width: 768px) and (max-width: 1279px) {
+                margin: 0 0 0 20px;
+            }
+        }
+        .card:nth-child(4) {
+            @media (min-width: 768px) and (max-width: 1279px) {
+                display: none;
+            }
+        }
     }
     .long-button {
         width: 261px;
@@ -84,6 +134,9 @@
     background-color: $white;
     @extend %column-center;
     padding: 0 40px;
+    @media (min-width: 768px) and (max-width: 1279px) {
+        height: 779px;
+    }
     h3 {
         width: 310px;
         height: 90px;
@@ -96,8 +149,17 @@
         flex-wrap: wrap;
         column-gap: 120px;
         row-gap: 55px;
+        @media (min-width: 768px) and (max-width: 1279px) {
+            width: 630px;
+            height: 449px;
+            column-gap: 60px;
+        }
         .item {
             @extend %column-center;
+            @media (min-width: 768px) and (max-width: 1279px) {
+                width: 170px;
+                height: 113px;
+            }
             h4 {
                 margin-top: 30px;
             }
@@ -111,15 +173,27 @@
     @extend %center;
     column-gap: 30px;
     color: $dark;
+    @media (min-width: 768px) and (max-width: 1279px) {
+        height: 783px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
     img {
         width: 505px;
         height: 261px;
         margin-top: 91px;
+        @media (min-width: 768px) and (max-width: 1279px) {
+            margin-top: 60px;
+        }
     }
     .donation-content {
         margin-top: 80px;
         width: 380px;
         height: 282px;
+        @media (min-width: 768px) and (max-width: 1279px) {
+            margin-top: -20px;
+        }
         h3 {
             width: 300px;
             height: 90px;
