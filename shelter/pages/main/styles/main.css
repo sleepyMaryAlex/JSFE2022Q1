@@ -247,6 +247,12 @@ h3 {
   color: #545454;
 }
 
+@media (max-width: 767px) {
+  h3 {
+    font-size: 25px;
+  }
+}
+
 h4 {
   font-size: 20px;
   letter-spacing: 0.06em;
@@ -295,6 +301,44 @@ button {
   }
 }
 
+@media (max-width: 767px) {
+  .header {
+    background-image: url(../../../assets/images/background-320.png);
+    padding: 30px 10px 0 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 41px;
+            column-gap: 41px;
+  }
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .burger {
+    display: block;
+    width: 30px;
+    height: 22px;
+    margin-right: 43px;
+  }
+}
+
+.burger .line {
+  width: 30px;
+  height: 2px;
+  background-color: #f1cdb3;
+}
+
+.burger .line:nth-child(2) {
+  margin: 8px 0;
+}
+
 .logo {
   width: 186px;
   height: 60px;
@@ -313,6 +357,12 @@ button {
   line-height: 15px;
   margin-left: 4px;
   margin-top: 8px;
+}
+
+@media (max-width: 767px) {
+  .nav {
+    display: none;
+  }
 }
 
 .nav ul li {
@@ -365,6 +415,12 @@ button {
   }
 }
 
+@media (max-width: 767px) {
+  .start-screen {
+    background-image: url(../../../assets/images/background-320.png);
+  }
+}
+
 .start-screen img {
   margin-top: 58px;
   margin-right: 40px;
@@ -376,6 +432,16 @@ button {
     height: 593px;
     margin-left: 175px;
     margin-top: 101px;
+  }
+}
+
+@media (max-width: 767px) {
+  .start-screen img {
+    margin-top: 105px;
+    width: 260px;
+    height: 272px;
+    margin-left: 50px;
+    margin-right: 10px;
   }
 }
 
@@ -391,9 +457,33 @@ button {
   }
 }
 
+@media (max-width: 767px) {
+  .start-screen-content {
+    width: 300px;
+    height: 296px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 60px;
+  }
+}
+
 @media (max-width: 1279px) {
   .start-screen-content .primary {
     margin-left: 126px;
+  }
+}
+
+@media (max-width: 767px) {
+  .start-screen-content .primary {
+    margin-left: 0;
   }
 }
 
@@ -404,12 +494,31 @@ button {
   color: #ffffff;
 }
 
+@media (max-width: 767px) {
+  .start-screen-content .heading {
+    font-size: 25px;
+    width: 220px;
+    height: 64px;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+}
+
 .start-screen-content .subheading {
   width: 460px;
   height: 72px;
   line-height: 160%;
   color: #cdcdcd;
   margin: 44px 0 41px 0;
+}
+
+@media (max-width: 767px) {
+  .start-screen-content .subheading {
+    width: 300px;
+    height: 96px;
+    text-align: center;
+    margin-top: 42px;
+  }
 }
 
 .about {
@@ -435,10 +544,24 @@ button {
   }
 }
 
+@media (max-width: 767px) {
+  .about {
+    height: 974px;
+  }
+}
+
 .about img {
   width: 300px;
   height: 408px;
   margin-top: 80px;
+}
+
+@media (max-width: 767px) {
+  .about img {
+    width: 260px;
+    height: 353.6px;
+    margin-top: 40px;
+  }
 }
 
 .about .about-content {
@@ -453,16 +576,54 @@ button {
   }
 }
 
+@media (max-width: 767px) {
+  .about .about-content {
+    width: 300px;
+    height: 494px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 2px;
+  }
+}
+
 .about .about-content h3 {
   width: 370px;
   height: 90px;
   line-height: 128%;
 }
 
+@media (max-width: 767px) {
+  .about .about-content h3 {
+    width: 220px;
+    height: 64px;
+    text-align: center;
+  }
+}
+
 .about .about-content p {
   line-height: 160%;
   color: #4c4c4c;
   margin-top: 25px;
+}
+
+@media (max-width: 767px) {
+  .about .about-content p {
+    width: 270px;
+    text-align: justify;
+    margin-top: 24px;
+  }
+}
+
+.about .about-content p:last-child {
+  margin-top: 22px;
 }
 
 .pets {

@@ -27,6 +27,9 @@ h3 {
     letter-spacing: 0.06em;
     line-height: 130%;
     color: $dark;
+    @media (max-width: 767px) {
+        font-size: 25px;
+    }
 }
 
 h4 {
