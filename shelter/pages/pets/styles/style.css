@@ -263,6 +263,7 @@ button {
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
+  position: relative;
 }
 
 .header {
@@ -415,8 +416,10 @@ button {
 
 .header {
   height: 120px;
-  width: 1280px;
-  position: fixed;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   background-image: none;
   background-color: #ffffff;
   padding-top: 30px;
@@ -454,8 +457,14 @@ button {
 
 .pets {
   padding: 0 40px;
-  padding-top: 200px;
+  padding-top: 80px;
   background-color: #f6f6f6;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .pets {
+    height: 1733px;
+  }
 }
 
 .pets h3 {
@@ -470,8 +479,35 @@ button {
   margin-top: 45px;
 }
 
+@media (min-width: 768px) and (max-width: 1279px) {
+  .pets .cards-container {
+    margin-top: 30px;
+    width: 580px;
+    height: 1365px;
+    row-gap: 30px;
+  }
+}
+
 .pets .cards-container .card {
   margin: 15px 0;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .pets .cards-container .card {
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .pets .cards-container .card:nth-child(7) {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .pets .cards-container .card:nth-child(8) {
+    display: none;
+  }
 }
 
 .pets .navigation {
@@ -480,6 +516,12 @@ button {
   margin-top: 45px;
   margin-bottom: 100px;
   padding-bottom: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .pets .navigation {
+    margin-top: 40px;
+  }
 }
 
 .pets .navigation .button-round {
