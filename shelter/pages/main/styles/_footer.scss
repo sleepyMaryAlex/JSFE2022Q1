@@ -2,14 +2,14 @@
     height: 350px;
     background-image: url(../../../assets/images/footer.png);
     padding: 0 40px;
-    @media (min-width: 768px) and (max-width: 1279px) {
+    @media (max-width: 1279px) {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
     .footer-content {
         @extend %space-between;
-        @media (min-width: 768px) and (max-width: 1279px) {
+        @media (max-width: 1279px) {
             width: 708px;
             justify-content: center;
             flex-wrap: wrap;
@@ -17,7 +17,7 @@
             row-gap: 25px;
         }
     }
-    @media (min-width: 768px) and (max-width: 1279px) {
+    @media (max-width: 1279px) {
         height: 640px;
         background-image: url(../../../assets/images/footer-768.png);
         background-size: 100%;
@@ -31,7 +31,7 @@
         margin-top: 56px;
         width: 279px;
         height: 234px;
-        @media (min-width: 768px) and (max-width: 1279px) {
+        @media (max-width: 1279px) {
             margin-top: 30px;
         }
         .item {
@@ -42,12 +42,12 @@
         margin-top: 56px;
         width: 302px;
         height: 234px;
-        @media (min-width: 768px) and (max-width: 1279px) {
+        @media (max-width: 1279px) {
             margin-top: 30px;
         }
         h3 {
             margin-bottom: 34px;
-            @media (min-width: 768px) and (max-width: 1279px) {
+            @media (max-width: 1279px) {
                 margin-bottom: 32px;
             }
         }
