@@ -153,12 +153,21 @@
     height: 877px;
     background-color: $gray;
     @extend %column-center;
+    @media (max-width: 767px) {
+        height: 791px;
+    }
     h3 {
         width: 400px;
         height: 90px;
         margin-top: 80px;
         margin-bottom: 60px;
         text-align: center;
+        @media (max-width: 767px) {
+            width: 300px;
+            height: 64px;
+            margin-top: 42px;
+            margin-bottom: 42px;
+        }
     }
     .slider {
         width: 1200px;
@@ -171,14 +180,39 @@
             width: 708px;
             justify-content: space-between;
         }
+        @media (max-width: 767px) {
+            width: 270px;
+            height: 507px;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            justify-content: center;
+            column-gap: 64px;
+            margin-bottom: 42px;
+        }
+        .arrow:first-child {
+            @media (max-width: 767px) {
+                order: 2;
+            }
+        }
+        .arrow:last-child {
+            @media (max-width: 767px) {
+                order: 3;
+            }
+        }
         .card:nth-child(2) {
             @media (max-width: 1279px) {
                 margin: 0 20px 0 0;
+            }
+            @media (max-width: 767px) {
+                margin: 0;
             }
         }
         .card:nth-child(3) {
             @media (max-width: 1279px) {
                 margin: 0 0 0 20px;
+            }
+            @media (max-width: 767px) {
+                display: none;
             }
         }
         .card:nth-child(4) {
@@ -200,12 +234,22 @@
     @media (max-width: 1279px) {
         height: 779px;
     }
+    @media (max-width: 767px) {
+        height: 745px;
+        padding: 0;
+    }
     h3 {
         width: 310px;
         height: 90px;
         margin-top: 80px;
         margin-bottom: 60px;
         text-align: center;
+        @media (max-width: 767px) {
+            width: 222px;
+            height: 64px;
+            margin-top: 42px;
+            margin-bottom: 42px;
+        }
     }
     .list {
         @extend %center;
@@ -217,14 +261,34 @@
             height: 449px;
             column-gap: 60px;
         }
+        @media (max-width: 767px) {
+            width: 290px;
+            height: 555px;
+            column-gap: 30px;
+            row-gap: 30px;
+            justify-content: flex-start;
+        }
         .item {
             @extend %column-center;
             @media (max-width: 1279px) {
                 width: 170px;
                 height: 113px;
             }
+            @media (max-width: 767px) {
+                width: 130px;
+                height: 87px;
+            }
             h4 {
                 margin-top: 30px;
+                @media (max-width: 767px) {
+                    font-size: 15px;
+                    margin-top: 19px;
+                }
+            }
+            img {
+                @media (max-width: 767px) {
+                    width: 40%;
+                }
             }
         }
     }
