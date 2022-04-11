@@ -579,6 +579,12 @@ button {
   color: #292929;
 }
 
+@media (max-width: 767px) {
+  .header .nav {
+    background-color: #ffffff;
+  }
+}
+
 .header .nav ul li:first-child {
   border-bottom: none;
 }
