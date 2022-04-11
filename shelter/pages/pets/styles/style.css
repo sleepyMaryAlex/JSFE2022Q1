@@ -203,19 +203,54 @@ template {
           align-items: center;
 }
 
+@font-face {
+  font-family: 'Georgia';
+  src: url("../../../assets/fonts/georgia/georgia-regular-webfont.woff2") format("woff2"), url("../../../assets/fonts/georgia/georgia-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url("../../../assets/fonts/georgia/georgia-bold-webfont.woff2") format("woff2"), url("../../../assets/fonts/georgia/georgia-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url("../../../assets/fonts/georgia/georgia-italic-webfont.woff2") format("woff2"), url("../../../assets/fonts/georgia/georgia-italic-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: url("../../../assets/fonts/arial/arial-italic-webfont.woff2") format("woff2"), url("../../../assets/fonts/arial/arial-italic-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: url("../../../assets/fonts/arial/arial-regular-webfont.woff2") format("woff2"), url("../../../assets/fonts/arial/arial-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: 400;
   font-size: 15px;
   background-color: #f6f6f6;
 }
 
 h1, h2, h3, h4, h5, button {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, serif;
   font-weight: 400;
 }
 
