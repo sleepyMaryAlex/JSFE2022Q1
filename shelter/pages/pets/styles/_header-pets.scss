@@ -25,6 +25,9 @@
         }
     }
     .nav {
+        @media (max-width: 767px) {
+            background-color: $white;
+        }
         ul {
             li {
                 &:first-child {
