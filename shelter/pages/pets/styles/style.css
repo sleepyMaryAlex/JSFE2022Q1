@@ -330,9 +330,6 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-column-gap: 41px;
             column-gap: 41px;
   }
@@ -378,7 +375,7 @@ button {
   letter-spacing: 0.1em;
   line-height: 15px;
   margin-left: 4px;
-  margin-top: 8px;
+  margin-top: 9px;
 }
 
 @media (max-width: 767px) {
@@ -889,6 +886,7 @@ button {
 
 .footer h3 {
   color: #ffffff;
+  padding-top: 1px;
 }
 
 @media (max-width: 767px) {
