@@ -3,14 +3,14 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     font-weight: 400;
     font-size: 15px;
     background-color: #f6f6f6;
 }
 
 h1, h2, h3, h4, h5, button {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, serif;
     font-weight: 400;
 }
 
@@ -27,6 +27,9 @@ h3 {
     letter-spacing: 0.06em;
     line-height: 130%;
     color: $dark;
+    @media (max-width: 767px) {
+        font-size: 25px;
+    }
 }
 
 h4 {
@@ -57,5 +60,6 @@ button {
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
+    position: relative;
 }
 

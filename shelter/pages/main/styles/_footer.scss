@@ -1,17 +1,56 @@
 .footer {
     height: 350px;
     background-image: url(../../../assets/images/footer.png);
-    @extend %space-between;
     padding: 0 40px;
+    @media (max-width: 1279px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 640px;
+        background-image: url(../../../assets/images/footer-768.png);
+        background-size: 100%;
+    }
+    @media (max-width: 767px) {
+        height: 809px;
+        background-image: url(../../../assets/images/footer-320.png);
+    }
+    .footer-content {
+        @extend %space-between;
+        @media (max-width: 1279px) {
+            width: 708px;
+            justify-content: center;
+            flex-wrap: wrap;
+            column-gap: 60px;
+            row-gap: 25px;
+        }
+        @media (max-width: 767px) {
+            width: 300px;
+            height: 470px;
+            row-gap: 14px;
+        }
+    }
     .puppy-img {
         margin-top: 40px;
         width: 300px;
         height: 310px;
+        @media (max-width: 767px) {
+            margin-top: 14px;
+            width: 260px;
+            height: 269px;
+        }
     }
     .contacts {
         margin-top: 56px;
         width: 279px;
         height: 234px;
+        @media (max-width: 1279px) {
+            margin-top: 30px;
+        }
+        @media (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .item {
             margin-top: 40px;
         }
@@ -20,11 +59,30 @@
         margin-top: 56px;
         width: 302px;
         height: 234px;
+        @media (max-width: 1279px) {
+            margin-top: 30px;
+        }
+        @media (max-width: 767px) {
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         h3 {
             margin-bottom: 34px;
+            @media (max-width: 1279px) {
+                margin-bottom: 32px;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 40px;
+            }
         }
         .item:last-child {
             margin-top: 32px;
+            @media (max-width: 767px) {
+                margin-top: 40px;
+                align-self: flex-start;
+            }
         }
     }
     .item {
@@ -43,5 +101,11 @@
     }
     h3 {
         color: $white;
+        padding-top: 1px;
+        @media (max-width: 767px) {
+            width: 270px;
+            height: 64px;
+            text-align: center;
+        }
     }
 }
