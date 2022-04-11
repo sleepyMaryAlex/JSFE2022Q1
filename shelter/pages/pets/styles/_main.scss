@@ -6,10 +6,18 @@
     @media (max-width: 1279px) {
         height: 1733px;
     }
+    @media (max-width: 767px) {
+        height: 1649px;
+        padding-top: 42px;
+    }
     h3 {
         width: 400px;
         height: 90px;
         text-align: center;
+        @media (max-width: 767px) {
+            width: 300px;
+            height: 64px;
+        }
     }
     .cards-container {
         @extend %space-between;
@@ -20,6 +28,10 @@
             width: 580px;
             height: 1365px;
             row-gap: 30px;
+        }
+        @media (max-width: 767px) {
+            width: 270px;
+            margin-top: 42px;
         }
         .card {
             margin: 15px 0;
@@ -36,6 +48,21 @@
                     display: none;
                 }
             }
+            &:nth-child(6) {
+                @media (max-width: 767px) {
+                    display: none;
+                }
+            }
+            &:nth-child(5) {
+                @media (max-width: 767px) {
+                    display: none;
+                }
+            }
+            &:nth-child(4) {
+                @media (max-width: 767px) {
+                    display: none;
+                }
+            }
         }
     }
     .navigation {
@@ -47,6 +74,9 @@
         @extend %space-between;
         @media (max-width: 1279px) {
             margin-top: 40px;
+        }
+        @media (max-width: 767px) {
+            width: 300px;
         }
         .button-round {
             font-size: 20px;

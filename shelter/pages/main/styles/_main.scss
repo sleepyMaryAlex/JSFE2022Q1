@@ -38,7 +38,8 @@
     height: 322px;
     margin: 220px 42px 0 40px;
     @media (max-width: 1279px) {
-        margin-top: 57px; 
+        margin-top: 57px;
+        margin-right: 40px; 
     }
     @media (max-width: 767px) {
         width: 300px;
@@ -143,7 +144,10 @@
                 margin-top: 24px;
             }
             &:last-child {
-                margin-top: 22px;
+                @media (max-width: 767px) {
+                    margin-top: 22px;
+                }
+                
             }
         }
     }
@@ -306,12 +310,20 @@
         flex-direction: column-reverse;
         align-items: center;
     }
+    @media (max-width: 767px) {
+        height: 542.2px;
+    }
     img {
         width: 505px;
         height: 261px;
         margin-top: 91px;
         @media (max-width: 1279px) {
             margin-top: 60px;
+        }
+        @media (max-width: 767px) {
+            width: 260px;
+            height: 135.2px;
+            margin-top: 42px;
         }
     }
     .donation-content {
@@ -321,12 +333,31 @@
         @media (max-width: 1279px) {
             margin-top: -20px;
         }
+        @media (max-width: 767px) {
+            width: 300px;
+            height: 281px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0;
+        }
         h3 {
             width: 300px;
             height: 90px;
+            @media (max-width: 767px) {
+                width: 220px;
+                height: 64px;
+                text-align: center;
+            }
         }
         h5 {
             margin: 20px 0;
+            @media (max-width: 767px) {
+                width: 273px;
+                height: 24px;
+                letter-spacing: 0;
+                line-height: 160%;
+            }
         }
         .credit-card-link {
             width: 349px;
@@ -337,6 +368,9 @@
             border-radius: 9px;
             margin-bottom: 20px;
             transition: background-color 0.5s;
+            @media (max-width: 767px) {
+                width: 281px;
+            }
             &:hover {
                 background-color: $light-peach;
                 cursor: pointer;
@@ -352,6 +386,9 @@
                 color: $dark;
                 line-height: 115%;
                 letter-spacing: 00.06em;
+                @media (max-width: 767px) {
+                    font-size: 15px;
+                }
             }
         }
         p {
@@ -359,6 +396,11 @@
             font-size: 12px;
             font-style: italic;
             line-height: 18px;
+            @media (max-width: 767px) {
+                width: 280px;
+                height: 90px;
+                text-align: justify;
+            }
         }
     }
 }

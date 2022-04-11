@@ -6,6 +6,16 @@
     background-image: none;
     background-color: $white;
     padding-top: 30px;
+    @media (max-width: 767px) {
+        padding-top: 0;
+    }
+    .burger {
+        .line {
+            @media (max-width: 767px) {
+                background-color: #000000;
+            }
+        }
+    }
     .logo {
         h1 {
             color: $dark;
