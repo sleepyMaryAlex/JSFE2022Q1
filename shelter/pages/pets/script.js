@@ -1,5 +1,6 @@
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".nav");
+const body = document.querySelector("body");
 const logoLink = document.querySelector(".logo-link");
 const navLinks = document.querySelectorAll(".nav-link");
 
@@ -15,4 +16,5 @@ function showMenu() {
     menu.classList.toggle("menu-visible");
     navLinks.forEach(link => link.classList.toggle("menu-link"));
     logoLink.classList.toggle("logo-invisible");
+    body.classList.toggle("body-overflow");
 }

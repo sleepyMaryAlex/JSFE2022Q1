@@ -318,6 +318,9 @@ button {
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
+}
+
+.body-overflow {
   overflow: hidden;
 }
 
@@ -341,6 +344,7 @@ button {
   .header {
     background-image: url(../../../assets/images/background-320.png);
     padding: 30px 10px 0 10px;
+    padding-left: 3%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
