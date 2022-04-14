@@ -6,12 +6,12 @@
     background-image: none;
     background-color: $white;
     padding-top: 30px;
-    @media (max-width: 767px) {
+    @media (max-width: $tablet) {
         padding-top: 0;
     }
     .burger {
         .line {
-            @media (max-width: 767px) {
+            @media (max-width: $tablet) {
                 background-color: #000000;
             }
         }

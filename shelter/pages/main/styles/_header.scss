@@ -6,11 +6,11 @@
     background-position: center 0;
     background-size: 100%;
     padding: 60px 40px 0 40px;
-    @media (max-width: 1279px) {
+    @media (max-width: $desktop) {
         background-image: url(../../../assets/images/background-768.png);
         padding: 30px 30px 0 30px;
     }
-    @media (max-width: 767px) {
+    @media (max-width: $tablet) {
         background-image: url(../../../assets/images/background-320.png);
         padding: 30px 10px 0 10px;
         align-items: center;
@@ -20,7 +20,7 @@
 
 .burger {
     display: none;
-    @media (max-width: 767px) {
+    @media (max-width: $tablet) {
         display: block;
         width: 30px;
         height: 22px;
@@ -62,7 +62,7 @@
 }
 
 .nav {
-    @media (max-width: 767px) {
+    @media (max-width: $tablet) {
         display: block;
         width: 320px;
         height: 100vh;
@@ -74,7 +74,7 @@
     }
     ul {
         @extend %space-between;
-        @media (max-width: 767px) {
+        @media (max-width: $tablet) {
             width: 281px;
             height: 320px;
             flex-direction: column;
@@ -87,7 +87,7 @@
             margin-left: 35px;
             padding-bottom: 2px;
             list-style: none;
-            @media (max-width: 767px) {
+            @media (max-width: $tablet) {
                 margin: 0;
                 margin-left: 38px;
                 padding-bottom: 6px;
