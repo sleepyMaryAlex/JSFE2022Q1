@@ -290,6 +290,7 @@ h5 {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -307,8 +308,24 @@ button {
   position: relative;
 }
 
-.body-overflow {
-  overflow: hidden;
+@media (max-width: 767px) {
+  .body-overflow {
+    overflow-y: hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  .body-overlay:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(41, 41, 41, 0.6);
+    z-index: 1;
+  }
 }
 
 .header {
@@ -351,11 +368,11 @@ button {
     height: 22px;
     margin-right: 43px;
     cursor: pointer;
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
-    transition: transform 0.5s, -webkit-transform 0.5s;
-    z-index: 1;
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    transition: transform 0.6s, -webkit-transform 0.6s;
+    z-index: 3;
   }
 }
 
@@ -383,8 +400,8 @@ button {
 .logo h1 {
   letter-spacing: 0.06em;
   color: #f1cdb3;
-  -webkit-transition: color 0.7s;
-  transition: color 0.7s;
+  -webkit-transition: color 0.6s;
+  transition: color 0.6s;
 }
 
 .logo p {
@@ -394,8 +411,8 @@ button {
   line-height: 15px;
   margin-left: 4px;
   margin-top: 9px;
-  -webkit-transition: color 0.7s;
-  transition: color 0.7s;
+  -webkit-transition: color 0.6s;
+  transition: color 0.6s;
 }
 
 @media (max-width: 767px) {
@@ -407,8 +424,9 @@ button {
     position: fixed;
     top: 0;
     right: -320px;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+    z-index: 2;
   }
 }
 
@@ -474,12 +492,18 @@ button {
   color: #fafafa;
 }
 
-.menu-visible {
-  right: 0;
+@media (max-width: 767px) {
+  .menu-visible {
+    right: 0;
+    -webkit-transition: all 0.6s ease-in;
+    transition: all 0.6s ease-in;
+  }
 }
 
-.logo-invisible h1, .logo-invisible p {
-  color: transparent;
+@media (max-width: 767px) {
+  .logo-invisible h1, .logo-invisible p {
+    color: transparent;
+  }
 }
 
 .invisible {
@@ -603,8 +627,10 @@ button {
   color: #292929;
 }
 
-.header .logo-invisible h1, .header .logo-invisible p {
-  color: transparent;
+@media (max-width: 767px) {
+  .header .logo-invisible h1, .header .logo-invisible p {
+    color: transparent;
+  }
 }
 
 @media (max-width: 767px) {
@@ -633,6 +659,12 @@ button {
 
 .header .nav ul li:nth-child(2) a {
   color: #292929;
+}
+
+@media (max-width: 767px) {
+  .header-position {
+    position: initial;
+  }
 }
 
 .pets {

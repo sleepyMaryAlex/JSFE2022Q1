@@ -17,4 +17,5 @@ function showMenu() {
     navLinks.forEach(link => link.classList.toggle("menu-link"));
     logoLink.classList.toggle("logo-invisible");
     body.classList.toggle("body-overflow");
+    body.classList.toggle("body-overlay");
 }
