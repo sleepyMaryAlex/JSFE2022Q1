@@ -24,6 +24,11 @@
             color: #292929;
         }
     }
+    .logo-invisible {
+        h1, p {
+            color: transparent;
+        }
+    }
     .nav {
         @media (max-width: 767px) {
             background-color: $white;

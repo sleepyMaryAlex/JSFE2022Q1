@@ -1,5 +1,8 @@
 .footer {
     .address {
+        .item:first-child {
+            align-self: flex-end;
+        }
         h3 {
             @media (max-width: $tablet) {
                 margin-bottom: 40px;

@@ -392,6 +392,8 @@ button {
 .logo h1 {
   letter-spacing: 0.06em;
   color: #f1cdb3;
+  -webkit-transition: color 0.7s;
+  transition: color 0.7s;
 }
 
 .logo p {
@@ -401,6 +403,8 @@ button {
   line-height: 15px;
   margin-left: 4px;
   margin-top: 9px;
+  -webkit-transition: color 0.7s;
+  transition: color 0.7s;
 }
 
 @media (max-width: 767px) {
@@ -417,9 +421,21 @@ button {
   }
 }
 
+.nav .nav-logo {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .nav .nav-logo {
+    display: block;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+}
+
 @media (max-width: 767px) {
   .nav ul {
-    width: 281px;
+    width: 282px;
     height: 320px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -428,7 +444,7 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 255px;
+    margin-top: 165px;
     font-size: 32px;
   }
 }
@@ -443,8 +459,8 @@ button {
 @media (max-width: 767px) {
   .nav ul li {
     margin: 0;
-    margin-left: 38px;
-    padding-bottom: 6px;
+    margin-left: 39px;
+    padding-bottom: 7px;
   }
 }
 
@@ -469,6 +485,10 @@ button {
 
 .menu-visible {
   right: 0;
+}
+
+.logo-invisible h1, .logo-invisible p {
+  color: transparent;
 }
 
 .invisible {
