@@ -1,17 +1,17 @@
 .header {
-    height: 120px;
-    width: 100%;
     position: sticky;
     top: 0;
+    height: 120px;
+    width: 100%;
     background-image: none;
     background-color: $white;
     padding-top: 30px;
-    @media (max-width: 767px) {
+    @media (max-width: $tablet) {
         padding-top: 0;
     }
     .burger {
         .line {
-            @media (max-width: 767px) {
+            @media (max-width: $tablet) {
                 background-color: #000000;
             }
         }
@@ -22,6 +22,11 @@
         }
         p {
             color: #292929;
+        }
+    }
+    .logo-invisible {
+        h1, p {
+            color: transparent;
         }
     }
     .nav {

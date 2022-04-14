@@ -2,7 +2,7 @@
     height: 350px;
     background-image: url(../../../assets/images/footer.png);
     padding: 0 40px;
-    @media (max-width: 1279px) {
+    @media (max-width: $desktop) {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -10,20 +10,20 @@
         background-image: url(../../../assets/images/footer-768.png);
         background-size: 100%;
     }
-    @media (max-width: 767px) {
+    @media (max-width: $tablet) {
         height: 809px;
         background-image: url(../../../assets/images/footer-320.png);
     }
     .footer-content {
         @extend %space-between;
-        @media (max-width: 1279px) {
+        @media (max-width: $desktop) {
             width: 708px;
             justify-content: center;
             flex-wrap: wrap;
             column-gap: 60px;
             row-gap: 25px;
         }
-        @media (max-width: 767px) {
+        @media (max-width: $tablet) {
             width: 300px;
             height: 470px;
             row-gap: 14px;
@@ -33,7 +33,7 @@
         margin-top: 40px;
         width: 300px;
         height: 310px;
-        @media (max-width: 767px) {
+        @media (max-width: $tablet) {
             margin-top: 14px;
             width: 260px;
             height: 269px;
@@ -43,10 +43,10 @@
         margin-top: 56px;
         width: 279px;
         height: 234px;
-        @media (max-width: 1279px) {
+        @media (max-width: $desktop) {
             margin-top: 30px;
         }
-        @media (max-width: 767px) {
+        @media (max-width: $tablet) {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -59,10 +59,10 @@
         margin-top: 56px;
         width: 302px;
         height: 234px;
-        @media (max-width: 1279px) {
+        @media (max-width: $desktop) {
             margin-top: 30px;
         }
-        @media (max-width: 767px) {
+        @media (max-width: $tablet) {
             margin-top: 0;
             display: flex;
             flex-direction: column;
@@ -70,16 +70,16 @@
         }
         h3 {
             margin-bottom: 32px;
-            @media (max-width: 1279px) {
+            @media (max-width: $desktop) {
                 margin-bottom: 32px;
             }
-            @media (max-width: 767px) {
+            @media (max-width: $tablet) {
                 margin-bottom: 40px;
             }
         }
         .item:last-child {
             margin-top: 32px;
-            @media (max-width: 767px) {
+            @media (max-width: $tablet) {
                 margin-top: 40px;
                 align-self: flex-start;
             }
@@ -102,7 +102,7 @@
     h3 {
         color: $white;
         padding-top: 1px;
-        @media (max-width: 767px) {
+        @media (max-width: $tablet) {
             width: 270px;
             height: 64px;
             text-align: center;

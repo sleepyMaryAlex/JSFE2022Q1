@@ -1,13 +1,16 @@
 .footer {
     .address {
+        .item:first-child {
+            align-self: flex-end;
+        }
         h3 {
-            @media (max-width: 767px) {
+            @media (max-width: $tablet) {
                 margin-bottom: 40px;
             }
         }
         .item:last-child {
             margin-top: 33px;
-            @media (max-width: 767px) {
+            @media (max-width: $tablet) {
                 margin-top: 40px;
             }
         }

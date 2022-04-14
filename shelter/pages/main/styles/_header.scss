@@ -6,13 +6,14 @@
     background-position: center 0;
     background-size: 100%;
     padding: 60px 40px 0 40px;
-    @media (max-width: 1279px) {
+    @media (max-width: $desktop) {
         background-image: url(../../../assets/images/background-768.png);
         padding: 30px 30px 0 30px;
     }
-    @media (max-width: 767px) {
+    @media (max-width: $tablet) {
         background-image: url(../../../assets/images/background-320.png);
         padding: 30px 10px 0 10px;
+        padding-left: 3%;
         align-items: center;
         column-gap: 41px;
     }
@@ -20,7 +21,7 @@
 
 .burger {
     display: none;
-    @media (max-width: 767px) {
+    @media (max-width: $tablet) {
         display: block;
         width: 30px;
         height: 22px;
@@ -50,6 +51,7 @@
     h1 {
         letter-spacing: 0.06em;
         color: $peach;
+        transition: color 0.7s;
     }
     p {
         font-size: 13px;
@@ -58,11 +60,12 @@
         line-height: 15px;
         margin-left: 4px;
         margin-top: 9px;
+        transition: color 0.7s;
     }
 }
 
 .nav {
-    @media (max-width: 767px) {
+    @media (max-width: $tablet) {
         display: block;
         width: 320px;
         height: 100vh;
@@ -72,14 +75,22 @@
         right: -320px;
         transition: all 0.5s;
     }
+    .nav-logo {
+        display: none;
+        @media (max-width: $tablet) {
+            display: block;
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+    }
     ul {
         @extend %space-between;
-        @media (max-width: 767px) {
-            width: 281px;
+        @media (max-width: $tablet) {
+            width: 282px;
             height: 320px;
             flex-direction: column;
             align-items: center;
-            margin-top: 255px;
+            margin-top: 165px;
             font-size: 32px;
         }
         li {
@@ -87,10 +98,10 @@
             margin-left: 35px;
             padding-bottom: 2px;
             list-style: none;
-            @media (max-width: 767px) {
+            @media (max-width: $tablet) {
                 margin: 0;
-                margin-left: 38px;
-                padding-bottom: 6px;
+                margin-left: 39px;
+                padding-bottom: 7px;
             }
             a {
                 letter-spacing: 0.05px;
@@ -112,6 +123,12 @@
 
 .menu-visible {
     right: 0;
+}
+
+.logo-invisible {
+    h1, p {
+        color: transparent;
+    }
 }
 
 .invisible {
