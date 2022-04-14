@@ -3,10 +3,10 @@
     padding-top: 80px;
     @extend %column-center;
     background-color: $gray;
-    @media (max-width: 1279px) {
+    @media (max-width: $desktop) {
         height: 1733px;
     }
-    @media (max-width: 767px) {
+    @media (max-width: $tablet) {
         height: 1649px;
         padding-top: 42px;
     }
@@ -14,7 +14,7 @@
         width: 400px;
         height: 90px;
         text-align: center;
-        @media (max-width: 767px) {
+        @media (max-width: $tablet) {
             width: 300px;
             height: 64px;
         }
@@ -23,43 +23,43 @@
         @extend %space-between;
         flex-wrap: wrap;
         margin-top: 45px;
-        @media (max-width: 1279px) {
+        @media (max-width: $desktop) {
             margin-top: 30px;
             width: 580px;
             height: 1365px;
             row-gap: 30px;
         }
-        @media (max-width: 767px) {
+        @media (max-width: $tablet) {
             width: 270px;
             margin-top: 42px;
         }
         .card {
             margin: 15px 0;
-            @media (max-width: 1279px) {
+            @media (max-width: $desktop) {
                 margin: 0;
             }
             &:nth-child(7) {
-                @media (max-width: 1279px) {
+                @media (max-width: $desktop) {
                     display: none;
                 }
             }
             &:nth-child(8) {
-                @media (max-width: 1279px) {
+                @media (max-width: $desktop) {
                     display: none;
                 }
             }
             &:nth-child(6) {
-                @media (max-width: 767px) {
+                @media (max-width: $tablet) {
                     display: none;
                 }
             }
             &:nth-child(5) {
-                @media (max-width: 767px) {
+                @media (max-width: $tablet) {
                     display: none;
                 }
             }
             &:nth-child(4) {
-                @media (max-width: 767px) {
+                @media (max-width: $tablet) {
                     display: none;
                 }
             }
@@ -72,10 +72,10 @@
         margin-bottom: 100px;
         padding-bottom: 0;
         @extend %space-between;
-        @media (max-width: 1279px) {
+        @media (max-width: $desktop) {
             margin-top: 40px;
         }
-        @media (max-width: 767px) {
+        @media (max-width: $tablet) {
             width: 300px;
         }
         .button-round {
@@ -106,11 +106,5 @@
             border: none;
             transition: background-color 0.5s;
         }
-    }
-}
-
-.address {
-    .item:first-child {
-        align-self: flex-end;
     }
 }
