@@ -11,6 +11,15 @@ navLinks.forEach(link => link.addEventListener("click",  () => {
     }
 }));
 
+body.addEventListener("click", (e) => {
+    if (menu.classList.contains("menu-visible")) {
+        if (e.target === body || e.target === burger) {
+            showMenu();
+        }
+    }
+}, true);
+
+
 function showMenu() {
     burger.classList.toggle("rotated");
     menu.classList.toggle("menu-visible");
