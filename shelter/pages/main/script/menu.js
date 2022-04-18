@@ -6,8 +6,8 @@ const body = document.querySelector("body");
 const header = document.querySelector(".header");
 const logoLink = document.querySelector(".logo-link");
 const navLinks = document.querySelectorAll(".nav-link");
+const lines = document.querySelectorAll(".line");
 
-burger.addEventListener("click", showMenu);
 navLinks.forEach(link => link.addEventListener("click",  () => {
     if (link.classList.contains("menu-link")) {
         showMenu();
@@ -15,12 +15,14 @@ navLinks.forEach(link => link.addEventListener("click",  () => {
 }));
 
 body.addEventListener("click", (e) => {
-    if (menu.classList.contains("menu-visible")) {
-        if (e.target === body || e.target === burger) {
+    lines.forEach(line => {
+        if (e.target === burger || e.target === line) {
+            showMenu();
+        } else if (menu.classList.contains("menu-visible") && e.target === body) {
             showMenu();
         }
-    }
-}, true);
+    })
+});
 
 function showMenu() {
     burger.classList.toggle("rotated");

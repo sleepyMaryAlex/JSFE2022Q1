@@ -889,6 +889,80 @@ button {
   width: 261px;
 }
 
+.pets .modal {
+  display: none;
+  position: fixed;
+  top: calc(50% - 250px);
+  width: 900px;
+  height: 500px;
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  background-color: #fafafa;
+  border-radius: 9px;
+  z-index: 3;
+}
+
+.pets .modal .pet-img {
+  width: 500px;
+  height: 500px;
+}
+
+.pets .modal .pet-content {
+  width: 351px;
+  margin-top: 50px;
+  margin-right: 20px;
+  color: #000000;
+}
+
+.pets .modal .pet-content h3 {
+  margin: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #000000;
+}
+
+.pets .modal .pet-content .pet-type-breed {
+  line-height: 115%;
+  margin: 10px 0 40px 0;
+}
+
+.pets .modal .pet-content .pet-description {
+  line-height: 110%;
+  margin-bottom: 40px;
+}
+
+.pets .modal .pet-content ul {
+  list-style: none;
+  list-style-image: url(../../../assets/icons/dot.svg);
+}
+
+.pets .modal .pet-content ul li {
+  margin-bottom: 11px;
+  font-family: Georgia, serif;
+  letter-spacing: 0.06em;
+}
+
+.pets .modal .pet-content ul li span {
+  font-weight: 700;
+  margin: 0 10px;
+}
+
+.pets .modal-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-column-gap: 29px;
+          column-gap: 29px;
+}
+
 .help {
   height: 611px;
   background-color: #ffffff;
@@ -972,6 +1046,7 @@ button {
 
 .help .list .item h4 {
   margin-top: 30px;
+  color: #545454;
 }
 
 @media (max-width: 767px) {
@@ -1151,6 +1226,22 @@ button {
     height: 90px;
     text-align: justify;
   }
+}
+
+.overflow {
+  overflow-y: hidden;
+}
+
+.overlay:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(41, 41, 41, 0.6);
+  z-index: 1;
 }
 
 .footer {

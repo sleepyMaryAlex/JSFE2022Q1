@@ -1,5 +1,7 @@
 import pets from "./pets.js";
 
+// ======= Slider =======
+
 const img1 = document.querySelector(".card-1 img");
 const img2 = document.querySelector(".card-2 img");
 const img3 = document.querySelector(".card-3 img");
@@ -26,7 +28,6 @@ function choosePets() {
     showPets(pets, indexes);
 }
 
-
 function showPets(pets, indexes) {
         img1.setAttribute("src", pets[indexes[0]].img);
         img2.setAttribute("src", pets[indexes[1]].img);
@@ -44,4 +45,17 @@ function getFromLocalStorage() {
     if (localStorage.getItem("prevIndexes")) {
         return JSON.parse(localStorage.getItem("prevIndexes"));
     }
+}
+
+// ======= Popup =======
+
+const cards = document.querySelectorAll(".card");
+const modal = document.querySelector(".modal");
+
+cards.forEach(card => card.addEventListener("click", showInfo));
+
+function showInfo() {
+    body.classList.toggle("overflow");
+    body.classList.toggle("overlay");
+    modal.classList.toggle("modal-active");
 }

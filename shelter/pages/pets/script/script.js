@@ -1,1 +1,1 @@
-import pets from "./pets.js"; 
+import pets from "../../main/script/pets.js"; 
