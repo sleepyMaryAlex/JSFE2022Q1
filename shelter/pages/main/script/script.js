@@ -12,11 +12,13 @@ const arrowButtons = document.querySelectorAll(".arrow");
 
 arrowButtons.forEach(btn => btn.addEventListener("click", choosePets));
 
+let indexes = [];
+
 choosePets();
 
 function choosePets() {
     let prevIndexes = getFromLocalStorage();
-    let indexes = [];
+    indexes = [];
 
     while (indexes.length < 3) {
         let n = Math.floor(Math.random() * 8); 
@@ -51,8 +53,39 @@ function getFromLocalStorage() {
 
 const cards = document.querySelectorAll(".card");
 const modal = document.querySelector(".modal");
+const petImg = document.querySelector(".pet-img");
+const petName = document.querySelector(".pet-name");
+const petTypeBreed = document.querySelector(".pet-type-breed");
+const petDescription = document.querySelector(".pet-description");
+const petAge = document.querySelector(".pet-age");
+const petInoculation = document.querySelector(".pet-inoculation");
+const petDiseases = document.querySelector(".pet-diseases");
+const petParasites = document.querySelector(".pet-parasites");
 
-cards.forEach(card => card.addEventListener("click", showInfo));
+let index;
+
+cards.forEach(card => card.addEventListener("click", () => {
+    if (card.classList.contains("card-1")) {
+        index = indexes[0];
+    } else if (card.classList.contains("card-2")) {
+        index = indexes[1];
+    } else if (card.classList.contains("card-3")) {
+        index = indexes[2];
+    }
+    getInfo(pets, index);
+}));
+
+function getInfo(pets, index) {
+    petImg.setAttribute("src", pets[index].img);
+    petName.textContent = pets[index].name;
+    petTypeBreed.textContent = pets[index].type + " - " + pets[index].breed;
+    petDescription.textContent = pets[index].description;
+    petAge.textContent = pets[index].age;
+    petInoculation.textContent = pets[index].inoculation;
+    petDiseases.textContent = pets[index].diseases;
+    petParasites.textContent = pets[index].parasites;
+    showInfo();
+}
 
 function showInfo() {
     body.classList.toggle("overflow");
