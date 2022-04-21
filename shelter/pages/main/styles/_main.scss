@@ -290,6 +290,7 @@
         .pet-img {
             width: 500px;
             height: 500px;
+            border-radius: 9px;
         }
     
         .pet-content {
@@ -311,22 +312,33 @@
             }
     
             .pet-description {
-                line-height: 110%;
+                line-height: 115%;
                 margin-bottom: 40px;
             }
     
             ul {
                 list-style: none;
-                list-style-image: url(../../../assets/icons/dot.svg);
     
                 li {
                     margin-bottom: 11px;
                     font-family: Georgia, serif;
                     letter-spacing: 0.06em;
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        margin-bottom: 3px;
+                        width: 4px;
+                        height: 4px;
+                        background-color: $peach;
+                        border-radius: 50%;
+                    }
     
-                    span {
+                    .span {
                         font-weight: 700;
-                        margin: 0 10px;
+                        margin: 0 7px 0 10px;
+                    }
+                    span {
+                        line-height: 110%;
                     }
                 }
             }

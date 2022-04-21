@@ -81,9 +81,9 @@ function getInfo(pets, index) {
     petTypeBreed.textContent = pets[index].type + " - " + pets[index].breed;
     petDescription.textContent = pets[index].description;
     petAge.textContent = pets[index].age;
-    petInoculation.textContent = pets[index].inoculation;
-    petDiseases.textContent = pets[index].diseases;
-    petParasites.textContent = pets[index].parasites;
+    petInoculation.textContent = pets[index].inoculations.join(", ");
+    petDiseases.textContent = pets[index].diseases.join(", ");
+    petParasites.textContent = pets[index].parasites.join(", ");
     showInfo();
 }
 

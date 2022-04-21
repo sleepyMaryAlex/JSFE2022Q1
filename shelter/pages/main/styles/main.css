@@ -905,6 +905,7 @@ button {
 .pets .modal .pet-img {
   width: 500px;
   height: 500px;
+  border-radius: 9px;
 }
 
 .pets .modal .pet-content {
@@ -931,13 +932,12 @@ button {
 }
 
 .pets .modal .pet-content .pet-description {
-  line-height: 110%;
+  line-height: 115%;
   margin-bottom: 40px;
 }
 
 .pets .modal .pet-content ul {
   list-style: none;
-  list-style-image: url(../../../assets/icons/dot.svg);
 }
 
 .pets .modal .pet-content ul li {
@@ -946,9 +946,23 @@ button {
   letter-spacing: 0.06em;
 }
 
-.pets .modal .pet-content ul li span {
+.pets .modal .pet-content ul li::before {
+  content: '';
+  display: inline-block;
+  margin-bottom: 3px;
+  width: 4px;
+  height: 4px;
+  background-color: #f1cdb3;
+  border-radius: 50%;
+}
+
+.pets .modal .pet-content ul li .span {
   font-weight: 700;
-  margin: 0 10px;
+  margin: 0 7px 0 10px;
+}
+
+.pets .modal .pet-content ul li span {
+  line-height: 110%;
 }
 
 .pets .modal-active {
