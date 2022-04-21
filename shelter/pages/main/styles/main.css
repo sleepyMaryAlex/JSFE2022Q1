@@ -910,6 +910,14 @@ button {
   }
 }
 
+@media (max-width: 767px) {
+  .pets .modal {
+    top: calc(50% - 190px);
+    width: 240px;
+    height: 380px;
+  }
+}
+
 .pets .modal .pet-img {
   width: 500px;
   height: 500px;
@@ -920,6 +928,12 @@ button {
   .pets .modal .pet-img {
     width: 350px;
     height: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pets .modal .pet-img {
+    display: none;
   }
 }
 
@@ -938,6 +952,14 @@ button {
   }
 }
 
+@media (max-width: 767px) {
+  .pets .modal .pet-content {
+    width: 220px;
+    margin-right: 0;
+    margin-top: 0;
+  }
+}
+
 .pets .modal .pet-content h3 {
   margin: 0;
   height: -webkit-fit-content;
@@ -947,6 +969,13 @@ button {
   width: -moz-fit-content;
   width: fit-content;
   color: #000000;
+}
+
+@media (max-width: 767px) {
+  .pets .modal .pet-content h3 {
+    width: auto;
+    text-align: center;
+  }
 }
 
 .pets .modal .pet-content .pet-type-breed {
@@ -960,6 +989,12 @@ button {
   }
 }
 
+@media (max-width: 767px) {
+  .pets .modal .pet-content .pet-type-breed {
+    text-align: center;
+  }
+}
+
 .pets .modal .pet-content .pet-description {
   line-height: 115%;
   margin-bottom: 40px;
@@ -970,6 +1005,12 @@ button {
     font-size: 13px;
     line-height: 110%;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pets .modal .pet-content .pet-description {
+    text-align: justify;
   }
 }
 
@@ -989,6 +1030,20 @@ button {
   }
 }
 
+@media (max-width: 767px) {
+  .pets .modal .pet-content ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .pets .modal .pet-content ul li::before {
   content: '';
   display: inline-block;
@@ -997,6 +1052,13 @@ button {
   height: 4px;
   background-color: #f1cdb3;
   border-radius: 50%;
+}
+
+@media (max-width: 767px) {
+  .pets .modal .pet-content ul li::before {
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
 }
 
 .pets .modal .pet-content ul li .span {
@@ -1027,6 +1089,17 @@ button {
   }
 }
 
+@media (max-width: 767px) {
+  .pets .modal-active {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .pets .close-btn {
   display: none;
   position: fixed;
@@ -1047,6 +1120,13 @@ button {
   .pets .close-btn {
     top: calc(50% - 230px);
     right: calc(50% - 355px);
+  }
+}
+
+@media (max-width: 767px) {
+  .pets .close-btn {
+    top: calc(50% - 245px);
+    right: calc(50% - 150px);
   }
 }
 

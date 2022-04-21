@@ -291,6 +291,11 @@
             width: 630px;
             height: 350px;
         }
+        @media (max-width: $tablet) {
+            top: calc(50% - 190px);
+            width: 240px;
+            height: 380px;
+        }
     
         .pet-img {
             width: 500px;
@@ -299,6 +304,9 @@
             @media (max-width: $desktop) {
                 width: 350px;
                 height: 350px;
+            }
+            @media (max-width: $tablet) {
+                display: none;
             }
         }
     
@@ -312,12 +320,21 @@
                 margin-top: 10px;
                 margin-right: 9px;
             }
+            @media (max-width: $tablet) {
+                width: 220px;
+                margin-right: 0;
+                margin-top: 0;
+            }
     
             h3 {
                 margin: 0;
                 height: fit-content;
                 width: fit-content;
                 color: #000000;
+                @media (max-width: $tablet) {
+                    width: auto;
+                    text-align: center;
+                }
             }
     
             .pet-type-breed {
@@ -325,6 +342,9 @@
                 margin: 10px 0 40px 0;
                 @media (max-width: $desktop) {
                     margin: 10px 0 15px 0;
+                }
+                @media (max-width: $tablet) {
+                    text-align: center;
                 }
             }
     
@@ -335,6 +355,9 @@
                     font-size: 13px;
                     line-height: 110%;
                     margin-bottom: 20px;
+                }
+                @media (max-width: $tablet) {
+                    text-align: justify;
                 }
             }
     
@@ -348,6 +371,11 @@
                     @media (max-width: $desktop) {
                         margin-bottom: 5px;
                     }
+                    @media (max-width: $tablet) {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                    }
                     &::before {
                         content: '';
                         display: inline-block;
@@ -356,6 +384,10 @@
                         height: 4px;
                         background-color: $peach;
                         border-radius: 50%;
+                        @media (max-width: $tablet) {
+                            margin-bottom: 0;
+                            margin-top: 5px;
+                        }
                     }
     
                     .span {
@@ -377,6 +409,10 @@
         @media (max-width: $desktop) {
             column-gap: 11px;
         }
+        @media (max-width: $tablet) {
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     .close-btn {
@@ -395,6 +431,10 @@
         @media (max-width: $desktop) {
             top: calc(50% - 230px);
             right: calc(50% - 355px);
+        }
+        @media (max-width: $tablet) {
+            top: calc(50% - 245px);
+            right: calc(50% - 150px);
         }
         img {
             padding: 18px;
