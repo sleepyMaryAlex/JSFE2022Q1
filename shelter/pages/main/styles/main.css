@@ -977,6 +977,30 @@ button {
           column-gap: 29px;
 }
 
+.pets .close-btn {
+  display: none;
+  position: fixed;
+  top: 13%;
+  right: 21.1%;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid #f1cdb3;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.pets .close-btn img {
+  padding: 17px;
+}
+
+.pets .close-btn-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .help {
   height: 611px;
   background-color: #ffffff;

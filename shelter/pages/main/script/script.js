@@ -53,6 +53,7 @@ function getFromLocalStorage() {
 
 const cards = document.querySelectorAll(".card");
 const modal = document.querySelector(".modal");
+const closeBtn = document.querySelector(".close-btn");
 const petImg = document.querySelector(".pet-img");
 const petName = document.querySelector(".pet-name");
 const petTypeBreed = document.querySelector(".pet-type-breed");
@@ -91,4 +92,5 @@ function showInfo() {
     body.classList.toggle("overflow");
     body.classList.toggle("overlay");
     modal.classList.toggle("modal-active");
+    closeBtn.classList.toggle("close-btn-active");
 }

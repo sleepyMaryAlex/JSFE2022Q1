@@ -349,6 +349,26 @@
         flex-direction: row;
         column-gap: 29px;
     }
+
+    .close-btn {
+        display: none;
+        position: fixed;
+        top: 13%;
+        right: 21.1%;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 2px solid $peach;
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 3;
+        img {
+            padding: 17px;
+        }
+    }
+    .close-btn-active {
+        display: flex;
+    }
 }
 
 .help {
