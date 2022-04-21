@@ -902,10 +902,25 @@ button {
   z-index: 3;
 }
 
+@media (max-width: 1279px) {
+  .pets .modal {
+    top: calc(50% - 175px);
+    width: 630px;
+    height: 350px;
+  }
+}
+
 .pets .modal .pet-img {
   width: 500px;
   height: 500px;
   border-radius: 9px;
+}
+
+@media (max-width: 1279px) {
+  .pets .modal .pet-img {
+    width: 350px;
+    height: 350px;
+  }
 }
 
 .pets .modal .pet-content {
@@ -913,6 +928,14 @@ button {
   margin-top: 50px;
   margin-right: 20px;
   color: #000000;
+}
+
+@media (max-width: 1279px) {
+  .pets .modal .pet-content {
+    width: 260px;
+    margin-top: 10px;
+    margin-right: 9px;
+  }
 }
 
 .pets .modal .pet-content h3 {
@@ -931,9 +954,23 @@ button {
   margin: 10px 0 40px 0;
 }
 
+@media (max-width: 1279px) {
+  .pets .modal .pet-content .pet-type-breed {
+    margin: 10px 0 15px 0;
+  }
+}
+
 .pets .modal .pet-content .pet-description {
   line-height: 115%;
   margin-bottom: 40px;
+}
+
+@media (max-width: 1279px) {
+  .pets .modal .pet-content .pet-description {
+    font-size: 13px;
+    line-height: 110%;
+    margin-bottom: 20px;
+  }
 }
 
 .pets .modal .pet-content ul {
@@ -944,6 +981,12 @@ button {
   margin-bottom: 11px;
   font-family: Georgia, serif;
   letter-spacing: 0.06em;
+}
+
+@media (max-width: 1279px) {
+  .pets .modal .pet-content ul li {
+    margin-bottom: 5px;
+  }
 }
 
 .pets .modal .pet-content ul li::before {
@@ -977,11 +1020,18 @@ button {
           column-gap: 29px;
 }
 
+@media (max-width: 1279px) {
+  .pets .modal-active {
+    -webkit-column-gap: 11px;
+            column-gap: 11px;
+  }
+}
+
 .pets .close-btn {
   display: none;
   position: fixed;
-  top: 13%;
-  right: 21.1%;
+  top: calc(50% - 305px);
+  right: calc(50% - 490px);
   width: 52px;
   height: 52px;
   border-radius: 50%;
@@ -989,10 +1039,24 @@ button {
   background-color: transparent;
   cursor: pointer;
   z-index: 3;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media (max-width: 1279px) {
+  .pets .close-btn {
+    top: calc(50% - 230px);
+    right: calc(50% - 355px);
+  }
 }
 
 .pets .close-btn img {
-  padding: 17px;
+  padding: 18px;
+}
+
+.pets .close-btn:hover {
+  border-color: #fddcc4;
+  background-color: #fddcc4;
 }
 
 .pets .close-btn-active {

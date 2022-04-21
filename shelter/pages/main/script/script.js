@@ -52,8 +52,6 @@ function getFromLocalStorage() {
 // ======= Popup =======
 
 const cards = document.querySelectorAll(".card");
-const modal = document.querySelector(".modal");
-const closeBtn = document.querySelector(".close-btn");
 const petImg = document.querySelector(".pet-img");
 const petName = document.querySelector(".pet-name");
 const petTypeBreed = document.querySelector(".pet-type-breed");
@@ -62,6 +60,9 @@ const petAge = document.querySelector(".pet-age");
 const petInoculation = document.querySelector(".pet-inoculation");
 const petDiseases = document.querySelector(".pet-diseases");
 const petParasites = document.querySelector(".pet-parasites");
+const closeBtn = document.querySelector(".close-btn");
+const closeBtnImg = document.querySelector(".close-btn-img");
+const modal = document.querySelector(".modal");
 
 let index;
 
@@ -94,3 +95,11 @@ function showInfo() {
     modal.classList.toggle("modal-active");
     closeBtn.classList.toggle("close-btn-active");
 }
+
+body.addEventListener("click", (e) => {
+    if (e.target === closeBtn || e.target === closeBtnImg) {
+        showInfo();
+    } else if (modal.classList.contains("modal-active") && e.target === body) {
+        showInfo();
+    }
+})
