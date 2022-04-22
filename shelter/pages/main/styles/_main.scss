@@ -406,6 +406,12 @@
         display: flex;
         flex-direction: row;
         column-gap: 29px;
+        &:not(:hover) {
+            .close-btn.close-btn-active {
+                background-color: $light-peach;
+                border-color: $light-peach;
+            }
+        }
         @media (max-width: $desktop) {
             column-gap: 11px;
         }
@@ -439,13 +445,13 @@
         img {
             padding: 18px;
         }
+    }
+    .close-btn-active {
+        display: flex;
         &:hover {
             border-color: $light-peach;
             background-color: $light-peach;
         }
-    }
-    .close-btn-active {
-        display: flex;
     }
 }
 
@@ -675,3 +681,4 @@
     background-color: rgba(41, 41, 41, 0.6);
     z-index: 1;
 }
+

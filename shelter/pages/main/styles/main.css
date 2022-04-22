@@ -1082,6 +1082,11 @@ button {
           column-gap: 29px;
 }
 
+.pets .modal-active:not(:hover) .close-btn.close-btn-active {
+  background-color: #fddcc4;
+  border-color: #fddcc4;
+}
+
 @media (max-width: 1279px) {
   .pets .modal-active {
     -webkit-column-gap: 11px;
@@ -1134,15 +1139,15 @@ button {
   padding: 18px;
 }
 
-.pets .close-btn:hover {
-  border-color: #fddcc4;
-  background-color: #fddcc4;
-}
-
 .pets .close-btn-active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.pets .close-btn-active:hover {
+  border-color: #fddcc4;
+  background-color: #fddcc4;
 }
 
 .help {
