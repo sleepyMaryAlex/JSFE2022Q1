@@ -274,6 +274,7 @@
         .active {
             cursor: pointer;
             transition: all 0.5s;
+            color: inherit;
             &:hover {
                 background-color: $light-peach;
                 border: 2px solid $light-peach;
