@@ -65,6 +65,184 @@
             }
         }
     }
+    .modal {
+        visibility: hidden;
+        position: fixed;
+        top: calc(50% - 250px);
+        width: 900px;
+        height: 500px;
+        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+        background-color: #fafafa;
+        border-radius: 9px;
+        z-index: 3;
+        transform: scale(0.7);
+        transition: transform 0.5s;
+        @media (max-width: $desktop) {
+            top: calc(50% - 175px);
+            width: 630px;
+            height: 350px;
+        }
+        @media (max-width: $tablet) {
+            top: calc(50% - 190px);
+            width: 240px;
+            height: 380px;
+        }
+    
+        .pet-img {
+            width: 500px;
+            height: 500px;
+            border-radius: 9px;
+            @media (max-width: $desktop) {
+                width: 350px;
+                height: 350px;
+            }
+            @media (max-width: $tablet) {
+                display: none;
+            }
+        }
+    
+        .pet-content {
+            width: 351px;
+            margin: 50px 20px 39px 0;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @media (max-width: $desktop) {
+                width: 260px;
+                margin: 10px 9px 10px 0;
+            }
+            @media (max-width: $tablet) {
+                width: 220px;
+                height: 345px;
+                margin: 0;
+            }
+    
+            h3 {
+                margin: 0;
+                height: fit-content;
+                width: fit-content;
+                color: #000000;
+                @media (max-width: $tablet) {
+                    width: auto;
+                    text-align: center;
+                }
+            }
+    
+            .pet-type-breed {
+                line-height: 115%;
+                @media (max-width: $desktop) {
+                }
+                @media (max-width: $tablet) {
+                    text-align: center;
+                }
+            }
+    
+            .pet-description {
+                line-height: 115%;
+                @media (max-width: $desktop) {
+                    font-size: 13px;
+                    line-height: 110%;
+                }
+                @media (max-width: $tablet) {
+                    text-align: justify;
+                }
+            }
+    
+            ul {
+                list-style: none;
+    
+                li {
+                    margin-bottom: 11px;
+                    font-family: Georgia, serif;
+                    letter-spacing: 0.06em;
+                    @media (max-width: $desktop) {
+                        margin-bottom: 5px;
+                    }
+                    @media (max-width: $tablet) {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                    }
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        margin-bottom: 3px;
+                        width: 4px;
+                        height: 4px;
+                        background-color: $peach;
+                        border-radius: 50%;
+                        @media (max-width: $tablet) {
+                            margin-bottom: 0;
+                            margin-top: 5px;
+                        }
+                    }
+    
+                    .span {
+                        font-weight: 700;
+                        margin: 0 7px 0 10px;
+                    }
+                    span {
+                        line-height: 110%;
+                    }
+                }
+            }
+        }
+    }
+    .modal-active {
+        visibility: inherit;
+        display: flex;
+        flex-direction: row;
+        column-gap: 29px;
+        transform: scale(1);
+        &:not(:hover) {
+            .close-btn.close-btn-active {
+                background-color: $light-peach;
+                border-color: $light-peach;
+            }
+        }
+        @media (max-width: $desktop) {
+            column-gap: 11px;
+        }
+        @media (max-width: $tablet) {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .close-btn {
+        display: none;
+        position: fixed;
+        top: calc(50% - 305px);
+        right: calc(50% - 490px);
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 2px solid $peach;
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 3;
+        transition: all 0.5s;
+        @media (max-width: $desktop) {
+            top: calc(50% - 230px);
+            right: calc(50% - 355px);
+        }
+        @media (max-width: $tablet) {
+            top: calc(50% - 245px);
+            right: calc(50% - 150px);
+        }
+        img {
+            padding: 18px;
+        }
+    }
+    .close-btn-active {
+        display: flex;
+        &:hover {
+            border-color: $light-peach;
+            background-color: $light-peach;
+        }
+    }
+
     .navigation {
         width: 340px;
         height: 52px;
@@ -96,6 +274,8 @@
         .active {
             cursor: pointer;
             transition: all 0.5s;
+            color: inherit;
+            border: 2px solid $peach;
             &:hover {
                 background-color: $light-peach;
                 border: 2px solid $light-peach;
@@ -107,4 +287,20 @@
             transition: background-color 0.5s;
         }
     }
+}
+
+.overflow {
+    overflow-y: hidden;
+}
+
+.overlay:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(41, 41, 41, 0.6);
+    z-index: 1;
 }
