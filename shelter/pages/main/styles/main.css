@@ -938,24 +938,32 @@ button {
 
 .pets .modal .pet-content {
   width: 351px;
-  margin-top: 50px;
-  margin-right: 20px;
+  margin: 50px 20px 39px 0;
   color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (max-width: 1279px) {
   .pets .modal .pet-content {
     width: 260px;
-    margin-top: 10px;
-    margin-right: 9px;
+    margin: 10px 9px 10px 0;
   }
 }
 
 @media (max-width: 767px) {
   .pets .modal .pet-content {
     width: 220px;
-    margin-right: 0;
-    margin-top: 0;
+    height: 345px;
+    margin: 0;
   }
 }
 
@@ -979,13 +987,6 @@ button {
 
 .pets .modal .pet-content .pet-type-breed {
   line-height: 115%;
-  margin: 10px 0 40px 0;
-}
-
-@media (max-width: 1279px) {
-  .pets .modal .pet-content .pet-type-breed {
-    margin: 10px 0 15px 0;
-  }
 }
 
 @media (max-width: 767px) {
@@ -996,14 +997,12 @@ button {
 
 .pets .modal .pet-content .pet-description {
   line-height: 115%;
-  margin-bottom: 40px;
 }
 
 @media (max-width: 1279px) {
   .pets .modal .pet-content .pet-description {
     font-size: 13px;
     line-height: 110%;
-    margin-bottom: 20px;
   }
 }
 
