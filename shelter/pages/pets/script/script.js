@@ -75,8 +75,9 @@ function createArray() {
   } else if (wrapper.clientWidth >= 768) {
     for (let i = 0; i < 8; i++) {
       let subArray = [];
-      while (subArray.length < 6) {
-        let n = Math.floor(Math.random() * 6);
+      //  8 or 6
+      while (subArray.length < 8) {   
+        let n = Math.floor(Math.random() * 8);
         if (!subArray.includes(n)) {
           subArray.push(n);
         }
@@ -86,8 +87,9 @@ function createArray() {
   } else if (wrapper.clientWidth < 768) {
     for (let i = 0; i < 16; i++) {
       let subArray = [];
-      while (subArray.length < 3) {
-        let n = Math.floor(Math.random() * 3);
+      // 8 or 3
+      while (subArray.length < 8) {
+        let n = Math.floor(Math.random() * 8);
         if (!subArray.includes(n)) {
           subArray.push(n);
         }
@@ -95,7 +97,6 @@ function createArray() {
       array.push(subArray);
     }
   }
-
   showCards(pets, array, currentPage);
 }
 createArray();
@@ -103,10 +104,7 @@ createArray();
 function showCards(pets, array, currentPage) {
   pageNumber.textContent = currentPage;
   for (let i = 0; i < array[currentPage - 1].length; i++) {
-    cards[i].children[0].setAttribute(
-      "src",
-      pets[array[currentPage - 1][i]].img
-    );
+    cards[i].children[0].setAttribute("src", pets[array[currentPage - 1][i]].img);
     cards[i].children[1].textContent = pets[array[currentPage - 1][i]].name;
   }
   if (currentPage === 6 && wrapper.clientWidth >= 1280) {
