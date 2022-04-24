@@ -889,7 +889,7 @@ button {
 }
 
 .pets .modal {
-  display: none;
+  visibility: hidden;
   position: fixed;
   top: calc(50% - 250px);
   width: 900px;
@@ -899,6 +899,12 @@ button {
   background-color: #fafafa;
   border-radius: 9px;
   z-index: 3;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 @media (max-width: 1279px) {
@@ -1069,6 +1075,7 @@ button {
 }
 
 .pets .modal-active {
+  visibility: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1078,6 +1085,8 @@ button {
           flex-direction: row;
   -webkit-column-gap: 29px;
           column-gap: 29px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .pets .modal-active:not(:hover) .close-btn.close-btn-active {

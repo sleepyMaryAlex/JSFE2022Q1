@@ -277,7 +277,7 @@
     }
 
     .modal {
-        display: none;
+        visibility: hidden;
         position: fixed;
         top: calc(50% - 250px);
         width: 900px;
@@ -286,6 +286,8 @@
         background-color: #fafafa;
         border-radius: 9px;
         z-index: 3;
+        transform: scale(0.7);
+        transition: transform 0.5s;
         @media (max-width: $desktop) {
             top: calc(50% - 175px);
             width: 630px;
@@ -400,9 +402,11 @@
     }
 
     .modal-active {
+        visibility: inherit;
         display: flex;
         flex-direction: row;
         column-gap: 29px;
+        transform: scale(1);
         &:not(:hover) {
             .close-btn.close-btn-active {
                 background-color: $light-peach;
