@@ -24,7 +24,7 @@
                 <div class="line"></div>
             </div>
             <nav class="nav">
-                <div class="logo nav-logo">
+                <div class="logo nav-logo" onclick="location.href = '../main/index.html'">
                     <h1>Cozy House</h1>
                     <p>Shelter for pets in Boston</p>
                 </div>
@@ -69,18 +69,18 @@
                     <button class="button-round arrow"><img src="../../assets/icons/arrow-left.svg"
                             alt="arrow"></button>
                     <div class="card">
-                        <img src="../../assets/images/pets-katrine.png" alt="katrine">
-                        <h4>Katrine</h4>
+                        <img src="" alt="pet">
+                        <h4></h4>
                         <button class="button secondary">Learn more</button>
                     </div>
                     <div class="card">
-                        <img src="../../assets/images/pets-jennifer.png" alt="jennifer">
-                        <h4>Jennifer</h4>
+                        <img src="" alt="pet">
+                        <h4></h4>
                         <button class="button secondary">Learn more</button>
                     </div>
                     <div class="card">
-                        <img src="../../assets/images/pets-woody.png" alt="woody">
-                        <h4>Woody</h4>
+                        <img src="" alt="pet">
+                        <h4></h4>
                         <button class="button secondary">Learn more</button>
                     </div>
                     <button class="button-round arrow"><img src="../../assets/icons/arrow-right.svg"
@@ -88,6 +88,22 @@
                 </div>
                 <button class="button long-button primary" onclick="location.href='../pets/index.html'">Get to know the
                     rest</button>
+                <div class="modal">
+                    <img class="pet-img" src="" alt="pet">
+                    <div class="pet-content">
+                        <h3 class="pet-name"></h3>
+                        <h4 class="pet-type-breed"></h4>
+                        <h5 class="pet-description"></h5>
+                        <ul>
+                            <li><span class="span">Age:</span><span class="pet-age"></span></li>
+                            <li><span class="span">Inoculations:</span><span class="pet-inoculation"></span></li>
+                            <li><span class="span">Diseases:</span><span class="pet-diseases"></span></li>
+                            <li><span class="span">Parasites:</span><span class="pet-parasites"></span></li>
+                        </ul>
+                    </div>
+                    <button class="close-btn"><img class="close-btn-img" src="../../assets/icons/close-btn.svg"></button>
+                </div>
+                
             </section>
 
             <section class="help" id="help">
@@ -180,7 +196,9 @@
         </footer>
 
     </div>
-    <script src="script.js"></script>
+    <script src="script/menu.js"></script>
+    <script type="module" src="script/slider.js"></script>
+    <script type="module" src="script/popup.js"></script>
 </body>
 
 </html>

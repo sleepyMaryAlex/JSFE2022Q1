@@ -46,6 +46,7 @@ h5 {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -64,6 +65,22 @@ button {
 }
 
 .body-overflow {
-    overflow: hidden;
+    @media (max-width: $tablet) {
+        overflow-y: hidden;
+    }
+}
+
+.body-overlay:before {
+    @media (max-width: $tablet) {
+        content: '';
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(41, 41, 41, 0.6);
+        z-index: 1;
+    }
 }
 
