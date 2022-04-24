@@ -26,6 +26,7 @@ body.addEventListener("click", (e) => {
 
 function showMenu() {
     burger.classList.toggle("rotated");
+    burger.classList.toggle("burger-fixed");
     menu.classList.toggle("menu-visible");
     navLinks.forEach(link => link.classList.toggle("menu-link"));
     logoLink.classList.toggle("logo-invisible");

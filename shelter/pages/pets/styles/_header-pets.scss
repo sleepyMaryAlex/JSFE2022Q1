@@ -63,3 +63,10 @@
         position: initial;
     }
 }
+
+.burger-fixed {
+    @media (max-width: $tablet) {
+        position: fixed;
+        right: 10px;
+    }
+}

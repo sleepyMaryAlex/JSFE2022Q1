@@ -667,6 +667,13 @@ button {
   }
 }
 
+@media (max-width: 767px) {
+  .burger-fixed {
+    position: fixed;
+    right: 10px;
+  }
+}
+
 .pets {
   padding: 0 40px;
   padding-top: 80px;
