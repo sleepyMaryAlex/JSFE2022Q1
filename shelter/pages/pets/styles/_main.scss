@@ -275,6 +275,7 @@
             cursor: pointer;
             transition: all 0.5s;
             color: inherit;
+            border: 2px solid $peach;
             &:hover {
                 background-color: $light-peach;
                 border: 2px solid $light-peach;

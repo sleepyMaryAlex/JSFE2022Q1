@@ -1074,6 +1074,7 @@ button {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   color: inherit;
+  border: 2px solid #f1cdb3;
 }
 
 .pets .navigation .active:hover {
