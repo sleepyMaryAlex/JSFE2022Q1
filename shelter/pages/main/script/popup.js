@@ -17,26 +17,27 @@ const modal = document.querySelector(".modal");
 
 let index;
 
-cards.forEach(card => card.addEventListener("click", () => {
-    if (card.children[0].getAttribute("src") === "../../assets/images/pets-jennifer.png") {
-        index = 0;
-    } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-sophia.png") {
-        index = 1;
-    } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-woody.png") {
-        index = 2;
-    } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-scarlett.png") {
-        index = 3;
-    } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-katrine.png") {
-        index = 4;
-    } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-timmy.png") {
-        index = 5;
-    } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-freddie.png") {
-        index = 6;
-    } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-charly.png") {
-        index = 7;
-    }
-    getInfo(pets, index);
-}));
+
+    cards.forEach(card => card.addEventListener("click", () => {
+        if (card.children[0].getAttribute("src") === "../../assets/images/pets-jennifer.png") {
+            index = 0;
+        } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-sophia.png") {
+            index = 1;
+        } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-woody.png") {
+            index = 2;
+        } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-scarlett.png") {
+            index = 3;
+        } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-katrine.png") {
+            index = 4;
+        } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-timmy.png") {
+            index = 5;
+        } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-freddie.png") {
+            index = 6;
+        } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-charly.png") {
+            index = 7;
+        }
+        getInfo(pets, index);
+    }));
 
 function getInfo(pets, index) {
     petImg.setAttribute("src", pets[index].img);
@@ -64,3 +65,26 @@ body.addEventListener("click", (e) => {
         showInfo();
     }
 })
+
+window.addEventListener("animationend", () => {
+    cards.forEach(card => card.addEventListener("click", () => {
+        if (card.children[0].getAttribute("src") === "../../assets/images/pets-jennifer.png") {
+            index = 0;
+        } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-sophia.png") {
+            index = 1;
+        } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-woody.png") {
+            index = 2;
+        } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-scarlett.png") {
+            index = 3;
+        } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-katrine.png") {
+            index = 4;
+        } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-timmy.png") {
+            index = 5;
+        } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-freddie.png") {
+            index = 6;
+        } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-charly.png") {
+            index = 7;
+        }
+        getInfo(pets, index);
+    }));
+});

@@ -844,6 +844,7 @@ button {
 .pets .slider .carousel {
   width: 990px;
   height: 435px;
+  overflow: hidden;
 }
 
 @media (max-width: 1279px) {
@@ -869,11 +870,12 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 990px;
   height: 435px;
+  position: relative;
 }
 
 @media (max-width: 1279px) {
@@ -886,6 +888,34 @@ button {
   .pets .slider .carousel .card-container {
     width: 270px;
   }
+}
+
+.pets .slider .carousel .card-container .prev-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 90px;
+  left: -1080px;
+}
+
+.pets .slider .carousel .card-container .curr-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 90px;
+}
+
+.pets .slider .carousel .card-container .next-container {
+  position: absolute;
+  right: -1080px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 90px;
 }
 
 .pets .slider .carousel .card-container .card {
@@ -901,6 +931,52 @@ button {
 @media (max-width: 1279px) {
   .pets .slider .carousel .card-container .card-3 {
     display: none;
+  }
+}
+
+.pets .slider .carousel .animation-left {
+  -webkit-animation: animation-left 0.7s;
+          animation: animation-left 0.7s;
+}
+
+@-webkit-keyframes animation-left {
+  from {
+    left: 0;
+  }
+  to {
+    left: 1080px;
+  }
+}
+
+@keyframes animation-left {
+  from {
+    left: 0;
+  }
+  to {
+    left: 1080px;
+  }
+}
+
+.pets .slider .carousel .animation-right {
+  -webkit-animation: animation-right 0.7s;
+          animation: animation-right 0.7s;
+}
+
+@-webkit-keyframes animation-right {
+  from {
+    right: 0;
+  }
+  to {
+    right: 1080px;
+  }
+}
+
+@keyframes animation-right {
+  from {
+    right: 0;
+  }
+  to {
+    right: 1080px;
   }
 }
 
