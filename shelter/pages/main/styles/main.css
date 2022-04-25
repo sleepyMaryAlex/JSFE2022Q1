@@ -810,6 +810,9 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 60px;
 }
 
@@ -838,8 +841,71 @@ button {
   }
 }
 
+.pets .slider .carousel {
+  width: 990px;
+  height: 435px;
+}
+
+@media (max-width: 1279px) {
+  .pets .slider .carousel {
+    width: 580px;
+  }
+}
+
 @media (max-width: 767px) {
-  .pets .slider .arrow:first-child {
+  .pets .slider .carousel {
+    width: 270px;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
+.pets .slider .carousel .card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 990px;
+  height: 435px;
+}
+
+@media (max-width: 1279px) {
+  .pets .slider .carousel .card-container {
+    width: 580px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pets .slider .carousel .card-container {
+    width: 270px;
+  }
+}
+
+.pets .slider .carousel .card-container .card {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .pets .slider .carousel .card-container .card-2 {
+    display: none;
+  }
+}
+
+@media (max-width: 1279px) {
+  .pets .slider .carousel .card-container .card-3 {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .pets .slider .carousel .arrow:first-child {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -847,40 +913,16 @@ button {
 }
 
 @media (max-width: 767px) {
-  .pets .slider .arrow:last-child {
+  .pets .slider .carousel .arrow:last-child {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
   }
 }
 
-@media (max-width: 1279px) {
-  .pets .slider .card:nth-child(2) {
-    margin: 0 20px 0 0;
-  }
-}
-
 @media (max-width: 767px) {
-  .pets .slider .card:nth-child(2) {
+  .pets .slider .carousel {
     margin: 0;
-  }
-}
-
-@media (max-width: 1279px) {
-  .pets .slider .card:nth-child(3) {
-    margin: 0 0 0 20px;
-  }
-}
-
-@media (max-width: 767px) {
-  .pets .slider .card:nth-child(3) {
-    display: none;
-  }
-}
-
-@media (max-width: 1279px) {
-  .pets .slider .card:nth-child(4) {
-    display: none;
   }
 }
 
