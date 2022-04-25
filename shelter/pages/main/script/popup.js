@@ -2,7 +2,6 @@ import pets from "./pets.js";
 
 // ======= Popup =======
 
-const cards = document.querySelectorAll(".card");
 const petImg = document.querySelector(".pet-img");
 const petName = document.querySelector(".pet-name");
 const petTypeBreed = document.querySelector(".pet-type-breed");
@@ -15,52 +14,40 @@ const closeBtn = document.querySelector(".close-btn");
 const closeBtnImg = document.querySelector(".close-btn-img");
 const modal = document.querySelector(".modal");
 
-let index;
+let currentPet;
 
-cards.forEach(card => card.addEventListener("click", () => {
-    if (card.children[0].getAttribute("src") === "../../assets/images/pets-jennifer.png") {
-        index = 0;
-    } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-sophia.png") {
-        index = 1;
-    } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-woody.png") {
-        index = 2;
-    } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-scarlett.png") {
-        index = 3;
-    } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-katrine.png") {
-        index = 4;
-    } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-timmy.png") {
-        index = 5;
-    } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-freddie.png") {
-        index = 6;
-    } else if (card.children[0].getAttribute("src") === "../../assets/images/pets-charly.png") {
-        index = 7;
+export function openPopup(e) {
+  for (let pet of pets) {
+    if (pet.name === e.target.parentElement.dataset.pet) {
+      currentPet = pet;
     }
-    getInfo(pets, index);
-}));
+  }
+  getInfo();
+  showInfo();
+}
 
-function getInfo(pets, index) {
-    petImg.setAttribute("src", pets[index].img);
-    petName.textContent = pets[index].name;
-    petTypeBreed.textContent = pets[index].type + " - " + pets[index].breed;
-    petDescription.textContent = pets[index].description;
-    petAge.textContent = pets[index].age;
-    petInoculation.textContent = pets[index].inoculations.join(", ");
-    petDiseases.textContent = pets[index].diseases.join(", ");
-    petParasites.textContent = pets[index].parasites.join(", ");
-    showInfo();
+function getInfo() {
+  petImg.setAttribute("src", currentPet.img);
+  petName.textContent = currentPet.name;
+  petTypeBreed.textContent = currentPet.type + " - " + currentPet.breed;
+  petDescription.textContent = currentPet.description;
+  petAge.textContent = currentPet.age;
+  petInoculation.textContent = currentPet.inoculations.join(", ");
+  petDiseases.textContent = currentPet.diseases.join(", ");
+  petParasites.textContent = currentPet.parasites.join(", ");
 }
 
 function showInfo() {
-    body.classList.toggle("overflow");
-    body.classList.toggle("overlay");
-    modal.classList.toggle("modal-active");
-    closeBtn.classList.toggle("close-btn-active");
+  body.classList.toggle("overflow");
+  body.classList.toggle("overlay");
+  modal.classList.toggle("modal-active");
+  closeBtn.classList.toggle("close-btn-active");
 }
 
 body.addEventListener("click", (e) => {
-    if (e.target === closeBtn || e.target === closeBtnImg) {
-        showInfo();
-    } else if (modal.classList.contains("modal-active") && e.target === body) {
-        showInfo();
-    }
-})
+  if (e.target === closeBtn || e.target === closeBtnImg) {
+    showInfo();
+  } else if (modal.classList.contains("modal-active") && e.target === body) {
+    showInfo();
+  }
+});

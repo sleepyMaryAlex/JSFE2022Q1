@@ -605,6 +605,7 @@ button {
   background-image: none;
   background-color: #ffffff;
   padding-top: 30px;
+  z-index: 1;
 }
 
 @media (max-width: 767px) {
@@ -662,8 +663,8 @@ button {
 }
 
 @media (max-width: 767px) {
-  .header-position {
-    position: initial;
+  .header-darken {
+    background-color: #999999;
   }
 }
 
@@ -723,6 +724,26 @@ button {
 
 .pets .cards-container .card {
   margin: 15px 0;
+  -webkit-animation: fading 0.3s;
+          animation: fading 0.3s;
+}
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1279px) {
@@ -772,12 +793,12 @@ button {
   background-color: #fafafa;
   border-radius: 9px;
   z-index: 3;
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scale(0.2);
+          transform: scale(0.2);
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
 
 @media (max-width: 1279px) {
@@ -843,6 +864,9 @@ button {
     width: 220px;
     height: 345px;
     margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -871,6 +895,7 @@ button {
 @media (max-width: 767px) {
   .pets .modal .pet-content .pet-type-breed {
     text-align: center;
+    margin: 12px 0;
   }
 }
 
@@ -888,17 +913,28 @@ button {
 @media (max-width: 767px) {
   .pets .modal .pet-content .pet-description {
     text-align: justify;
+    margin-bottom: 12px;
   }
 }
 
 .pets .modal .pet-content ul {
-  list-style: none;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.pets .modal .pet-content ul li::marker {
+  color: #f1cdb3;
+  font-size: 13px;
 }
 
 .pets .modal .pet-content ul li {
   margin-bottom: 11px;
   font-family: Georgia, serif;
   letter-spacing: 0.06em;
+  margin-left: 14px;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 @media (max-width: 1279px) {
@@ -907,40 +943,9 @@ button {
   }
 }
 
-@media (max-width: 767px) {
-  .pets .modal .pet-content ul li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-.pets .modal .pet-content ul li::before {
-  content: '';
-  display: inline-block;
-  margin-bottom: 3px;
-  width: 4px;
-  height: 4px;
-  background-color: #f1cdb3;
-  border-radius: 50%;
-}
-
-@media (max-width: 767px) {
-  .pets .modal .pet-content ul li::before {
-    margin-bottom: 0;
-    margin-top: 5px;
-  }
-}
-
 .pets .modal .pet-content ul li .span {
   font-weight: 700;
-  margin: 0 7px 0 10px;
+  margin: 0 7px 0 0;
 }
 
 .pets .modal .pet-content ul li span {
@@ -1102,7 +1107,7 @@ button {
   height: 100%;
   width: 100%;
   background-color: rgba(41, 41, 41, 0.6);
-  z-index: 1;
+  z-index: 2;
 }
 
 .footer {
