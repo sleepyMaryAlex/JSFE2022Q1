@@ -1,8 +1,8 @@
 import pets from "./pets.js";
+import { openPopup } from "./popup.js";
 
 // ======= Slider =======
 
-const cards = document.querySelectorAll(".card");
 const prevContainer = document.querySelector(".prev-container");
 const currContainer = document.querySelector(".curr-container");
 const nextContainer = document.querySelector(".next-container");
@@ -41,6 +41,8 @@ function chooseIndexes() {
   }
 }
 chooseIndexes();
+
+showPets();
 
 function getUniqueSubArray(index) {
   let isUnique = false;
@@ -91,6 +93,7 @@ cardContainer.addEventListener("animationend", () => {
   cardContainer.classList.remove("animation-right");
   cardContainer.classList.remove("animation-left");
   showPets();
+  
 });
 
 function showPets() {
@@ -99,7 +102,7 @@ function showPets() {
   nextContainer.innerHTML = "";
   for (let i = 0; i < 3; i++) {
     for (let k = 0; k < 3; k++) {
-      const card = `<div class="card">
+      const card = `<div class="card" data-pet="${pets[indexArray[i][k]].name}">
             <img src=${pets[indexArray[i][k]].img} alt="pet">
             <h4>${pets[indexArray[i][k]].name}</h4>
             <button class="button secondary">Learn more</button>
@@ -115,6 +118,5 @@ function showPets() {
       }
     }
   }
+  currContainer.childNodes.forEach(card => card.addEventListener('click', openPopup));
 }
-
-showPets();

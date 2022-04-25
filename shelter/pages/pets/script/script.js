@@ -1,4 +1,5 @@
 import pets from "../../main/script/pets.js";
+import { openPopup } from "../../main/script/popup.js";
 
 const wrapper = document.querySelector(".wrapper");
 
@@ -10,8 +11,8 @@ const prevPage = document.querySelector(".prev-page");
 const nextPage = document.querySelector(".next-page");
 const pageNumber = document.querySelector(".page-number");
 const cardsContainer = document.querySelector(".cards-container");
-const cards = document.querySelectorAll(".card");
 const btnRound = document.querySelectorAll(".button-round");
+
 
 let currentPage = 1;
 
@@ -106,13 +107,14 @@ function showCards(pets, array, currentPage) {
   cardsContainer.innerHTML = "";
   pageNumber.textContent = currentPage;
   for (let i = 0; i < array[currentPage - 1].length; i++) {
-    const card = `<div class="card">
+    const card = `<div class="card" data-pet="${pets[array[currentPage - 1][i]].name}">
                       <img src=${pets[array[currentPage - 1][i]].img} alt="pet">
                       <h4>${pets[array[currentPage - 1][i]].name}</h4>
                       <button class="button secondary">Learn more</button>
                   </div>`;
     cardsContainer.insertAdjacentHTML("beforeend", card);
   }
+  const cards = document.querySelectorAll(".card");
   if ((currentPage === 6 && wrapper.clientWidth >= 1280) || (currentPage === 8 && wrapper.clientWidth >= 768) || (currentPage === 16 && wrapper.clientWidth < 768)) {
     btnRound.forEach((btn) => btn.classList.remove("active"));
     btnRound.forEach((btn) => btn.classList.remove("inactive"));
@@ -130,4 +132,6 @@ function showCards(pets, array, currentPage) {
   } else {
     btnRound.forEach((btn) => btn.classList.add("active"));
   }
+  cards.forEach(card => card.addEventListener("click", openPopup));
 }
+
