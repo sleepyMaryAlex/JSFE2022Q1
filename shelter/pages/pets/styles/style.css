@@ -605,6 +605,7 @@ button {
   background-image: none;
   background-color: #ffffff;
   padding-top: 30px;
+  z-index: 1;
 }
 
 @media (max-width: 767px) {
@@ -664,6 +665,7 @@ button {
 @media (max-width: 767px) {
   .header-position {
     position: inherit;
+    z-index: auto;
   }
 }
 
