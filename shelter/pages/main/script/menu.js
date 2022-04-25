@@ -26,11 +26,10 @@ body.addEventListener("click", (e) => {
 
 function showMenu() {
     burger.classList.toggle("rotated");
-    burger.classList.toggle("burger-fixed");
     menu.classList.toggle("menu-visible");
     navLinks.forEach(link => link.classList.toggle("menu-link"));
     logoLink.classList.toggle("logo-invisible");
     body.classList.toggle("body-overflow");
-    header.classList.toggle("header-position");
+    header.classList.toggle("header-darken");
     body.classList.toggle("body-overlay");
 }

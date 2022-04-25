@@ -124,6 +124,7 @@
                 width: 220px;
                 height: 345px;
                 margin: 0;
+                justify-content: center;
             }
     
             h3 {
@@ -143,6 +144,7 @@
                 }
                 @media (max-width: $tablet) {
                     text-align: center;
+                    margin: 12px 0;
                 }
             }
     
@@ -154,41 +156,32 @@
                 }
                 @media (max-width: $tablet) {
                     text-align: justify;
+                    margin-bottom: 12px;
                 }
             }
     
             ul {
-                list-style: none;
+                list-style-type: disc;
+                list-style-position: outside;
+                
+                li::marker {
+                    color: $peach;
+                    font-size: 13px;
+                }
     
                 li {
                     margin-bottom: 11px;
                     font-family: Georgia, serif;
                     letter-spacing: 0.06em;
+                    margin-left: 14px;
+                    hyphens: auto;
                     @media (max-width: $desktop) {
                         margin-bottom: 5px;
                     }
-                    @media (max-width: $tablet) {
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                    }
-                    &::before {
-                        content: '';
-                        display: inline-block;
-                        margin-bottom: 3px;
-                        width: 4px;
-                        height: 4px;
-                        background-color: $peach;
-                        border-radius: 50%;
-                        @media (max-width: $tablet) {
-                            margin-bottom: 0;
-                            margin-top: 5px;
-                        }
-                    }
-    
+
                     .span {
                         font-weight: 700;
-                        margin: 0 7px 0 10px;
+                        margin: 0 7px 0 0;
                     }
                     span {
                         line-height: 110%;

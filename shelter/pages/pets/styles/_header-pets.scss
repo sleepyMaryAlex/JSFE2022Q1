@@ -59,16 +59,8 @@
     }
 }
 
-.header-position {
+.header-darken {
     @media (max-width: $tablet) {
-        position: inherit;
-        z-index: auto;
-    }
-}
-
-.burger-fixed {
-    @media (max-width: $tablet) {
-        position: fixed;
-        right: 10px;
+        background-color: darken($white, 40%);
     }
 }
