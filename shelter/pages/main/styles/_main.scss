@@ -268,6 +268,23 @@
                     display: flex;
                     gap: 90px;
                     left: -1080px;
+                    @media (max-width: $desktop) {
+                        gap: 40px;
+                        left: -620px;
+                    }
+                    @media (max-width: $tablet) {
+                        left: -310px;
+                    }
+                    .card:last-child {
+                        @media (max-width: $desktop) {
+                            display: none;
+                        }
+                    }
+                    .card:nth-child(2) {
+                        @media (max-width: $tablet) {
+                            display: none;
+                        }
+                    }
                 }
                 .curr-container {
                     position: absolute;
@@ -275,28 +292,46 @@
                     right: 0;
                     display: flex;
                     gap: 90px;
+                    @media (max-width: $desktop) {
+                        gap: 40px;
+                    }
+                    .card:last-child {
+                        @media (max-width: $desktop) {
+                            display: none;
+                        }
+                    }
+                    .card:nth-child(2) {
+                        @media (max-width: $tablet) {
+                            display: none;
+                        }
+                    }
                 }
                 .next-container {
                     position: absolute;
                     right: -1080px;
                     display: flex;
                     gap: 90px;
+                    @media (max-width: $desktop) {
+                        gap: 40px;
+                        right: -620px;
+                    }
+                    @media (max-width: $tablet) {
+                        right: -310px;
+                    }
+                    .card:last-child {
+                        @media (max-width: $desktop) {
+                            display: none;
+                        }
+                    }
+                    .card:nth-child(2) {
+                        @media (max-width: $tablet) {
+                            display: none;
+                        }
+                    }
                 }
 
                 .card {
                     margin: 0;
-                }
-
-                .card-2 {
-                     @media (max-width: $tablet) {
-                        display: none;
-                    }
-                }
-
-                .card-3 {
-                    @media (max-width: $desktop) {
-                        display: none;
-                    }
                 }
             }
             .animation-left {
@@ -307,6 +342,24 @@
                     left: 0;
                 } to {
                     left: 1080px;
+                }
+            }
+            @media (max-width: $desktop) {
+                @keyframes animation-left {
+                    from {
+                        left: 0;
+                    } to {
+                        left: 620px;
+                    }
+                }
+            }
+            @media (max-width: $tablet) {
+                @keyframes animation-left {
+                    from {
+                        left: 0;
+                    } to {
+                        left: 310px;
+                    }
                 }
             }
 
@@ -321,6 +374,25 @@
                 }
             }
 
+            @media (max-width: $desktop) {
+                @keyframes animation-right {
+                    from {
+                        right: 0;
+                    } to {
+                        right: 620px;
+                    }
+                }
+            }
+            @media (max-width: $tablet) {
+                @keyframes animation-right {
+                    from {
+                        right: 0;
+                    } to {
+                        right: 310px;
+                    }
+                }
+            }
+            
             .arrow:first-child {
                 @media (max-width: $tablet) {
                     order: 2;

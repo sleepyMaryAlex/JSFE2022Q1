@@ -9,11 +9,13 @@ const nextContainer = document.querySelector(".next-container");
 const cardContainer = document.querySelector(".card-container");
 const arrowLeft = document.querySelector(".arrow-left");
 const arrowRight = document.querySelector(".arrow-right");
+const wrapper = document.querySelector(".wrapper");
 
 arrowLeft.addEventListener("click", moveLeft);
 arrowRight.addEventListener("click", moveRight);
 
 let indexArray = [];
+// let step = wrapper.clientWidth < 768 ? 1 : wrapper.clientWidth >= 1280 ? 3 : 2; 
 
 function chooseIndexes() {
   let isUnique = false;
@@ -93,8 +95,8 @@ cardContainer.addEventListener("animationend", () => {
   cardContainer.classList.remove("animation-right");
   cardContainer.classList.remove("animation-left");
   showPets();
-  
 });
+// console.log(step)
 
 function showPets() {
   prevContainer.innerHTML = "";
