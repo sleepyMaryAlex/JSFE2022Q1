@@ -996,37 +996,49 @@ button {
 }
 
 @-webkit-keyframes animation-left {
-  from {
+  0% {
     left: 0;
   }
-  to {
+  60% {
+    left: 1110px;
+  }
+  100% {
     left: 1080px;
   }
 }
 
 @keyframes animation-left {
-  from {
+  0% {
     left: 0;
   }
-  to {
+  60% {
+    left: 1110px;
+  }
+  100% {
     left: 1080px;
   }
 }
 
 @media (max-width: 1279px) {
   @-webkit-keyframes animation-left {
-    from {
+    0% {
       left: 0;
     }
-    to {
+    60% {
+      left: 640px;
+    }
+    100% {
       left: 620px;
     }
   }
   @keyframes animation-left {
-    from {
+    0% {
       left: 0;
     }
-    to {
+    60% {
+      left: 640px;
+    }
+    100% {
       left: 620px;
     }
   }
@@ -1034,60 +1046,78 @@ button {
 
 @media (max-width: 767px) {
   @-webkit-keyframes animation-left {
-    from {
+    0% {
       left: 0;
     }
-    to {
+    60% {
+      left: 330px;
+    }
+    100% {
       left: 310px;
     }
   }
   @keyframes animation-left {
-    from {
+    0% {
       left: 0;
     }
-    to {
+    60% {
+      left: 330px;
+    }
+    100% {
       left: 310px;
     }
   }
 }
 
 .pets .slider .carousel .animation-right {
-  -webkit-animation: animation-right 0.7s;
-          animation: animation-right 0.7s;
+  -webkit-animation: animation-right 0.8s ease;
+          animation: animation-right 0.8s ease;
 }
 
 @-webkit-keyframes animation-right {
-  from {
+  0% {
     right: 0;
   }
-  to {
+  60% {
+    right: 1110px;
+  }
+  100% {
     right: 1080px;
   }
 }
 
 @keyframes animation-right {
-  from {
+  0% {
     right: 0;
   }
-  to {
+  60% {
+    right: 1110px;
+  }
+  100% {
     right: 1080px;
   }
 }
 
 @media (max-width: 1279px) {
   @-webkit-keyframes animation-right {
-    from {
+    0% {
       right: 0;
     }
-    to {
+    60% {
+      right: 640px;
+    }
+    100% {
       right: 620px;
     }
   }
   @keyframes animation-right {
-    from {
+    0% {
       right: 0;
     }
-    to {
+    60% {
+      right: 640px;
+    }
+    100% {
       right: 620px;
     }
   }
@@ -1095,18 +1125,24 @@ button {
 
 @media (max-width: 767px) {
   @-webkit-keyframes animation-right {
-    from {
+    0% {
       right: 0;
     }
-    to {
+    60% {
+      right: 330px;
+    }
+    100% {
       right: 310px;
     }
   }
   @keyframes animation-right {
-    from {
+    0% {
       right: 0;
     }
-    to {
+    60% {
+      right: 330px;
+    }
+    100% {
       right: 310px;
     }
   }

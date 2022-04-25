@@ -354,22 +354,26 @@
             }
 
             @keyframes animation-left {
-                from {
+                0% {
                     left: 0;
                 }
-
-                to {
+                60% {
+                    left: 1110px;
+                }
+                100% {
                     left: 1080px;
                 }
             }
 
             @media (max-width: $desktop) {
                 @keyframes animation-left {
-                    from {
+                    0% {
                         left: 0;
                     }
-
-                    to {
+                    60% {
+                        left: 640px;
+                    }
+                    100% {
                         left: 620px;
                     }
                 }
@@ -377,37 +381,43 @@
 
             @media (max-width: $tablet) {
                 @keyframes animation-left {
-                    from {
+                    0% {
                         left: 0;
                     }
-
-                    to {
+                    60% {
+                        left: 330px;
+                    }
+                    100% {
                         left: 310px;
                     }
                 }
             }
 
             .animation-right {
-                animation: animation-right 0.7s;
+                animation: animation-right 0.8s ease;
             }
 
             @keyframes animation-right {
-                from {
+                0% {
                     right: 0;
                 }
-
-                to {
+                60% {
+                    right: 1110px;
+                }
+                100% {
                     right: 1080px;
                 }
             }
 
             @media (max-width: $desktop) {
                 @keyframes animation-right {
-                    from {
+                    0% {
                         right: 0;
                     }
-
-                    to {
+                    60% {
+                        right: 640px;
+                    }
+                    100% {
                         right: 620px;
                     }
                 }
@@ -415,11 +425,13 @@
 
             @media (max-width: $tablet) {
                 @keyframes animation-right {
-                    from {
+                    0% {
                         right: 0;
                     }
-
-                    to {
+                    60% {
+                        right: 330px;
+                    }
+                    100% {
                         right: 310px;
                     }
                 }
