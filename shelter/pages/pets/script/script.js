@@ -1,4 +1,5 @@
 import pets from "../../main/script/pets.js";
+import { openPopup } from "../../main/script/popup.js";
 
 const wrapper = document.querySelector(".wrapper");
 
@@ -9,8 +10,9 @@ const lastPage = document.querySelector(".last-page");
 const prevPage = document.querySelector(".prev-page");
 const nextPage = document.querySelector(".next-page");
 const pageNumber = document.querySelector(".page-number");
-const cards = document.querySelectorAll(".card");
+const cardsContainer = document.querySelector(".cards-container");
 const btnRound = document.querySelectorAll(".button-round");
+
 
 let currentPage = 1;
 
@@ -75,8 +77,9 @@ function createArray() {
   } else if (wrapper.clientWidth >= 768) {
     for (let i = 0; i < 8; i++) {
       let subArray = [];
-      while (subArray.length < 6) {
-        let n = Math.floor(Math.random() * 6);
+      //  8 or 6
+      while (subArray.length < 8) {
+        let n = Math.floor(Math.random() * 8);
         if (!subArray.includes(n)) {
           subArray.push(n);
         }
@@ -86,8 +89,9 @@ function createArray() {
   } else if (wrapper.clientWidth < 768) {
     for (let i = 0; i < 16; i++) {
       let subArray = [];
-      while (subArray.length < 3) {
-        let n = Math.floor(Math.random() * 3);
+      // 8 or 3
+      while (subArray.length < 8) {
+        let n = Math.floor(Math.random() * 8);
         if (!subArray.includes(n)) {
           subArray.push(n);
         }
@@ -95,49 +99,47 @@ function createArray() {
       array.push(subArray);
     }
   }
-
   showCards(pets, array, currentPage);
 }
 createArray();
 
 function showCards(pets, array, currentPage) {
+  cardsContainer.innerHTML = "";
   pageNumber.textContent = currentPage;
   for (let i = 0; i < array[currentPage - 1].length; i++) {
-    cards[i].children[0].setAttribute(
-      "src",
-      pets[array[currentPage - 1][i]].img
-    );
-    cards[i].children[1].textContent = pets[array[currentPage - 1][i]].name;
+    const card = `<div class="card" data-pet="${pets[array[currentPage - 1][i]].name}">
+                      <img src=${pets[array[currentPage - 1][i]].img} alt="pet">
+                      <h4>${pets[array[currentPage - 1][i]].name}</h4>
+                      <button class="button secondary">Learn more</button>
+                  </div>`;
+    cardsContainer.insertAdjacentHTML("beforeend", card);
   }
-  if (currentPage === 6 && wrapper.clientWidth >= 1280) {
+  const cards = document.querySelectorAll(".card");
+  if ((currentPage === 6 && wrapper.clientWidth >= 1280) || (currentPage === 8 && wrapper.clientWidth >= 768) || (currentPage === 16 && wrapper.clientWidth < 768)) {
     btnRound.forEach((btn) => btn.classList.remove("active"));
     btnRound.forEach((btn) => btn.classList.remove("inactive"));
+    lastPage.removeAttribute("disabled");
+    firstPage.removeAttribute("disabled");
     nextPage.classList.add("inactive");
     lastPage.classList.add("inactive");
-    prevPage.classList.add("active");
-    firstPage.classList.add("active");
-  } else if (currentPage === 8 && wrapper.clientWidth >= 768) {
-    btnRound.forEach((btn) => btn.classList.remove("active"));
-    btnRound.forEach((btn) => btn.classList.remove("inactive"));
-    nextPage.classList.add("inactive");
-    lastPage.classList.add("inactive");
-    prevPage.classList.add("active");
-    firstPage.classList.add("active");
-  } else if (currentPage === 16 && wrapper.clientWidth < 768) {
-    btnRound.forEach((btn) => btn.classList.remove("active"));
-    btnRound.forEach((btn) => btn.classList.remove("inactive"));
-    nextPage.classList.add("inactive");
-    lastPage.classList.add("inactive");
+    lastPage.setAttribute("disabled", "true");
     prevPage.classList.add("active");
     firstPage.classList.add("active");
   } else if (currentPage === 1) {
     btnRound.forEach((btn) => btn.classList.remove("active"));
     btnRound.forEach((btn) => btn.classList.remove("inactive"));
+    lastPage.removeAttribute("disabled");
+    firstPage.removeAttribute("disabled");
     prevPage.classList.add("inactive");
     firstPage.classList.add("inactive");
+    firstPage.setAttribute("disabled", "true");
     nextPage.classList.add("active");
     lastPage.classList.add("active");
   } else {
+    lastPage.removeAttribute("disabled");
+    firstPage.removeAttribute("disabled");
     btnRound.forEach((btn) => btn.classList.add("active"));
   }
+  cards.forEach(card => card.addEventListener("click", openPopup));
 }
+

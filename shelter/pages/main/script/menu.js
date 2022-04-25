@@ -30,6 +30,6 @@ function showMenu() {
     navLinks.forEach(link => link.classList.toggle("menu-link"));
     logoLink.classList.toggle("logo-invisible");
     body.classList.toggle("body-overflow");
-    header.classList.toggle("header-position");
+    header.classList.toggle("header-darken");
     body.classList.toggle("body-overlay");
 }

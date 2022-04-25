@@ -1,44 +1,124 @@
 import pets from "./pets.js";
+import { openPopup } from "./popup.js";
 
 // ======= Slider =======
 
-const cards = document.querySelectorAll(".card");
-const arrowButtons = document.querySelectorAll(".arrow");
+const prevContainer = document.querySelector(".prev-container");
+const currContainer = document.querySelector(".curr-container");
+const nextContainer = document.querySelector(".next-container");
+const cardContainer = document.querySelector(".card-container");
+const arrowLeft = document.querySelector(".arrow-left");
+const arrowRight = document.querySelector(".arrow-right");
+const wrapper = document.querySelector(".wrapper");
 
-arrowButtons.forEach(btn => btn.addEventListener("click", choosePets));
+arrowLeft.addEventListener("click", moveLeft);
+arrowRight.addEventListener("click", moveRight);
 
-let indexes = [];
+let indexArray = [];
+// let step = wrapper.clientWidth < 768 ? 1 : wrapper.clientWidth >= 1280 ? 3 : 2; 
 
-choosePets();
-
-function choosePets() {
-    let prevIndexes = getFromLocalStorage();
-    indexes = [];
-
-    while (indexes.length < 3) {
-        let n = Math.floor(Math.random() * 8); 
-        if (!indexes.includes(n) && (prevIndexes === undefined || !prevIndexes.includes(n))) {
-            indexes.push(n);
-            saveToLocalStorage(indexes);
-        }
+function chooseIndexes() {
+  let isUnique = false;
+  while (isUnique === false && indexArray.length < 3) {
+    isUnique = true;
+    let subArray = [];
+    while (subArray.length < 3) {
+      let randomNumber = Math.floor(Math.random() * pets.length);
+      if (!subArray.includes(randomNumber)) {
+        subArray.push(randomNumber);
+      }
     }
-    showPets(pets, indexes);
-}
-
-function showPets(pets, indexes) {
-    for (let i = 0; i < indexes.length; i++) {
-        cards[i].children[0].setAttribute("src", pets[indexes[i]].img);
-        cards[i].children[1].textContent = pets[indexes[i]].name;
+    for (let n of subArray) {
+      if (indexArray.length === 0) {
+        indexArray.push(subArray);
+        isUnique = false;
+      } else if (indexArray[indexArray.length - 1].includes(n)) {
+        isUnique = false;
+      }
     }
-}
-
-function saveToLocalStorage(indexes) {
-    localStorage.setItem("prevIndexes", JSON.stringify(indexes));
-}
-
-function getFromLocalStorage() {
-    if (localStorage.getItem("prevIndexes")) {
-        return JSON.parse(localStorage.getItem("prevIndexes"));
+    if (isUnique === true) {
+      indexArray.push(subArray);
+      isUnique = false;
     }
+  }
+}
+chooseIndexes();
+
+showPets();
+
+function getUniqueSubArray(index) {
+  let isUnique = false;
+  let uniqueSubArray = [];
+  while (isUnique === false) {
+    isUnique = true;
+    let subArray = [];
+    while (subArray.length < 3) {
+      let randomNumber = Math.floor(Math.random() * pets.length);
+      if (!subArray.includes(randomNumber)) {
+        subArray.push(randomNumber);
+      }
+    }
+    for (let n of subArray) {
+      if (indexArray[index].includes(n)) {
+        isUnique = false;
+      }
+    }
+    uniqueSubArray = subArray;
+  }
+  return uniqueSubArray;
 }
 
+function moveLeft() {
+  indexArray.splice(0, 0, getUniqueSubArray(0));
+  indexArray.pop();
+  cardContainer.classList.add("animation-left");
+}
+
+function moveRight() {
+  indexArray.splice(
+    indexArray.length,
+    0,
+    getUniqueSubArray(indexArray.length - 1)
+  );
+  indexArray.shift();
+  cardContainer.classList.add("animation-right");
+}
+
+cardContainer.addEventListener("animationstart", () => {
+  arrowLeft.removeEventListener("click", moveLeft);
+  arrowRight.removeEventListener("click", moveRight);
+});
+
+cardContainer.addEventListener("animationend", () => {
+  arrowLeft.addEventListener("click", moveLeft);
+  arrowRight.addEventListener("click", moveRight);
+  cardContainer.classList.remove("animation-right");
+  cardContainer.classList.remove("animation-left");
+  showPets();
+});
+// console.log(step)
+
+function showPets() {
+  prevContainer.innerHTML = "";
+  currContainer.innerHTML = "";
+  nextContainer.innerHTML = "";
+  for (let i = 0; i < 3; i++) {
+    for (let k = 0; k < 3; k++) {
+      const card = `<div class="card" data-pet="${pets[indexArray[i][k]].name}">
+            <img src=${pets[indexArray[i][k]].img} alt="pet">
+            <h4>${pets[indexArray[i][k]].name}</h4>
+            <button class="button secondary">Learn more</button>
+        </div>`;
+      if (i === 0) {
+        prevContainer.insertAdjacentHTML("beforeend", card);
+      }
+      if (i === 1) {
+        currContainer.insertAdjacentHTML("beforeend", card);
+      }
+      if (i === 2) {
+        nextContainer.insertAdjacentHTML("beforeend", card);
+      }
+    }
+  }
+  currContainer.childNodes.forEach(card => card.addEventListener('click', openPopup));
+}
