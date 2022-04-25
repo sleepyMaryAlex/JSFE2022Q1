@@ -35,6 +35,14 @@
         }
         .card {
             margin: 15px 0;
+            animation: fading 0.3s;
+            @keyframes fading {
+                from {
+                    opacity: 0;
+                } to {
+                    opacity: 1;
+                }
+            }
             @media (max-width: $desktop) {
                 margin: 0;
             }

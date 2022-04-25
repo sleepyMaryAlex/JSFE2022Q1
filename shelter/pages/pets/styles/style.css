@@ -605,6 +605,7 @@ button {
   background-image: none;
   background-color: #ffffff;
   padding-top: 30px;
+  z-index: 1;
 }
 
 @media (max-width: 767px) {
@@ -730,6 +731,26 @@ button {
 
 .pets .cards-container .card {
   margin: 15px 0;
+  -webkit-animation: fading 0.3s;
+          animation: fading 0.3s;
+}
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1279px) {

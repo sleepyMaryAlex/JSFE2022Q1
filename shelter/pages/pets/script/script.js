@@ -9,6 +9,7 @@ const lastPage = document.querySelector(".last-page");
 const prevPage = document.querySelector(".prev-page");
 const nextPage = document.querySelector(".next-page");
 const pageNumber = document.querySelector(".page-number");
+const cardsContainer = document.querySelector(".cards-container");
 const cards = document.querySelectorAll(".card");
 const btnRound = document.querySelectorAll(".button-round");
 
@@ -76,7 +77,7 @@ function createArray() {
     for (let i = 0; i < 8; i++) {
       let subArray = [];
       //  8 or 6
-      while (subArray.length < 8) {   
+      while (subArray.length < 8) {
         let n = Math.floor(Math.random() * 8);
         if (!subArray.includes(n)) {
           subArray.push(n);
@@ -102,26 +103,17 @@ function createArray() {
 createArray();
 
 function showCards(pets, array, currentPage) {
+  cardsContainer.innerHTML = "";
   pageNumber.textContent = currentPage;
   for (let i = 0; i < array[currentPage - 1].length; i++) {
-    cards[i].children[0].setAttribute("src", pets[array[currentPage - 1][i]].img);
-    cards[i].children[1].textContent = pets[array[currentPage - 1][i]].name;
+    const card = `<div class="card">
+                      <img src=${pets[array[currentPage - 1][i]].img} alt="pet">
+                      <h4>${pets[array[currentPage - 1][i]].name}</h4>
+                      <button class="button secondary">Learn more</button>
+                  </div>`;
+    cardsContainer.insertAdjacentHTML("beforeend", card);
   }
-  if (currentPage === 6 && wrapper.clientWidth >= 1280) {
-    btnRound.forEach((btn) => btn.classList.remove("active"));
-    btnRound.forEach((btn) => btn.classList.remove("inactive"));
-    nextPage.classList.add("inactive");
-    lastPage.classList.add("inactive");
-    prevPage.classList.add("active");
-    firstPage.classList.add("active");
-  } else if (currentPage === 8 && wrapper.clientWidth >= 768) {
-    btnRound.forEach((btn) => btn.classList.remove("active"));
-    btnRound.forEach((btn) => btn.classList.remove("inactive"));
-    nextPage.classList.add("inactive");
-    lastPage.classList.add("inactive");
-    prevPage.classList.add("active");
-    firstPage.classList.add("active");
-  } else if (currentPage === 16 && wrapper.clientWidth < 768) {
+  if ((currentPage === 6 && wrapper.clientWidth >= 1280) || (currentPage === 8 && wrapper.clientWidth >= 768) || (currentPage === 16 && wrapper.clientWidth < 768)) {
     btnRound.forEach((btn) => btn.classList.remove("active"));
     btnRound.forEach((btn) => btn.classList.remove("inactive"));
     nextPage.classList.add("inactive");
