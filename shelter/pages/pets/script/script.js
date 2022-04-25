@@ -143,3 +143,12 @@ function showCards(pets, array, currentPage) {
   cards.forEach(card => card.addEventListener("click", openPopup));
 }
 
+window.addEventListener("resize", () => {
+  if (currentPage > 6 && wrapper.clientWidth >= 1280){
+    currentPage = 6;
+  } else if (currentPage > 8 && wrapper.clientWidth >= 768) {
+    currentPage = 8;
+  }
+  createArray();
+});
+
