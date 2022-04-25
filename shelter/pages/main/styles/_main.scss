@@ -263,66 +263,80 @@
                 @media (max-width: $tablet) {
                     width: 270px;
                 }
+
                 .prev-container {
                     position: absolute;
                     display: flex;
                     gap: 90px;
                     left: -1080px;
+
                     @media (max-width: $desktop) {
                         gap: 40px;
                         left: -620px;
                     }
+
                     @media (max-width: $tablet) {
                         left: -310px;
                     }
+
                     .card:last-child {
                         @media (max-width: $desktop) {
                             display: none;
                         }
                     }
+
                     .card:nth-child(2) {
                         @media (max-width: $tablet) {
                             display: none;
                         }
                     }
                 }
+
                 .curr-container {
                     position: absolute;
                     left: 0;
                     right: 0;
                     display: flex;
                     gap: 90px;
+
                     @media (max-width: $desktop) {
                         gap: 40px;
                     }
+
                     .card:last-child {
                         @media (max-width: $desktop) {
                             display: none;
                         }
                     }
+
                     .card:nth-child(2) {
                         @media (max-width: $tablet) {
                             display: none;
                         }
                     }
                 }
+
                 .next-container {
                     position: absolute;
                     right: -1080px;
                     display: flex;
                     gap: 90px;
+
                     @media (max-width: $desktop) {
                         gap: 40px;
                         right: -620px;
                     }
+
                     @media (max-width: $tablet) {
                         right: -310px;
                     }
+
                     .card:last-child {
                         @media (max-width: $desktop) {
                             display: none;
                         }
                     }
+
                     .card:nth-child(2) {
                         @media (max-width: $tablet) {
                             display: none;
@@ -334,30 +348,40 @@
                     margin: 0;
                 }
             }
+
             .animation-left {
                 animation: animation-left 0.8s ease;
             }
+
             @keyframes animation-left {
                 from {
                     left: 0;
-                } to {
+                }
+
+                to {
                     left: 1080px;
                 }
             }
+
             @media (max-width: $desktop) {
                 @keyframes animation-left {
                     from {
                         left: 0;
-                    } to {
+                    }
+
+                    to {
                         left: 620px;
                     }
                 }
             }
+
             @media (max-width: $tablet) {
                 @keyframes animation-left {
                     from {
                         left: 0;
-                    } to {
+                    }
+
+                    to {
                         left: 310px;
                     }
                 }
@@ -366,10 +390,13 @@
             .animation-right {
                 animation: animation-right 0.7s;
             }
+
             @keyframes animation-right {
                 from {
                     right: 0;
-                } to {
+                }
+
+                to {
                     right: 1080px;
                 }
             }
@@ -378,21 +405,26 @@
                 @keyframes animation-right {
                     from {
                         right: 0;
-                    } to {
+                    }
+
+                    to {
                         right: 620px;
                     }
                 }
             }
+
             @media (max-width: $tablet) {
                 @keyframes animation-right {
                     from {
                         right: 0;
-                    } to {
+                    }
+
+                    to {
                         right: 310px;
                     }
                 }
             }
-            
+
             .arrow:first-child {
                 @media (max-width: $tablet) {
                     order: 2;
@@ -472,6 +504,7 @@
                 width: 220px;
                 height: 345px;
                 margin: 0;
+                justify-content: center;
             }
 
             h3 {
@@ -493,6 +526,7 @@
 
                 @media (max-width: $tablet) {
                     text-align: center;
+                    margin: 12px 0;
                 }
             }
 
@@ -506,45 +540,33 @@
 
                 @media (max-width: $tablet) {
                     text-align: justify;
+                    margin-bottom: 12px;
                 }
             }
 
             ul {
-                list-style: none;
+                list-style-type: disc;
+                list-style-position: outside;
+
+                li::marker {
+                    color: $peach;
+                    font-size: 13px;
+                }
 
                 li {
                     margin-bottom: 11px;
                     font-family: Georgia, serif;
                     letter-spacing: 0.06em;
+                    margin-left: 14px;
+                    hyphens: auto;
 
                     @media (max-width: $desktop) {
                         margin-bottom: 5px;
                     }
 
-                    @media (max-width: $tablet) {
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                    }
-
-                    &::before {
-                        content: '';
-                        display: inline-block;
-                        margin-bottom: 3px;
-                        width: 4px;
-                        height: 4px;
-                        background-color: $peach;
-                        border-radius: 50%;
-
-                        @media (max-width: $tablet) {
-                            margin-bottom: 0;
-                            margin-top: 5px;
-                        }
-                    }
-
                     .span {
                         font-weight: 700;
-                        margin: 0 7px 0 10px;
+                        margin: 0 7px 0 0;
                     }
 
                     span {
