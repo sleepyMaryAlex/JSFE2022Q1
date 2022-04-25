@@ -118,18 +118,26 @@ function showCards(pets, array, currentPage) {
   if ((currentPage === 6 && wrapper.clientWidth >= 1280) || (currentPage === 8 && wrapper.clientWidth >= 768) || (currentPage === 16 && wrapper.clientWidth < 768)) {
     btnRound.forEach((btn) => btn.classList.remove("active"));
     btnRound.forEach((btn) => btn.classList.remove("inactive"));
+    lastPage.removeAttribute("disabled");
+    firstPage.removeAttribute("disabled");
     nextPage.classList.add("inactive");
     lastPage.classList.add("inactive");
+    lastPage.setAttribute("disabled", "true");
     prevPage.classList.add("active");
     firstPage.classList.add("active");
   } else if (currentPage === 1) {
     btnRound.forEach((btn) => btn.classList.remove("active"));
     btnRound.forEach((btn) => btn.classList.remove("inactive"));
+    lastPage.removeAttribute("disabled");
+    firstPage.removeAttribute("disabled");
     prevPage.classList.add("inactive");
     firstPage.classList.add("inactive");
+    firstPage.setAttribute("disabled", "true");
     nextPage.classList.add("active");
     lastPage.classList.add("active");
   } else {
+    lastPage.removeAttribute("disabled");
+    firstPage.removeAttribute("disabled");
     btnRound.forEach((btn) => btn.classList.add("active"));
   }
   cards.forEach(card => card.addEventListener("click", openPopup));
