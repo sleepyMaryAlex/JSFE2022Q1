@@ -62,6 +62,66 @@ firstPage.addEventListener("click", () => {
 
 let array = [];
 
+// function initializeArray() {
+//   for (let i = 0; i < 6; i++) {
+//     for (let j = 0; j < 8; j++) {
+//       array.push(j);
+//     }
+//   }
+
+//   let pageSize = getPageSize();
+
+//   for (let i = 0; i < array.length / pageSize; i++) {
+//     shuffleArray(i * pageSize, (i + 1) * pageSize);
+//   }
+
+  // do {
+  //   shuffleArray();
+  // } while (!areElementsUnique(8));
+
+//   showCards(pets, array, currentPage);
+// }
+
+// function shuffleArray(indexFrom, indexTo) {
+//   let pageSize = indexTo - indexFrom;
+//   for (let i = indexFrom; i < indexTo; i++) {
+//     const j = indexFrom + Math.floor(Math.random() * pageSize);
+//     [array[i], array[j]] = [array[j], array[i]];
+//   }
+// }
+
+// function areElementsUnique(pageSize) {
+//   for (let i = 0; i < array.length / pageSize; i++) {
+//     if (!areSubarrayElementsUnique(pageSize * i, pageSize * (i + 1))) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// function areSubarrayElementsUnique(indexFrom, indexTo) {
+//   for (let i = indexFrom; i < indexTo; i++) {
+//     for (let j = i + 1; j < indexTo; j++) {
+//       if (array[i] == array[j]) {
+//         return false;
+//       }
+//     }
+//   }
+//   return true;
+// }
+
+// initializeArray();
+
+// function getPageSize() {
+//   if (wrapper.clientWidth >= 1280) {
+//     return 8
+//   } else if (wrapper.clientWidth >= 768) {
+//     return 6;
+//   } else {
+//     return 3;
+//   }
+// }
+
 function createArray() {
   if (wrapper.clientWidth >= 1280) {
     for (let i = 0; i < 6; i++) {
@@ -106,6 +166,16 @@ createArray();
 function showCards(pets, array, currentPage) {
   cardsContainer.innerHTML = "";
   pageNumber.textContent = currentPage;
+  // let pageSize = getPageSize();
+  // for (let i = 0; i < pageSize; i++) {
+  //   let index = array[(currentPage - 1) * pageSize + i];
+  //   const card = `<div class="card" data-pet="${pets[index].name}">
+  //                     <img src=${pets[index].img} alt="pet">
+  //                     <h4>${pets[index].name}</h4>
+  //                     <button class="button secondary">Learn more</button>
+  //                 </div>`;
+  //   cardsContainer.insertAdjacentHTML("beforeend", card);
+  // }
   for (let i = 0; i < array[currentPage - 1].length; i++) {
     const card = `<div class="card" data-pet="${pets[array[currentPage - 1][i]].name}">
                       <img src=${pets[array[currentPage - 1][i]].img} alt="pet">
@@ -151,4 +221,13 @@ window.addEventListener("resize", () => {
   }
   createArray();
 });
+
+// window.addEventListener("resize", () => {
+//   if (currentPage > 6 && wrapper.clientWidth >= 1280){
+//     currentPage = 6;
+//   } else if (currentPage > 8 && wrapper.clientWidth >= 768) {
+//     currentPage = 8;
+//   }
+//   initializeArray();
+// });
 

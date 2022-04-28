@@ -622,6 +622,7 @@ button {
 
 @media (max-width: 767px) {
   .header .burger .line {
+    z-index: 3;
     background-color: #000000;
   }
 }
@@ -669,8 +670,16 @@ button {
 }
 
 @media (max-width: 767px) {
-  .header-darken {
-    background-color: #999999;
+  .header-position {
+    position: inherit;
+    z-index: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .burger-fixed {
+    position: fixed;
+    right: 10px;
   }
 }
 

@@ -13,6 +13,7 @@
     .burger {
         .line {
             @media (max-width: $tablet) {
+                z-index: 3;
                 background-color: #000000;
             }
         }
@@ -59,8 +60,16 @@
     }
 }
 
-.header-darken {
+.header-position {
     @media (max-width: $tablet) {
-        background-color: darken($white, 40%);
+        position: inherit;
+        z-index: auto;
+    }
+}
+
+.burger-fixed {
+    @media (max-width: $tablet) {
+        position: fixed;
+        right: 10px;
     }
 }
