@@ -13,7 +13,6 @@ var AppView = /** @class */ (function () {
         this.news.draw(values);
     };
     AppView.prototype.drawSources = function (data) {
-        console.log(data);
         var values = (data === null || data === void 0 ? void 0 : data.sources) ? data === null || data === void 0 ? void 0 : data.sources : [];
         this.sources.draw(values);
     };
