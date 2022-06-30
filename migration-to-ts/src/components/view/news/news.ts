@@ -1,22 +1,9 @@
+import { IArticle } from '../../../types/index';
 import './news.css';
 
-interface Data {
-    source: {
-        id: string;
-        name: string;
-    };
-    publishedAt: string;
-    urlToImage: string;
-    content: string;
-    author: string;
-    title: string;
-    description: string;
-    url: string;
-}
-
 class News {
-    draw(data: Data[]) {
-        const news: Data[] = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
+    draw(data: IArticle[]) {
+        const news: IArticle[] = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
 
         const fragment: DocumentFragment = document.createDocumentFragment();
         const newsItemTemp: HTMLTemplateElement | null = document.querySelector('#newsItemTemp');

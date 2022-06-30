@@ -1,17 +1,8 @@
+import { ISources } from '../../../types/index';
 import './sources.css';
 
-interface Data {
-    id: string;
-    name: string;
-    description: string;
-    url: string;
-    category: string;
-    country: string;
-    language: string;
-}
-
 class Sources {
-    draw(data: Data[]) {
+    draw(data: ISources[]) {
         const fragment: DocumentFragment = document.createDocumentFragment();
         const sourceItemTemp: HTMLTemplateElement | null = document.querySelector('#sourceItemTemp');
 

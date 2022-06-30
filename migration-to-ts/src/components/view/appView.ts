@@ -1,33 +1,6 @@
+import { IDataArticles, IDataSources } from '../../types/index';
 import News from './news/news';
 import Sources from './sources/sources';
-
-interface DataArticles {
-    articles: {
-        author: string;
-        content: string;
-        description: string;
-        publishedAt: string;
-        source: {
-            id: string;
-            name: string;
-        };
-        title: string;
-        url: string;
-        urlToImage: string;
-    }[];
-}
-
-interface DataSources {
-    sources: {
-        category: string;
-        country: string;
-        description: string;
-        id: string;
-        language: string;
-        name: string;
-        url: string;
-    }[];
-}
 
 export class AppView {
     news: News;
@@ -37,12 +10,12 @@ export class AppView {
         this.sources = new Sources();
     }
 
-    drawNews(data: DataArticles) {
+    drawNews(data: IDataArticles) {
         const values = data?.articles ? data?.articles : [];
         this.news.draw(values);
     }
 
-    drawSources(data: DataSources) {
+    drawSources(data: IDataSources) {
         const values = data?.sources ? data?.sources : [];
         this.sources.draw(values);
     }
