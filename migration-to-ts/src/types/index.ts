@@ -38,3 +38,5 @@ export type Option = {
 };
 
 export type targetType = EventTarget | null;
+
+export type CallbackGeneric<T> = (data?: T) => void;

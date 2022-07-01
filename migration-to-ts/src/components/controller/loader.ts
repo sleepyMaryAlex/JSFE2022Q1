@@ -1,4 +1,4 @@
-import { Option } from '../../types/index';
+import { CallbackGeneric, Option } from '../../types/index';
 
 enum StatusCodes {
     UNAUTHORIZED = 401,
@@ -13,13 +13,13 @@ class Loader {
         this.options = options;
     }
 
-    protected getResp(
+    protected getResp<T>(
         { endpoint = '', options = {} },
-        callback = () => {
+        callback: CallbackGeneric<T> = () => {
             console.error('No callback for GET response');
         }
     ) {
-        this.load('GET', endpoint, callback, options);
+        this.load<T>('GET', endpoint, callback, options);
     }
 
     private errorHandler(res: Response) {
@@ -43,11 +43,11 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    private load(method: string, endpoint: string, callback: (data: object) => void, options = {}) {
+    private load<T>(method: string, endpoint: string, callback: CallbackGeneric<T>, options = {}) {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => (res as Response).json())
-            .then((data: object) => callback(data))
+            .then((data: T) => callback(data))
             .catch((err) => console.error(err));
     }
 }
