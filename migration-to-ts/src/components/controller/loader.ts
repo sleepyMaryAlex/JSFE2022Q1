@@ -1,3 +1,8 @@
+enum StatusCodes {
+    UNAUTHORIZED = 401,
+    NOT_FOUND = 404,
+}
+
 class Loader {
     baseLink: string;
     options: {
@@ -19,7 +24,7 @@ class Loader {
 
     errorHandler(res: Response) {
         if (!res.ok) {
-            if (res.status === 401 || res.status === 404)
+            if (res.status === StatusCodes.UNAUTHORIZED || res.status === StatusCodes.NOT_FOUND)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
             throw Error(res.statusText);
         }
