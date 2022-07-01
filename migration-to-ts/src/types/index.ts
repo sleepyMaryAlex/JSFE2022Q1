@@ -32,3 +32,9 @@ export interface IArticle {
     publishedAt: string;
     content: string;
 }
+
+export type Option = {
+    [prop: string]: string;
+};
+
+export type targetType = EventTarget | null;

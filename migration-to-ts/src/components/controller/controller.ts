@@ -1,3 +1,4 @@
+import { targetType } from '../../types/index';
 import AppLoader from './appLoader';
 
 class AppController extends AppLoader {
@@ -11,8 +12,8 @@ class AppController extends AppLoader {
     }
 
     public getNews(e: Event, callback: (data?: object) => void) {
-        let target: EventTarget | null = e.target;
-        const newsContainer: EventTarget | null = e.currentTarget;
+        let target: targetType = e.target;
+        const newsContainer: targetType = e.currentTarget;
 
         while (target !== newsContainer) {
             if ((target as HTMLElement).classList.contains('source__item')) {

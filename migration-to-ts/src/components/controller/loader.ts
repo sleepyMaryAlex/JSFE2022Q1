@@ -1,3 +1,5 @@
+import { Option } from '../../types/index';
+
 enum StatusCodes {
     UNAUTHORIZED = 401,
     NOT_FOUND = 404,
@@ -5,10 +7,8 @@ enum StatusCodes {
 
 class Loader {
     private baseLink: string;
-    protected options: {
-        apiKey: string;
-    };
-    constructor(baseLink: string, options: { apiKey: string }) {
+    protected options: Option;
+    constructor(baseLink: string, options: Option) {
         this.baseLink = baseLink;
         this.options = options;
     }
