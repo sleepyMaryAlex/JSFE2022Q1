@@ -7,7 +7,7 @@ enum StatusCodes {
 
 class Loader {
     private baseLink: string;
-    protected options: Option;
+    private options: Option;
     constructor(baseLink: string, options: Option) {
         this.baseLink = baseLink;
         this.options = options;
