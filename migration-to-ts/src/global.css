@@ -23,11 +23,11 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    color: #fff;
+    color: #aaa;
 }
 
 .footer-data span:nth-child(2) {
-    margin: 0 40px;
+    margin-right: 2px;
 }
 
 .rs-img {
@@ -37,7 +37,7 @@ footer {
 }
 
 .rs-img:hover {
-    filter: invert(40%) sepia(0%) saturate(638%) hue-rotate(510deg) brightness(92%) contrast(87%);
+    filter: invert(80%) sepia(0%) saturate(638%) hue-rotate(5deg) brightness(92%) contrast(87%);
 }
 
 .github-link {
@@ -52,19 +52,21 @@ footer {
 
 footer .copyright {
     font-size: 14px;
-    color: #333;
+    color: #aaa;
     text-align: center;
 }
 
 footer .copyright a {
-    color: #444;
+    text-decoration: none;
+    color: #aaa;
     transition: color 0.6s;
 }
 
 footer .copyright a:hover {
-    color: #555;
+    color: #fff;
 }
 
 footer .copyright:before {
     content: '©';
+    padding-right: 5px;
 }
