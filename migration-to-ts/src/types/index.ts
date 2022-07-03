@@ -20,10 +20,7 @@ export interface IDataArticles {
 }
 
 export interface IArticle {
-    source: {
-        id: string;
-        name: string;
-    };
+    source: Pick<ISources, 'id' | 'name'>;
     author: string;
     title: string;
     description: string;
