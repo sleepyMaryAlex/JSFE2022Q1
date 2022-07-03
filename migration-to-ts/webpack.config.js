@@ -41,6 +41,10 @@ const baseConfig = {
                     from: path.resolve(__dirname, 'src', 'img', 'rs_school_js.svg'),
                     to: path.resolve(__dirname, 'dist', 'img', 'rs_school_js.svg'),
                 },
+                {
+                    from: path.resolve(__dirname, 'src', 'img', 'news_placeholder.jpg'),
+                    to: path.resolve(__dirname, 'dist', 'img', 'news_placeholder.jpg'),
+                },
             ],
         }),
     ],
