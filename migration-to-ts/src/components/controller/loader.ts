@@ -33,8 +33,8 @@ class Loader {
     }
 
     private makeUrl(options: Partial<Option>, endpoint: string) {
-        const urlOptions = { ...this.options, ...options };
-        let url = `${this.baseLink}${endpoint}?`;
+        const urlOptions: { [x: string]: string | undefined } = { ...this.options, ...options };
+        let url: string | undefined = `${this.baseLink}${endpoint}?`;
 
         Object.keys(urlOptions).forEach((key) => {
             url += `${key}=${urlOptions[key as keyof typeof urlOptions]}&`;
