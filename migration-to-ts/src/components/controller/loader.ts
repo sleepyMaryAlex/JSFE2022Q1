@@ -1,4 +1,4 @@
-import { CallbackGeneric, Option } from '../../types/index';
+import { CallbackGeneric, getRespObj, Option } from '../../types/index';
 
 enum StatusCodes {
     UNAUTHORIZED = 401,
@@ -14,12 +14,12 @@ class Loader {
     }
 
     protected getResp<T>(
-        { endpoint = '', options = {} },
+        obj: getRespObj,
         callback: CallbackGeneric<T> = () => {
             console.error('No callback for GET response');
         }
     ) {
-        this.load<T>('GET', endpoint, callback, options);
+        this.load<T>('GET', obj.endpoint, callback, obj.options as Option);
     }
 
     private errorHandler(res: Response) {
@@ -37,7 +37,7 @@ class Loader {
         let url: string | undefined = `${this.baseLink}${endpoint}?`;
 
         Object.keys(urlOptions).forEach((key) => {
-            url += `${key}=${urlOptions[key as keyof typeof urlOptions]}&`;
+            url += `${key}=${urlOptions[key]}&`;
         });
 
         return url.slice(0, -1);

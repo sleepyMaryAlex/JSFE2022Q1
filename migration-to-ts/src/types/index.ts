@@ -34,6 +34,11 @@ export type Option = {
     [prop: string]: string;
 };
 
+export type getRespObj = {
+    endpoint: string;
+    options?: Option;
+};
+
 export type targetType = EventTarget | null;
 
 export type CallbackGeneric<T> = (data?: T) => void;
