@@ -1,0 +1,146 @@
+.header {
+    color: #fafafa;
+    @extend %space-between;
+    background-image: url(../../../assets/images/background.png);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: 100%;
+    padding: 60px 40px 0 40px;
+    @media (max-width: $desktop) {
+        background-image: url(../../../assets/images/background-768.png);
+        padding: 30px 30px 0 30px;
+    }
+    @media (max-width: $tablet) {
+        background-image: url(../../../assets/images/background-320.png);
+        padding: 30px 10px 0 10px;
+        padding-left: 3%;
+        align-items: center;
+        column-gap: 41px;
+    }
+}
+
+.burger {
+    display: none;
+    @media (max-width: $tablet) {
+        display: block;
+        width: 30px;
+        height: 22px;
+        margin-right: 43px;
+        cursor: pointer;
+        transition: transform 0.6s;
+        z-index: 3;
+    }
+    .line {
+        width: 30px;
+        height: 2px;
+        background-color: $peach;
+        &:nth-child(2) {
+            margin: 8px 0;
+        }
+    }
+}
+
+.rotated {
+    transform: rotate(90deg);
+}
+
+.logo {
+    width: 186px;
+    height: 60px;
+    cursor: pointer;
+    h1 {
+        letter-spacing: 0.06em;
+        color: $peach;
+        transition: color 0.6s;
+    }
+    p {
+        font-size: 13px;
+        color: $white;
+        letter-spacing: 0.1em;
+        line-height: 15px;
+        margin-left: 4px;
+        margin-top: 9px;
+        transition: color 0.6s;
+    }
+}
+
+.nav {
+    @media (max-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        height: 100vh;
+        background-color: #292929;
+        position: fixed;
+        top: 0;
+        right: -320px;
+        transition: all 0.6s ease-out;
+        z-index: 2;
+    }
+    .nav-logo {
+        display: none;
+        @media (max-width: $tablet) {
+            display: block;
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+    }
+    ul {
+        @extend %space-between;
+        @media (max-width: $tablet) {
+            width: 282px;
+            height: 320px;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            font-size: 32px;
+        }
+        li {
+            margin: 20px 0;
+            margin-left: 35px;
+            padding-bottom: 2px;
+            list-style: none;
+            @media (max-width: $tablet) {
+                margin: 0;
+                margin-left: 39px;
+                padding-bottom: 7px;
+            }
+            a {
+                letter-spacing: 0.05px;
+                color: #cdcdcd;
+                transition: color 0.5s;
+                &:hover {
+                    color: #fafafa;
+                }
+            }
+        }
+        .active-link {
+            border-bottom: 3px solid $peach;
+            a {
+                color: #fafafa;
+            }
+        }
+    }
+}
+
+.menu-visible {
+    @media (max-width: $tablet) {
+        right: 0;
+        transition: all 0.6s ease-in;
+    }
+}
+
+.logo-invisible {
+    @media (max-width: $tablet) {
+        h1, p {
+            color: transparent;
+        }
+    }
+}
+
+.invisible {
+    display: none;
+}
+
+
+

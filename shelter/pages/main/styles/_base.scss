@@ -1,0 +1,86 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    background-color: #f6f6f6;
+}
+
+h1, h2, h3, h4, h5, button {
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 44px;
+}
+
+h3 {
+    font-size: 35px;
+    letter-spacing: 0.06em;
+    line-height: 130%;
+    color: $dark;
+    @media (max-width: $tablet) {
+        font-size: 25px;
+    }
+}
+
+h4 {
+    font-size: 20px;
+    letter-spacing: 0.06em;
+}
+
+h5 {
+    font-size: 15px;
+    letter-spacing: 0.06em;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.body-overflow {
+    @media (max-width: $tablet) {
+        overflow-y: hidden;
+    }
+}
+
+.body-overlay:before {
+    @media (max-width: $tablet) {
+        content: '';
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(41, 41, 41, 0.6);
+        z-index: 1;
+    }
+}
+

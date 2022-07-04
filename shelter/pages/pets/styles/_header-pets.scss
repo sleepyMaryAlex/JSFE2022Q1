@@ -1,0 +1,75 @@
+.header {
+    position: sticky;
+    top: 0;
+    height: 120px;
+    width: 100%;
+    background-image: none;
+    background-color: $white;
+    padding-top: 30px;
+    z-index: 1;
+    @media (max-width: $tablet) {
+        padding-top: 0;
+    }
+    .burger {
+        .line {
+            @media (max-width: $tablet) {
+                z-index: 3;
+                background-color: #000000;
+            }
+        }
+    }
+    .logo {
+        h1 {
+            color: $dark;
+        }
+        p {
+            color: #292929;
+        }
+    }
+    .logo-invisible {
+        @media (max-width: $tablet) {
+            h1, p {
+                color: transparent;
+            }
+        }
+    }
+    .nav {
+        @media (max-width: 767px) {
+            background-color: $white;
+        }
+        ul {
+            li {
+                &:first-child {
+                    border-bottom: none;
+                }
+                a {
+                    color: $dark;
+                    transition: color 0.5s;
+                    &:hover {
+                        color: #292929;
+                    }
+                }
+                &:nth-child(2) {
+                    border-bottom: 3px solid $peach;
+                    a {
+                        color: #292929;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header-position {
+    @media (max-width: $tablet) {
+        position: inherit;
+        z-index: auto;
+    }
+}
+
+.burger-fixed {
+    @media (max-width: $tablet) {
+        position: fixed;
+        right: 10px;
+    }
+}
