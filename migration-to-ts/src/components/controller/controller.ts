@@ -3,7 +3,7 @@ import { targetType } from '../../types/index';
 import AppLoader from './appLoader';
 
 class AppController extends AppLoader {
-    public getSources<T>(callback: CallbackGeneric<T>) {
+    public getSources<T>(callback: CallbackGeneric<T>): void {
         super.getResp<T>(
             {
                 endpoint: 'sources',
@@ -12,7 +12,7 @@ class AppController extends AppLoader {
         );
     }
 
-    public getNews<T>(e: Event, callback: CallbackGeneric<T>) {
+    public getNews<T>(e: Event, callback: CallbackGeneric<T>): void {
         const input: HTMLElement = document.querySelector('.input') as HTMLElement;
         (input as HTMLInputElement).value = '';
 
@@ -40,8 +40,7 @@ class AppController extends AppLoader {
         }
     }
 
-    public getNewsByPhrase<T>(callback: CallbackGeneric<T>) {
-        
+    public getNewsByPhrase<T>(callback: CallbackGeneric<T>): void {
         const input: HTMLElement = document.querySelector('.input') as HTMLElement;
         const inputValue: string = (input as HTMLInputElement).value;
 
@@ -58,7 +57,7 @@ class AppController extends AppLoader {
         }
     }
 
-    public getInitialNews<T>(callback: CallbackGeneric<T>) {
+    public getInitialNews<T>(callback: CallbackGeneric<T>): void {
         super.getResp<T>(
             {
                 endpoint: 'everything',

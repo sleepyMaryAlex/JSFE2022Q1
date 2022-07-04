@@ -31,7 +31,7 @@ export interface IArticle {
 }
 
 export type Option = {
-    [prop: string]: string;
+    [prop: string]: string | undefined;
 };
 
 export type getRespObj = {

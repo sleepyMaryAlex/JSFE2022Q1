@@ -18,11 +18,11 @@ class Loader {
         callback: CallbackGeneric<T> = () => {
             console.error('No callback for GET response');
         }
-    ) {
+    ): void {
         this.load<T>('GET', obj.endpoint, callback, obj.options as Option);
     }
 
-    private errorHandler(res: Response) {
+    private errorHandler(res: Response): Response {
         if (!res.ok) {
             if (res.status === StatusCodes.UNAUTHORIZED || res.status === StatusCodes.NOT_FOUND)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
@@ -32,8 +32,8 @@ class Loader {
         return res;
     }
 
-    private makeUrl(options: Partial<Option>, endpoint: string) {
-        const urlOptions: { [x: string]: string | undefined } = { ...this.options, ...options };
+    private makeUrl(options: Partial<Option>, endpoint: string): string {
+        const urlOptions: Option = { ...this.options, ...options };
         let url: string | undefined = `${this.baseLink}${endpoint}?`;
 
         Object.keys(urlOptions).forEach((key) => {
@@ -43,7 +43,7 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    private load<T>(method: string, endpoint: string, callback: CallbackGeneric<T>, options: Partial<Option>) {
+    private load<T>(method: string, endpoint: string, callback: CallbackGeneric<T>, options: Partial<Option>): void {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => (res as Response).json())
