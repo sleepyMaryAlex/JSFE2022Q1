@@ -12,11 +12,29 @@ body {
 
 header {
     padding: 20px 20px;
+    display: grid;
+    grid-template-columns: 265px 1fr;
 }
 
 header h1 {
     font-size: 34px;
     font-weight: 800;
+}
+
+.input {
+    width: 300px;
+    height: 10px;
+    font-size: inherit;
+    margin: auto;
+    padding: 10px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0.5em 0.5em -0.4em #3fcc59;
+    transition: border 0.3s;
+}
+
+.input:focus {
+    border: 2px solid #3fcc59;
 }
 
 main {
