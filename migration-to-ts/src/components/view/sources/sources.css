@@ -1,11 +1,27 @@
 .sources {
     display: flex;
     flex-wrap: nowrap;
-    width: 100%;
-    height: 120px;
+    flex-direction: column;
+    height: 2690px;
     overflow: auto;
     align-items: center;
     font: 300 1em 'Fira Sans', sans-serif;
+    border-right: 4px solid #0e303e90;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #0e303e90;
+    border-radius: 5px;
+}
+
+.sources::-webkit-scrollbar {
+    width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #30c5ff;
+    border-radius: 5px;
 }
 
 .source__item {
@@ -14,7 +30,7 @@
     font: inherit;
     line-height: 1;
     margin: 0.5em;
-    padding: 1em 2em;
+    padding: 0.7em 0.7em;
     color: #70d6ff;
     transition: 0.25s;
     cursor: pointer;
