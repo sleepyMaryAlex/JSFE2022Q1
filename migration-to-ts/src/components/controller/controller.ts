@@ -13,6 +13,9 @@ class AppController extends AppLoader {
     }
 
     public getNews<T>(e: Event, callback: CallbackGeneric<T>) {
+        const input: HTMLElement = document.querySelector('.input') as HTMLElement;
+        (input as HTMLInputElement).value = '';
+
         let target: targetType = e.target;
         const newsContainer: targetType = e.currentTarget;
 
@@ -34,6 +37,23 @@ class AppController extends AppLoader {
                 return;
             }
             target = (target as HTMLElement).parentNode;
+        }
+    }
+
+    public getNewsByPhrase<T>(callback: CallbackGeneric<T>) {
+        const input: HTMLElement = document.querySelector('.input') as HTMLElement;
+        const inputValue: string = (input as HTMLInputElement).value;
+
+        if (inputValue.trim() !== '') {
+            super.getResp<T>(
+                {
+                    endpoint: 'everything',
+                    options: {
+                        q: inputValue,
+                    },
+                },
+                callback
+            );
         }
     }
 }
