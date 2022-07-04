@@ -15,6 +15,7 @@ class App {
             this.controller.getNews<IDataArticles>(e, (data) => this.view.drawNews(data as IDataArticles))
         );
         this.controller.getSources<IDataSources>((data) => this.view.drawSources(data as IDataSources));
+        this.controller.getInitialNews<IDataArticles>((data) => this.view.drawNews(data as IDataArticles));
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
                 this.controller.getNewsByPhrase<IDataArticles>((data) => this.view.drawNews(data as IDataArticles));

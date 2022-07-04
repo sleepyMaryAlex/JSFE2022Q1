@@ -41,6 +41,7 @@ class AppController extends AppLoader {
     }
 
     public getNewsByPhrase<T>(callback: CallbackGeneric<T>) {
+        
         const input: HTMLElement = document.querySelector('.input') as HTMLElement;
         const inputValue: string = (input as HTMLInputElement).value;
 
@@ -55,6 +56,18 @@ class AppController extends AppLoader {
                 callback
             );
         }
+    }
+
+    public getInitialNews<T>(callback: CallbackGeneric<T>) {
+        super.getResp<T>(
+            {
+                endpoint: 'everything',
+                options: {
+                    q: 'Trump',
+                },
+            },
+            callback
+        );
     }
 }
 
