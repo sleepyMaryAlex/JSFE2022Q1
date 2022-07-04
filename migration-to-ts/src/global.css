@@ -91,3 +91,36 @@ footer .copyright a:hover {
 footer .copyright:before {
     content: '©';
 }
+
+@media (max-width: 650px) {
+    header {
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 60px;
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 180px 1fr;
+    }
+
+    footer {
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .input {
+        width: 250px;
+        height: 10px;
+    }
+}

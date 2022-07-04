@@ -48,3 +48,13 @@
     font-weight: 400;
     white-space: nowrap;
 }
+
+@media (max-width: 650px) {
+    .sources {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        height: 180px;
+        border-right: none;
+    }
+}
