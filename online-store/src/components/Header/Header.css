@@ -1,0 +1,221 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    height: 170px;
+    position: fixed;
+    background-color: transparent;
+    z-index: 2;
+    transition: background-color 0.6s;
+}
+
+.header:hover {
+    background-color: var(--main-bg-color);
+}
+
+.header__img {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.header__logo .logo {
+    width: 280px;
+    cursor: pointer;
+    margin: 0 20px;
+    transition: color 0.7s;
+}
+
+.header__logo_transparent {
+    color: transparent;
+}
+
+.header__logo .logo__title {
+    font-family: 'Noto Serif Display', serif;
+    font-size: 140px;
+    align-self: flex-end;
+    letter-spacing: -27px;
+    margin-bottom: -25px;
+    margin-top: -30px;
+}
+
+.header__logo .logo__subtitle {
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.header__categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 320px;
+    padding: 15px;
+}
+
+.header__input {
+    width: 200px;
+    height: 30px;
+    margin-top: 22px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--font-color);
+    font-size: inherit;
+    background-color: transparent;
+}
+
+.header__input-container {
+    position: relative;
+}
+
+.input__close-button {
+    display: none;
+    width: 15px;
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: #000;
+    font-weight: bold;
+}
+
+.header__filters {
+    padding: 10px;
+    border: 2px solid var(--font-color);
+    margin: 20px 10px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.categories__item {
+    cursor: pointer;
+}
+
+@media (min-width: 1650px) {
+    .header {
+        width: auto;
+        min-width: 1610px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .header__input-container {
+        position: absolute;
+        left: calc(68.5% - 164px);
+    }
+
+    .header__input {
+        width: 275px;
+    }
+}
+
+@media (max-width: 850px) {
+    .header__logo {
+        width: 190px;
+        align-self: flex-end;
+        padding-bottom: 15px;
+    }
+    
+    .header__logo .logo__title {
+        font-size: 100px;
+        margin-top: 0;
+    }
+    
+    .header__logo .logo__subtitle {
+        letter-spacing: 1px;
+        text-align: start;
+    }
+
+    .header__input-container {
+        left: calc(65% - 164px);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 54px 120px 50px;
+        grid-template-areas: "burger search search search search"
+                            "logo logo logo filters filters"
+                            "category category category category category";
+    }
+
+    .header__input-container {
+        grid-area: search;
+        width: min-content;
+        left: auto;
+        right: 10px;
+    }
+
+    .header__logo {
+        grid-area: logo;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        left: 70px;
+    }
+
+    .header-img {
+        grid-area: burger;
+    }
+
+    .header__categories {
+        grid-area: category;
+        width: 320px;
+        margin-left: calc(50% - 160px);
+    }
+
+    .header__filters {
+        grid-area: filters;
+        width: fit-content;
+        position: absolute;
+        text-align: center;
+    }
+
+    .header {
+        height: 224px;
+    }
+}
+
+@media (max-width: 520px) {
+    .header__input {
+        width: 200px;
+    }
+
+    .header__filters {
+        right: 0;
+    }
+}
+
+@media (max-width: 430px) {
+    .header__logo {
+        left: 0;
+    }
+
+    .header__logo .logo__title {
+        font-size: 95px;
+    }
+    
+    .header__logo .logo__subtitle {
+        letter-spacing: 0;
+    }
+
+    .header__logo {
+        width: 180px;
+    }
+}
+
+.input__close-button_active {
+    display: block;
+}
+
+.categories__item_active {
+    font-weight: bold;
+}

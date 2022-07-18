@@ -1,0 +1,15 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 40px;
+    margin-top: 170px;
+    padding: 0 2px;
+}
+
+@media (max-width: 768px) {
+    .main {
+        margin-top: 230px;
+    }
+}

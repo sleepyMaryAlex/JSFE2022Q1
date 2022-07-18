@@ -1,0 +1,131 @@
+.popup {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--main-bg-color);
+    z-index: 5;
+    left: -1px;
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow-y: auto;
+}
+
+.popup__addition,
+.popup__info {
+    text-align: center;
+    width: 35%;
+    height: 300px;
+    margin-top: calc(50vh - 150px);
+}
+
+.popup__addition {
+    height: 500px;
+    margin-top: calc(50vh - 250px);
+}
+
+.popup__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 40px;
+}
+
+.popup__info > * {
+    margin-bottom: 35px;
+}
+
+.popup__image {
+    width: 350px;
+    height: 525px;
+    margin-top: calc(50vh - 262.5px);
+}
+
+.popup::-webkit-scrollbar {
+    width: 0;
+}
+
+.addition__category,
+.addition__color,
+.addition__size,
+.addition__brand,
+.addition__year,
+.addition__quantity {
+    margin: 35px 0;
+}
+
+.size__title,
+.color__title,
+.brand__title,
+.year__title,
+.quantity__title,
+.category__title {
+    margin-bottom: 10px;
+}
+
+.info__price {
+    background-color: var(--contrast-color);
+    padding: 3px;
+    width: fit-content;
+}
+
+.info__title,
+.info__description {
+    line-height: 22px;
+}
+
+.info__close-button {
+    width: 20px;
+    position: absolute;
+    top: 5vh;
+    right: 5vh;
+    margin: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+    .popup__image {
+        width: 300px;
+        height: 450px;
+        margin-top: calc(50vh - 225px);
+    }
+
+    .popup__info {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 850px) {
+    .popup__image {
+        width: 250px;
+        height: 375px;
+        margin-top: calc(50vh - 187.5px);
+    }
+}
+
+@media (max-width: 600px) {
+    .popup__image {
+        display: none;
+    }
+
+    .popup__addition {
+        width: 40%
+    }
+
+    .popup__info {
+        width: 60%;
+    }
+}
+
+@media (max-width: 430px) {
+    .popup__info,
+    .popup__addition {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.popup_active {
+    display: flex;
+}

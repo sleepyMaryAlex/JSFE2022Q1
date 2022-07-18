@@ -1,0 +1,146 @@
+.filters {
+    position: fixed;
+    padding: 20px;
+    width: 450px;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+    right: -450px;
+    overflow-y: auto;
+    z-index: 4;
+    transition: right 0.6s ease-in-out;
+}
+
+.filters::-webkit-scrollbar {
+    width: 0;
+}
+
+.filters__size,
+.filters__color,
+.filters__price,
+.filters__brand,
+.filters__popular,
+.filters__quantity,
+.filters__release-year,
+.filters__buttons {
+    margin: 35px 0;
+}
+
+.size__title,
+.color__title,
+.price__title,
+.brand__title,
+.popular__title,
+.quantity__title,
+.release-year__title {
+    margin-bottom: 10px;
+}
+
+.size__title {
+    margin-top: 5vh;
+}
+
+.size__container,
+.color__item,
+.brand__container,
+.filters__buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.size__container {
+    width: 200px;
+}
+
+.size__item,
+.brand__item,
+.popular__item {
+    width: 60px;
+    text-align: center;
+    padding: 3px;
+    border: 1px solid var(--font-color);
+    cursor: pointer;
+}
+
+.brand__item {
+    width: 80px;
+}
+
+.color__item {
+    margin-bottom: 5px;
+}
+
+.color__item_khaki,
+.color__item_sand,
+.color__item_white,
+.color__item_black,
+.color__item_multi-colored {
+    width: 15px;
+    height: 15px;
+    margin-top: 1px;
+    border: 1px solid var(--contrast-color);
+}
+
+.color__item_khaki {
+    background-color: rgb(179, 198, 71);
+}
+
+.color__item_sand {
+    background-color: beige;
+}
+
+.color__item_black {
+    background-color: var(--font-color);
+}
+
+.color__item_multi-colored {
+    background: linear-gradient(0deg, rgb(155, 195, 34) 0%, rgba(252, 187, 45, 1) 100%);
+}
+
+.color__name,
+.color-template {
+    cursor: pointer;
+}
+
+.buttons__results,
+.buttons__reset {
+    background-color: var(--contrast-color);
+    padding: 3px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.filters__close-button {
+    width: 20px;
+    position: absolute;
+    right: 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 520px) {
+    .filters {
+        padding: 20px;
+        width: 300px;
+        height: 100vh;
+        right: -300px;
+    }
+}
+
+.item_active {
+    background-color: var(--font-color);
+    color: var(--main-bg-color);
+}
+
+.color__item_active {
+    border: 2px solid var(--font-color);
+}
+
+.filters_active {
+    right: 0;
+}
+
+.close-button_fixed {
+    position: fixed;
+}
