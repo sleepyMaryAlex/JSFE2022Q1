@@ -2,6 +2,7 @@ import './Filters.css';
 import React from 'react';
 import Range from './Range/Range';
 import { IFiltersContext, IRangeState } from '../../types/types';
+import closeButton from './../../assets/icons/close-button.svg';
 
 const Filters = (props: IFiltersContext) => {
     const [priceState, setPriceState] = React.useState<IRangeState>(props.filtersSettings.price);
@@ -116,7 +117,7 @@ const Filters = (props: IFiltersContext) => {
         <div className="filters" ref={filtersRef}>
             <img
                 className="filters__close-button"
-                src="assets/icons/close-button.svg"
+                src={closeButton}
                 alt="close"
                 ref={filtersCloseButtonRef}
                 onClick={() => props.setFiltersStatus(false)}

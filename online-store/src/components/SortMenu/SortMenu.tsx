@@ -1,6 +1,7 @@
 import './SortMenu.css';
 import React from 'react';
 import { ISortMenuContext, ISortSettings } from '../../types/types';
+import closeButton from './../../assets/icons/close-button.svg';
 
 const SortMenu = (props: ISortMenuContext) => {
     const [settings, setSettings] = React.useState<ISortSettings | null>(props.sortSettings);
@@ -42,7 +43,7 @@ const SortMenu = (props: ISortMenuContext) => {
         <div className="menu" ref={sortMenuRef}>
             <img
                 className="menu__close-button"
-                src="assets/icons/close-button.svg"
+                src={closeButton}
                 alt="close"
                 onClick={() => props.setMenuStatus(false)}
                 ref={closeButtonRef}

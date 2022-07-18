@@ -2,6 +2,7 @@ import './Popup.css';
 import { IPopupContext } from '../../types/types';
 import cards from '../../app/cards';
 import React from 'react';
+import closeButton from './../../assets/icons/close-button.svg';
 
 const Popup = (props: IPopupContext) => {
     const selectedCard = cards.find((card) => card.id === props.cardId);
@@ -51,12 +52,7 @@ const Popup = (props: IPopupContext) => {
             </div>
             <img className="popup__image" src={selectedCard?.image} alt="outfit" />
             <div className="popup__info">
-                <img
-                    className="info__close-button"
-                    src="assets/icons/close-button.svg"
-                    alt="close"
-                    onClick={closePopup}
-                />
+                <img className="info__close-button" src={closeButton} alt="close" onClick={closePopup} />
                 <h5 className="info__title">{selectedCard?.title}</h5>
                 <div className="info__description">{selectedCard?.description.toUpperCase()}</div>
                 <div className="info__price">{selectedCard?.price}</div>

@@ -2,6 +2,8 @@ import './Header.css';
 import React from 'react';
 import Categories from '../Categories/Categories';
 import { IHeaderContext } from '../../types/types';
+import burger from './../../assets/icons/burger-menu.svg';
+import closeButton from './../../assets/icons/close-button.svg';
 
 const Header = (props: IHeaderContext) => {
     const headerLogoRef = React.useRef<HTMLDivElement>(null);
@@ -31,12 +33,7 @@ const Header = (props: IHeaderContext) => {
 
     return (
         <header className="header">
-            <img
-                className="header__img"
-                src="assets/icons/burger-menu.svg"
-                alt="burger-menu"
-                onClick={() => props.setMenuStatus(true)}
-            />
+            <img className="header__img" src={burger} alt="burger-menu" onClick={() => props.setMenuStatus(true)} />
             <div className="logo header__logo" onClick={() => location.reload()} ref={headerLogoRef}>
                 <h1 className="logo__title">H&amp;M</h1>
                 <p className="logo__subtitle">BY HUCHKOVA MARIA</p>
@@ -56,7 +53,7 @@ const Header = (props: IHeaderContext) => {
                 />
                 <img
                     className={`input__close-button${props.searchString ? ' input__close-button_active' : ''}`}
-                    src="assets/icons/close-button.svg"
+                    src={closeButton}
                     alt="close"
                     onClick={clearSearchString}
                 />

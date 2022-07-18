@@ -1,10 +1,75 @@
 import { ICard } from '../types/types';
+import id1 from './../assets/images/light-khaki-shirt.jpg';
+import id2 from './../assets/images/neon-lime-shirt.jpg';
+import id3 from './../assets/images/light-khaki-dress.jpg';
+import id4 from './../assets/images/ecru-shirt.jpg';
+import id5 from './../assets/images/khaki-shirt.jpg';
+import id6 from './../assets/images/sand-shirt.jpg';
+import id7 from './../assets/images/rustic-pants.jpg';
+import id8 from './../assets/images/white-culottes.jpg';
+import id9 from './../assets/images/light-beige-shirt.jpg';
+import id10 from './../assets/images/jacket-with-tasses.jpg';
+
+import id11 from './../assets/images/jacquard-pants.jpg';
+import id12 from './../assets/images/rolled-shirt.jpg';
+import id13 from './../assets/images/yellow-white-shirt.jpg';
+import id14 from './../assets/images/milti-colored-shirt.jpg';
+import id15 from './../assets/images/print-shirt.jpg';
+import id16 from './../assets/images/rolled-print-shirt.jpg';
+import id17 from './../assets/images/satin-blouse.jpg';
+import id18 from './../assets/images/white-shirt.jpg';
+import id19 from './../assets/images/short-black-dress.jpg';
+import id20 from './../assets/images/pink-dress.jpg';
+
+import id21 from './../assets/images/shirt-with-embroidery.jpg';
+import id22 from './../assets/images/shirt-with-lace-crochet.jpg';
+import id23 from './../assets/images/black-shirt.jpg';
+import id24 from './../assets/images/black-cotton-blouse.jpg';
+import id25 from './../assets/images/black-blouse.jpg';
+import id26 from './../assets/images/print-black-shirt.jpg';
+import id27 from './../assets/images/green-dress.jpg';
+import id28 from './../assets/images/midi-green-dress.jpg';
+import id29 from './../assets/images/aquamarine-dress.jpg';
+import id30 from './../assets/images/light-sand-dress.jpg';
+
+import id31 from './../assets/images/sand-dress.jpg';
+import id32 from './../assets/images/ecru-dress.jpg';
+import id33 from './../assets/images/multi-colored-dress.jpg';
+import id34 from './../assets/images/print-multi-colored-dress.jpg';
+import id35 from './../assets/images/black-leggings.jpg';
+import id36 from './../assets/images/poplin-dress.jpg';
+import id37 from './../assets/images/short-white-dress.jpg';
+import id38 from './../assets/images/leggings.jpg';
+import id39 from './../assets/images/midi-shirt-dress.jpg';
+import id40 from './../assets/images/dress-with-rolls.jpg';
+
+import id41 from './../assets/images/satin-black-dress.jpg';
+import id42 from './../assets/images/black-dress.jpg';
+import id43 from './../assets/images/dress-with-beads.jpg';
+import id44 from './../assets/images/khaki-pants.jpg';
+import id45 from './../assets/images/cargo-pants.jpg';
+import id46 from './../assets/images/light-khaki-pants.jpg';
+import id47 from './../assets/images/pastel-green-pants.jpg';
+import id48 from './../assets/images/sand-pants.jpg';
+import id49 from './../assets/images/natural-pants.jpg';
+import id50 from './../assets/images/long-white-pants.jpg';
+
+import id51 from './../assets/images/ecru-pants.jpg';
+import id52 from './../assets/images/multi-colored-pants.jpg';
+import id53 from './../assets/images/flared-pants.jpg';
+import id54 from './../assets/images/pajama-pants.jpg';
+import id55 from './../assets/images/black-pants.jpg';
+import id56 from './../assets/images/flared-satin-pants.jpg';
+import id57 from './../assets/images/flat-pants.jpg';
+import id58 from './../assets/images/flower-dress.jpg';
+import id59 from './../assets/images/tie-die-dress.jpg';
+import id60 from './../assets/images/leggings-with-details.jpg';
 
 const cards: ICard[] = [
     {
         title: 'SHIRT WITH DECORATIVE DETAILS ON THE COLLAR',
         color: ['KHAKI'],
-        image: 'assets/images/light-khaki-shirt.jpg',
+        image: id1,
         description: 'Cotton shirt with collar and beads. Long sleeves, slits at the bottom. Fastens with buttons.',
         category: 'shirts',
         price: '59.99 USD',
@@ -18,7 +83,7 @@ const cards: ICard[] = [
     {
         title: 'CROPPED SHIRT WITH GLOSSY SHINE',
         color: ['KHAKI'],
-        image: 'assets/images/neon-lime-shirt.jpg',
+        image: id2,
         description:
             'Shirt with turn-down collar and V-neck. Long sleeves with cuffs. It fastens with buttons and ties at the front.',
         category: 'shirts',
@@ -33,7 +98,7 @@ const cards: ICard[] = [
     {
         title: 'DRESS IN CUT-OUT FABRIC',
         color: ['KHAKI'],
-        image: 'assets/images/light-khaki-dress.jpg',
+        image: id3,
         description:
             'Midi dress with round neckline and long sleeves. Elastic beaded cutouts at the front, elasticated waistband. Back slit with button.',
         category: 'dresses',
@@ -48,7 +113,7 @@ const cards: ICard[] = [
     {
         title: 'BLOUSE WITH PRINT WITH KNOT',
         color: ['KHAKI'],
-        image: 'assets/images/ecru-shirt.jpg',
+        image: id4,
         description: 'Cropped blouse with V-neck and knot. Sleeves below the elbow.',
         category: 'shirts',
         price: '59.99 USD',
@@ -62,7 +127,7 @@ const cards: ICard[] = [
     {
         title: 'BLOUSE WITH OPENWORK EMBROIDERY',
         color: ['KHAKI'],
-        image: 'assets/images/khaki-shirt.jpg',
+        image: id5,
         description:
             'Blouse with stand-up collar and long sleeves. Elastic hems, tone-on-tone openwork embroidery. Concealed zip fastening at the back.',
         category: 'shirts',
@@ -77,7 +142,7 @@ const cards: ICard[] = [
     {
         title: 'POPLIN SHIRT',
         color: ['SAND'],
-        image: 'assets/images/sand-shirt.jpg',
+        image: id6,
         description: 'Shirt with long sleeves and lapel collar. Front patch pocket and button fastening at the front.',
         category: 'shirts',
         price: '59.99 USD',
@@ -91,7 +156,7 @@ const cards: ICard[] = [
     {
         title: 'RUSTIC PANTS WITH FRINGING',
         color: ['WHITE'],
-        image: 'assets/images/rustic-pants.jpg',
+        image: id7,
         description: 'Pants with a high waist and wide legs. Zipper and button closure.',
         category: 'pants',
         price: '79.99 USD',
@@ -105,7 +170,7 @@ const cards: ICard[] = [
     {
         title: 'HIGH RISE CULOTTES',
         color: ['WHITE'],
-        image: 'assets/images/white-culottes.jpg',
+        image: id8,
         description:
             'Cotton trousers with a high waist and wide legs. Ribbed seams, front welt pockets. Fastened with a zipper, inner button and metal hook.',
         category: 'pants',
@@ -120,7 +185,7 @@ const cards: ICard[] = [
     {
         title: 'SHIRT WITH GOLD BUTTONS',
         color: ['SAND'],
-        image: 'assets/images/light-beige-shirt.jpg',
+        image: id9,
         description:
             'Shirt with collar and long sleeves. Cuffs with cuffs, button-down straps. Front patch pockets. Fastened with golden buttons.',
         category: 'shirts',
@@ -135,7 +200,7 @@ const cards: ICard[] = [
     {
         title: 'JACKET WITH EMBROIDERY AND TASSES',
         color: ['SAND'],
-        image: 'assets/images/jacket-with-tasses.jpg',
+        image: id10,
         description:
             'Jacket with a round neckline and wide sleeves below the elbow. Contrasting embroidery, tassels. Ties at the front.',
         category: 'shirts',
@@ -150,7 +215,7 @@ const cards: ICard[] = [
     {
         title: 'JACQUARD TROUSERS IN PAJAMA STYLE',
         color: ['BLACK'],
-        image: 'assets/images/jacquard-pants.jpg',
+        image: id11,
         description: 'Trousers in flowing fabric with a high waist and wide legs. Elasticated waist.',
         category: 'pants',
         price: '69.99 USD',
@@ -164,7 +229,7 @@ const cards: ICard[] = [
     {
         title: 'ROLLED SHIRT',
         color: ['SAND'],
-        image: 'assets/images/rolled-shirt.jpg',
+        image: id12,
         description: 'Shirt with collar and V-neck. Long sleeves with cuffs. Fastens with buttons.',
         category: 'shirts',
         price: '59.99 USD',
@@ -178,7 +243,7 @@ const cards: ICard[] = [
     {
         title: 'LINEN SHIRT WITH EMBROIDERY',
         color: ['SAND'],
-        image: 'assets/images/yellow-white-shirt.jpg',
+        image: id13,
         description: 'Shirt in 100% linen. Collar, long sleeves with cuffs, embroidery. Fastens with buttons.',
         category: 'shirts',
         price: '79.99 USD',
@@ -192,7 +257,7 @@ const cards: ICard[] = [
     {
         title: 'SHIRT WITH LACE CROCHET',
         color: ['MULTI-COLORED'],
-        image: 'assets/images/milti-colored-shirt.jpg',
+        image: id14,
         description: 'V-neck shirt with short wide sleeves. Contrasting crochet lace detail.',
         category: 'shirts',
         price: '59.99 USD',
@@ -206,7 +271,7 @@ const cards: ICard[] = [
     {
         title: 'PRINT SHIRT',
         color: ['MULTI-COLORED'],
-        image: 'assets/images/print-shirt.jpg',
+        image: id15,
         description:
             'V-neck shirt with adjustable drawstrings in the same fabric. Wooden details, long sleeves. Cuffs with buttons.',
         category: 'shirts',
@@ -221,7 +286,7 @@ const cards: ICard[] = [
     {
         title: 'ROLLED SHIRT IN PRINTED FABRIC',
         color: ['MULTI-COLORED'],
-        image: 'assets/images/rolled-print-shirt.jpg',
+        image: id16,
         description: 'Shirt with elastic collar, flounce and bow. V-neck, long sleeves. Elastic details.',
         category: 'shirts',
         price: '59.99 USD',
@@ -235,7 +300,7 @@ const cards: ICard[] = [
     {
         title: 'SATIN TIE DIE BLOUSE',
         color: ['MULTI-COLORED'],
-        image: 'assets/images/satin-blouse.jpg',
+        image: id17,
         description: 'Flowy blouse. Collar, V-neckline and button. Long sleeves and an asymmetrical hem with a slit.',
         category: 'shirts',
         price: '89.99 USD',
@@ -249,7 +314,7 @@ const cards: ICard[] = [
     {
         title: 'SHIRT WITH OPENWORK EMBROIDERY',
         color: ['WHITE'],
-        image: 'assets/images/white-shirt.jpg',
+        image: id18,
         description: 'Shirt with collar and long puff sleeves. Openwork embroidery in tone. Fastens with buttons.',
         category: 'shirts',
         price: '99.99 USD',
@@ -263,7 +328,7 @@ const cards: ICard[] = [
     {
         title: 'SHORT DRESS WITH EMBROIDERY',
         color: ['MULTI-COLORED', 'BLACK'],
-        image: 'assets/images/short-black-dress.jpg',
+        image: id19,
         description:
             'Keyhole mini dress with adjustable ties. Long sleeves with elasticated cuffs. Contrasting embroidery. Side slits.',
         category: 'dresses',
@@ -278,7 +343,7 @@ const cards: ICard[] = [
     {
         title: 'FLORAL PRINT CORSET DRESS',
         color: ['MULTI-COLORED'],
-        image: 'assets/images/pink-dress.jpg',
+        image: id20,
         description:
             'Dress with a sweetheart neckline and adjustable thin shoulder straps. Gathered detail at the back, concealed zip fastening at the side.',
         category: 'dresses',
@@ -293,7 +358,7 @@ const cards: ICard[] = [
     {
         title: 'SHIRT WITH CONTRAST EMBROIDERY',
         color: ['WHITE'],
-        image: 'assets/images/shirt-with-embroidery.jpg',
+        image: id21,
         description:
             'Shirt with collar and long sleeves. Front patch pocket. Details with openwork embroidery. Fastens with buttons.',
         category: 'shirts',
@@ -308,7 +373,7 @@ const cards: ICard[] = [
     {
         title: 'SHIRT WITH LACE CROCHET',
         color: ['WHITE'],
-        image: 'assets/images/shirt-with-lace-crochet.jpg',
+        image: id22,
         description: 'Shirt with collar and long sleeves. Details in contrasting fabric, fastened with buttons.',
         category: 'shirts',
         price: '59.99 USD',
@@ -322,7 +387,7 @@ const cards: ICard[] = [
     {
         title: 'BLOUSE IN CUPRO WITH LACE',
         color: ['BLACK'],
-        image: 'assets/images/black-shirt.jpg',
+        image: id23,
         description:
             'High collar blouse in 100% cupro fabric. Long sleeves, matching lace details. Back slit with button.',
         category: 'shirts',
@@ -337,7 +402,7 @@ const cards: ICard[] = [
     {
         title: 'COTTON BLOUSE WITH EMBROIDERY',
         color: ['BLACK', 'MULTI-COLORED'],
-        image: 'assets/images/black-cotton-blouse.jpg',
+        image: id24,
         description:
             'Blouse with round neckline and long sleeves. Embroidery, button closure. Drawstring adjustable hem.',
         category: 'shirts',
@@ -352,7 +417,7 @@ const cards: ICard[] = [
     {
         title: 'BLOUSE WITH EMBROIDERY',
         color: ['BLACK', 'MULTI-COLORED'],
-        image: 'assets/images/black-blouse.jpg',
+        image: id25,
         description:
             'Blouse with long sleeves and a V-shaped neckline. Embroidery, contrasting beads with a mirror finish. Fastened with buttons.',
         category: 'shirts',
@@ -367,7 +432,7 @@ const cards: ICard[] = [
     {
         title: 'PRINT SHIRT',
         color: ['BLACK', 'MULTI-COLORED'],
-        image: 'assets/images/print-black-shirt.jpg',
+        image: id26,
         description: 'Shirt with a collar and wide long sleeves. Side slits at the bottom. Fastens with buttons.',
         category: 'shirts',
         price: '99.99 USD',
@@ -381,7 +446,7 @@ const cards: ICard[] = [
     {
         title: 'PRINT SHORT DRESS',
         color: ['KHAKI'],
-        image: 'assets/images/green-dress.jpg',
+        image: id27,
         description: 'Short dress with V-neckline and adjustable ties. Sleeves below the elbow, frill at the bottom.',
         category: 'dresses',
         price: '89.99 USD',
@@ -395,7 +460,7 @@ const cards: ICard[] = [
     {
         title: 'MIDI DRESS WITH HALTER NECK',
         color: ['KHAKI'],
-        image: 'assets/images/midi-green-dress.jpg',
+        image: id28,
         description:
             'Dress with a halter neckline and thin, adjustable shoulder straps at the back. Gathering on the sides.',
         category: 'dresses',
@@ -410,7 +475,7 @@ const cards: ICard[] = [
     {
         title: 'PLEATED MIDI DRESS',
         color: ['KHAKI'],
-        image: 'assets/images/aquamarine-dress.jpg',
+        image: id29,
         description:
             'Dress with a round neckline and short sleeves. Lining, elastic waistband. Fastened with a button on the back.',
         category: 'dresses',
@@ -425,7 +490,7 @@ const cards: ICard[] = [
     {
         title: 'LINEN BLENDED DRESS WITH RHINES',
         color: ['SAND'],
-        image: 'assets/images/light-sand-dress.jpg',
+        image: id30,
         description:
             'Linen-blend midi dress. Square neckline, thin shoulder straps with rhinestones. Elastic side slits, concealed zip fastening at the back.',
         category: 'dresses',
@@ -440,7 +505,7 @@ const cards: ICard[] = [
     {
         title: 'LINEN BLEND DRESS',
         color: ['SAND'],
-        image: 'assets/images/sand-dress.jpg',
+        image: id31,
         description:
             'Jumpsuit in linen fabric with round neckline and short sleeves with cuffs. Side pockets, chest patch pockets, trouser legs with elasticated sides. Fastened with buttons at the front.',
         category: 'dresses',
@@ -455,7 +520,7 @@ const cards: ICard[] = [
     {
         title: 'KNITTED DRESS WITHOUT SLEEVES',
         color: ['SAND'],
-        image: 'assets/images/ecru-dress.jpg',
+        image: id32,
         description: 'Sleeveless dress with high collar and lapel.',
         category: 'dresses',
         price: '79.99 USD',
@@ -469,7 +534,7 @@ const cards: ICard[] = [
     {
         title: 'DRESS WITH GEOMETRIC PRINT',
         color: ['MULTI-COLORED'],
-        image: 'assets/images/multi-colored-dress.jpg',
+        image: id33,
         description: 'Mini dress with a high collar and short sleeves. Cutout with button at the back.',
         category: 'dresses',
         price: '89.99 USD',
@@ -483,7 +548,7 @@ const cards: ICard[] = [
     {
         title: 'PRINT DRESS',
         color: ['MULTI-COLORED'],
-        image: 'assets/images/print-multi-colored-dress.jpg',
+        image: id34,
         description:
             'Dress with a round neck and a V-neck with a flounce. Long sleeves with elastic cuffs. Gathered waist, lined. Fastens with buttons.',
         category: 'dresses',
@@ -498,7 +563,7 @@ const cards: ICard[] = [
     {
         title: 'LEGGINGS WITH BRILLIANT LAMPS',
         color: ['BLACK'],
-        image: 'assets/images/black-leggings.jpg',
+        image: id35,
         description: 'Leggings with a high waist and elasticated waist. Stripes with contrasting rhinestones.',
         category: 'pants',
         price: '69.99 USD',
@@ -512,7 +577,7 @@ const cards: ICard[] = [
     {
         title: 'POPLIN DRESS WITH ELASTIC WAIST',
         color: ['WHITE'],
-        image: 'assets/images/poplin-dress.jpg',
+        image: id36,
         description:
             'Long wrap dress. Gathered short sleeves, elasticated cuffs. Elastic waistband with drawstrings at the sides.',
         category: 'dresses',
@@ -527,7 +592,7 @@ const cards: ICard[] = [
     {
         title: 'ROLLED LINEN BLEND DRESS',
         color: ['WHITE'],
-        image: 'assets/images/short-white-dress.jpg',
+        image: id37,
         description:
             'V-neck mini dress with thin straps. Ruffled hem, elastic gathered details. Concealed zip fastening at the back.',
         category: 'dresses',
@@ -542,7 +607,7 @@ const cards: ICard[] = [
     {
         title: 'LEGGINGS WITH GOLD BUTTONS',
         color: ['BLACK'],
-        image: 'assets/images/leggings.jpg',
+        image: id38,
         description: 'High rise leggings. Elastic waistband, raised seams. Decorative golden buttons.',
         category: 'pants',
         price: '39.99 USD',
@@ -556,7 +621,7 @@ const cards: ICard[] = [
     {
         title: 'MIDI SHIRT DRESS',
         color: ['WHITE'],
-        image: 'assets/images/midi-shirt-dress.jpg',
+        image: id39,
         description:
             'Linen and cotton blend dress. Collar, short sleeves with cuffs. Front patch pockets, on-seam side pockets. Contrasting woven belt, slits at the bottom. Fastened with buttons.',
         category: 'dresses',
@@ -571,7 +636,7 @@ const cards: ICard[] = [
     {
         title: 'DRESS WITH ROLLS AND PLUMETI EMBROIDERY',
         color: ['WHITE'],
-        image: 'assets/images/dress-with-rolls.jpg',
+        image: id40,
         description:
             'V-neck mini dress with decorative buttons. Wide shoulder straps with flounces, assemblies. Frill at the bottom, hidden zip fastening at the back.',
         category: 'dresses',
@@ -586,7 +651,7 @@ const cards: ICard[] = [
     {
         title: 'CUT-OUT SATIN DRESS',
         color: ['BLACK'],
-        image: 'assets/images/satin-black-dress.jpg',
+        image: id41,
         description:
             'V-neck midi dress with thin crossover straps with adjustable ties at the back. Side slits, hidden side zip fastening.',
         category: 'dresses',
@@ -601,7 +666,7 @@ const cards: ICard[] = [
     {
         title: 'MINI DRESS',
         color: ['BLACK'],
-        image: 'assets/images/black-dress.jpg',
+        image: id42,
         description: 'Short dress with round neckline and short sleeves. Fastens with a hidden zip at the back.',
         category: 'dresses',
         price: '99.99 USD',
@@ -615,7 +680,7 @@ const cards: ICard[] = [
     {
         title: 'MINI DRESS WITH BEADS',
         color: ['BLACK'],
-        image: 'assets/images/dress-with-beads.jpg',
+        image: id43,
         description:
             'Linen blend dress. Square neckline with beading, adjustable thin shoulder straps. Gathered sides, concealed zip fastening at the back.',
         category: 'dresses',
@@ -630,7 +695,7 @@ const cards: ICard[] = [
     {
         title: 'STRAIGHT PANTS WITH POCKETS',
         color: ['KHAKI'],
-        image: 'assets/images/khaki-pants.jpg',
+        image: id44,
         description:
             'Pants with a high waist and straight legs. Front patch pockets, back patch pockets with flaps. Zipper and button closure.',
         category: 'pants',
@@ -645,7 +710,7 @@ const cards: ICard[] = [
     {
         title: 'CARGO PANTS WITH BELT',
         color: ['KHAKI'],
-        image: 'assets/images/cargo-pants.jpg',
+        image: id45,
         description:
             'Pants with a high waist. Pintucks, matching belt. Front pockets, side flap pockets. Decorative back pockets with flaps, zip fastening and metal hook.',
         category: 'pants',
@@ -660,7 +725,7 @@ const cards: ICard[] = [
     {
         title: 'ZW THE MERCER JOGGING JEANS',
         color: ['KHAKI'],
-        image: 'assets/images/light-khaki-pants.jpg',
+        image: id46,
         description:
             'Mid-rise jeans. Worn-effect fabric, elastic waistband at the back. Five pockets, elasticated cuffs. Zipper and button closure.',
         category: 'pants',
@@ -675,7 +740,7 @@ const cards: ICard[] = [
     {
         title: 'FULL LENGTH PANTS',
         color: ['KHAKI'],
-        image: 'assets/images/pastel-green-pants.jpg',
+        image: id47,
         description:
             'Pants with a high waist. Side pockets, decorative welted back pockets. Tucks in front, fastens with a zip and button at the top.',
         category: 'pants',
@@ -690,7 +755,7 @@ const cards: ICard[] = [
     {
         title: 'CULOTTES WITH PLEAT',
         color: ['SAND'],
-        image: 'assets/images/sand-pants.jpg',
+        image: id48,
         description: 'Wide-leg pants with a high waist and elasticated waist.',
         category: 'pants',
         price: '69.99 USD',
@@ -704,7 +769,7 @@ const cards: ICard[] = [
     {
         title: 'HIGH RISE STRAIGHT PANTS',
         color: ['WHITE'],
-        image: 'assets/images/natural-pants.jpg',
+        image: id49,
         description:
             'Pants with a high waist and straight legs. Front welt pockets. Zip closure, inner button and metal hook.',
         category: 'pants',
@@ -719,7 +784,7 @@ const cards: ICard[] = [
     {
         title: 'LONG PANTS WITH BUTTONS',
         color: ['WHITE'],
-        image: 'assets/images/long-white-pants.jpg',
+        image: id50,
         description:
             'Trousers in a linen and cotton blend with a high waist and wide legs. Five pockets. Fastened with buttons.',
         category: 'pants',
@@ -734,7 +799,7 @@ const cards: ICard[] = [
     {
         title: 'STANDARD-LENGTH FAUX LEATHER PANTS',
         color: ['WHITE'],
-        image: 'assets/images/ecru-pants.jpg',
+        image: id51,
         description:
             'Pants with a high waist. Side pockets, decorative welt back pockets. Raised seams. Zip closure, inner button and metal hooks.',
         category: 'pants',
@@ -749,7 +814,7 @@ const cards: ICard[] = [
     {
         title: 'HIGH RISE TROUSERS',
         color: ['MULTI-COLORED'],
-        image: 'assets/images/multi-colored-pants.jpg',
+        image: id52,
         description:
             'Skinny trousers with a high waist. Ribbed seams, front welt pockets. Zip closure, metal hook and inner button.',
         category: 'pants',
@@ -764,7 +829,7 @@ const cards: ICard[] = [
     {
         title: 'PRINTED FLARED PANTS',
         color: ['MULTI-COLORED'],
-        image: 'assets/images/flared-pants.jpg',
+        image: id53,
         description:
             'Pants with a high waist, elastic waistband and slightly flared legs. Fastened with a zipper and a button.',
         category: 'pants',
@@ -779,7 +844,7 @@ const cards: ICard[] = [
     {
         title: 'PAJAMA PANTS WITH PRINT',
         color: ['MULTI-COLORED'],
-        image: 'assets/images/pajama-pants.jpg',
+        image: id54,
         description: 'Pants with a high waist and laces. Elasticated waistband at the back, front pockets.',
         category: 'pants',
         price: '79.99 USD',
@@ -793,7 +858,7 @@ const cards: ICard[] = [
     {
         title: 'PANTS WITH ROLL WAIST WITH OPENWORK EMBROIDERY',
         color: ['BLACK'],
-        image: 'assets/images/black-pants.jpg',
+        image: id55,
         description: 'Pants with a high waist and straight legs. Elastic waistband with adjustable drawstring.',
         category: 'pants',
         price: '79.99 USD',
@@ -807,7 +872,7 @@ const cards: ICard[] = [
     {
         title: 'SLIGHTLY FLARED SATIN PANTS',
         color: ['BLACK'],
-        image: 'assets/images/flared-satin-pants.jpg',
+        image: id56,
         description: 'Pants with a high waist. Zip fastening and matching covered button.',
         category: 'pants',
         price: '59.99 USD',
@@ -821,7 +886,7 @@ const cards: ICard[] = [
     {
         title: 'FLAT PANTS',
         color: ['BLACK'],
-        image: 'assets/images/flat-pants.jpg',
+        image: id57,
         description: 'High rise flared trousers. Fastened with a zip and a button at the front.',
         category: 'pants',
         price: '39.99 USD',
@@ -835,7 +900,7 @@ const cards: ICard[] = [
     {
         title: 'FLOWER PRINT DRESS',
         color: ['MULTI-COLORED'],
-        image: 'assets/images/flower-dress.jpg',
+        image: id58,
         description:
             'Linen blend dress. Halter neckline, cutout at the waist, side pleats. Open back. Fastens with matching buttons and a hidden zip.',
         category: 'dresses',
@@ -850,7 +915,7 @@ const cards: ICard[] = [
     {
         title: 'LINEN TIE DIE DRESS',
         color: ['MULTI-COLORED'],
-        image: 'assets/images/tie-die-dress.jpg',
+        image: id59,
         description: 'Dress with a draped neckline. Thin straps crossed at the back with a bow.',
         category: 'dresses',
         price: '99.99 USD',
@@ -864,7 +929,7 @@ const cards: ICard[] = [
     {
         title: 'LEGGINGS WITH WIDE WAIST DETAILS',
         color: ['BLACK'],
-        image: 'assets/images/leggings-with-details.jpg',
+        image: id60,
         description: 'High rise leggings. Wide elastic waistband.',
         category: 'pants',
         price: '39.99 USD',

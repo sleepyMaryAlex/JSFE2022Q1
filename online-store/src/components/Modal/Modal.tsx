@@ -1,6 +1,7 @@
 import { IModalContext } from '../../types/types';
 import './Modal.css';
 import React from 'react';
+import closeButton from './../../assets/icons/close-button.svg';
 
 const Modal = (props: IModalContext) => {
     const modalRef = React.useRef<HTMLDivElement>(null);
@@ -21,7 +22,7 @@ const Modal = (props: IModalContext) => {
         <div className="modal" ref={modalRef}>
             <img
                 className="modal__close-button"
-                src="assets/icons/close-button.svg"
+                src={closeButton}
                 alt="close"
                 onClick={() => props.setModalStatus(false)}
             />
