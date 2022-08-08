@@ -1,0 +1,52 @@
+.car-controls {
+    display: flex;
+    flex-direction: row;
+}
+
+.car-controls__select-button {
+    margin-left: 20px;
+}
+
+.car-controls__start-button,
+.car-controls__stop-button {
+    width: 30px;
+    height: 25px;
+}
+
+.car-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 10px;
+    color: #ffe800;
+}
+
+.launch-pad {
+    margin: 20px 0;
+}
+
+.road {
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: rgba(27, 27, 28, 0.607);
+    position: relative;
+}
+
+.car {
+    position: absolute;
+    left: 0;
+}
+
+.car-active {
+    right: 0;
+}
+
+.flag {
+    width: 50px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(122deg) brightness(108%) contrast(101%);
+    position: relative;
+    right: 160px;
+    z-index: 2;
+}

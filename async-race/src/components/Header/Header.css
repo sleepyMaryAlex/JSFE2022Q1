@@ -1,0 +1,15 @@
+.header__button-garage,
+.header__button-winners {
+    color: #ffe800;
+    letter-spacing: 2px;
+}
+
+.header__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header {
+    padding: 10px;
+}

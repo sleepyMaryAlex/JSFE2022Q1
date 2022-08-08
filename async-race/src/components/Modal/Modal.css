@@ -1,0 +1,31 @@
+.modal {
+    position: fixed;
+    width: 450px;
+    height: 150px;
+    background-color: transparent;
+    top: calc(50vh - 95px);
+    left: calc(50vw - 225px);
+    z-index: 5;
+    font-size: 30px;
+    text-shadow:  3px 3px 8px #ffe800, -3px -3px 8px #ffe800;
+}
+
+.modal__message {
+    text-align: center;
+    margin: 10px;
+    margin-top: 40px;
+}
+
+.modal__close-button {
+    width: 20px;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    margin: 5px;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(84%) sepia(42%) saturate(949%) hue-rotate(355deg) brightness(103%) contrast(109%);
+}
+
+.invisible {
+    display: none;
+}

@@ -1,0 +1,20 @@
+h1,
+h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h1 {
+    margin-top: 10px;
+    color: #ffe800;
+    letter-spacing: 2px;
+}
+
+.garage__page {
+    margin: 0 5px;
+}
+
+.cars {
+    height: 998px;
+}

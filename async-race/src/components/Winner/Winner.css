@@ -1,0 +1,16 @@
+tr {
+    padding: 5px 0;
+}
+
+td .car__image {
+    width: 50px;
+    height: 27px;
+}
+
+td {
+    width: 100px;
+}
+
+td {
+    text-align: center;
+}

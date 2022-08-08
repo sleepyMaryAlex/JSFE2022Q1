@@ -1,0 +1,9 @@
+.car__image {
+    display: inline-block;
+    width: 120px;
+    height: 62px;
+    padding: 10px;
+    margin: 10px;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+}

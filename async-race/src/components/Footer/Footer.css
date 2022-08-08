@@ -1,0 +1,15 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    height: 100px;
+    color: #ffffff;
+}
+
+.footer__github-link,
+.footer__rs-link {
+    text-decoration: none;
+    color: inherit;
+}
