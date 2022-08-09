@@ -1,4 +1,4 @@
-import { useContext, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { RaceStatusContext, SelectedCarContext } from '../../App';
 import Common from '../../app/common';
 import { ICreateCar, IUpdateCar } from '../../types/types';
@@ -13,6 +13,13 @@ function Forms(props: { createCar: (car: ICreateCar) => void,
 
   const selectedCar = useContext(SelectedCarContext);
   const { isRace } = useContext(RaceStatusContext);
+
+  useEffect(() => {
+    const updateNameInput = updateNameInputRef.current as HTMLInputElement;
+    updateNameInput.value = selectedCar?.name || '';
+    const updateColorInput = updateColorInputRef.current as HTMLInputElement;
+    updateColorInput.value = selectedCar?.color || '#ffe800';
+  }, [selectedCar]);
 
   const createCar = () => {
     const createNameInput = createNameInputRef.current as HTMLInputElement;
@@ -32,7 +39,9 @@ function Forms(props: { createCar: (car: ICreateCar) => void,
       updateNameInput.value = '';
       const color = updateColorInput.value;
       const { id } = selectedCar;
-      props.updateCar({ id, name, color });
+      props.updateCar({
+        id, name, color, url: selectedCar.url,
+      });
     }
   };
 

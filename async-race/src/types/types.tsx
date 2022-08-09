@@ -14,6 +14,7 @@ export interface IUpdateCar {
   id: number;
   name: string;
   color: string;
+  url: string;
 }
 
 export interface ICreateCar {
