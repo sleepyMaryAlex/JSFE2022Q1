@@ -1,8 +1,22 @@
 import {
+  ICarStatus, ICarData,
   IAction, IUpdateCarsDataAction, IUpdateRaceData, IUpdateCarStatus, IUpdateGaragePage,
   IUpdateSortingOptions, IUpdateWinnersDataAction, IUpdateWinnersPage, ISelectCar,
   IAppState,
 } from '../types/types';
+
+function resolveCarStatuses(prev: ICarStatus[], cars: ICarData[]) {
+  const curr = [] as ICarStatus[];
+  cars.forEach((car) => {
+    const carStatus = prev.find((status) => status.id === car.id);
+    if (carStatus) {
+      curr.push({ ...carStatus });
+    } else {
+      curr.push({ id: car.id, velocity: 0, isActive: false });
+    }
+  });
+  return curr;
+}
 
 function reducer(state: IAppState, action: IAction) {
   switch (action.type) {
@@ -13,7 +27,7 @@ function reducer(state: IAppState, action: IAction) {
         ...state,
         cars,
         carsCount,
-        carStatuses: cars.map((car) => ({ id: car.id, velocity: 0, isActive: false })),
+        carStatuses: resolveCarStatuses(state.carStatuses, cars),
         selectedCar,
       };
     case 'UPDATE_GARAGE_PAGE':

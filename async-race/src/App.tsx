@@ -161,7 +161,7 @@ function App() {
       type: 'UPDATE_CAR_STATUS', id, velocity, isActive: true,
     };
     dispatch(action);
-    drive(id);
+    drive(id).catch(() => null);
   };
 
   const stopTestDrive = async (id: number) => {
