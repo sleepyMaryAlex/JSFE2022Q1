@@ -1,3 +1,4 @@
+import { ICarStatus, ICarData } from './../types/types';
 import {
   IAction, IUpdateCarsDataAction, IUpdateRaceData, IUpdateCarStatus, IUpdateGaragePage,
   IUpdateSortingOptions, IUpdateWinnersDataAction, IUpdateWinnersPage, ISelectCar,
@@ -13,7 +14,7 @@ function reducer(state: IAppState, action: IAction) {
         ...state,
         cars,
         carsCount,
-        carStatuses: cars.map((car) => ({ id: car.id, velocity: 0, isActive: false })),
+        carStatuses: resolveCarStatuses(state.carStatuses, cars),
         selectedCar,
       };
     case 'UPDATE_GARAGE_PAGE':
@@ -44,6 +45,19 @@ function reducer(state: IAppState, action: IAction) {
     default:
       return state;
   }
+}
+
+function resolveCarStatuses(prev: ICarStatus[], cars: ICarData[]) {
+  const curr = [] as ICarStatus[];
+  cars.forEach((car) => {
+    const carStatus = prev.find((status) => status.id === car.id);
+    if (carStatus) {
+      curr.push({...carStatus});
+    } else {
+      curr.push({ id: car.id, velocity: 0, isActive: false });
+    }
+  });
+  return curr;
 }
 
 export default reducer;
