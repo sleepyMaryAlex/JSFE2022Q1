@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sleepymaryalex-JSFE2022Q1/async-race/static/css/main.6030a50d.css",
-    "main.js": "/sleepymaryalex-JSFE2022Q1/async-race/static/js/main.6c01e0ca.js",
+    "main.js": "/sleepymaryalex-JSFE2022Q1/async-race/static/js/main.78c7c9f9.js",
     "static/media/car12.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/car12.56ecc10b1a2681df04680500531e9081.svg",
     "static/media/car6.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/car6.90f4a6bb978be072ab562f1574e45ea3.svg",
     "static/media/car3.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/car3.283ad999a01802cb691ab26acd66b49c.svg",
@@ -18,10 +18,10 @@
     "index.html": "/sleepymaryalex-JSFE2022Q1/async-race/index.html",
     "static/media/close-button.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/close-button.e302745f1ceb591b89558fcee9c7820b.svg",
     "main.6030a50d.css.map": "/sleepymaryalex-JSFE2022Q1/async-race/static/css/main.6030a50d.css.map",
-    "main.6c01e0ca.js.map": "/sleepymaryalex-JSFE2022Q1/async-race/static/js/main.6c01e0ca.js.map"
+    "main.78c7c9f9.js.map": "/sleepymaryalex-JSFE2022Q1/async-race/static/js/main.78c7c9f9.js.map"
   },
   "entrypoints": [
     "static/css/main.6030a50d.css",
-    "static/js/main.6c01e0ca.js"
+    "static/js/main.78c7c9f9.js"
   ]
 }
