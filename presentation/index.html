@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>KISS</h1>
+					<img src="./examples/assets/kiss.jpg" style="height: 300px;">
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>KISS</h2>
+					<p class="fragment">Keep it simple stupid</p>
+					<p class="fragment">Keep it simple, silly</p>
+					<p class="fragment">Keep it short and simple</p>
+					<p class="fragment">Keep it simple and straightforward</p>
+					<p class="fragment">Keep it small and simple</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Kelly Johnson</h2>
+					<img src="./examples/assets/photo_2022-08-15.jpg" style="height: 300px;">
+				</section>
+				<section data-auto-animate>
+					<h2>Main questions</h2>
+					<p class="fragment">What does simple mean?</p>
+					<p class="fragment">Why do we need simplicity?</p>
+					<p class="fragment">How to achieve simplicity?</p>
+				</section>
+				<section data-auto-animate>
+					<h2>simple:</h2>
+					<p class="fragment">- having few parts or features; not complicated or involved</p>
+					<p class="fragment">- plain, basic, or uncomplicated in form, nature, or design; without much decoration or ornamentation</p>
+				</section>
+				<section data-auto-animate>
+					<h2>complex:</h2>
+					<p class="fragment">- made up of various interconnected parts; composite</p>
+				</section>
+				<section data-auto-animate>
+					<h2>easy:</h2>
+					<p class="fragment">- achieved without great effort; presenting few difficulties</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<img src="./examples/assets/photo_2022-08.jpg" style="height: 400px;">
+				</section>
+				<section data-auto-animate>
+					<h2>Disadvantages of a complex system</h2>
+					<p class="fragment">You spend more time to understand the code</p>
+					<p class="fragment">Sometimes you may not understand how something works, even after spending a lot of time on it</p>
+					<p class="fragment">You may misunderstand how the code works. You can easily make bugs</p>
+				</section>
+				<section data-auto-animate>
+					<h2>How to achieve simplicity?</h2>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>1. Use good names</h3>
+					<img src="./examples/assets/photo.jpg" style="height: 450px;">
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+						function foo(a, b) {
+							const c = PI * a ** 2 * 8 / b;
+							return c > 1 ? c : 1;
+						}
+					</code></pre>
+					<pre data-id="code"><code data-line-numbers class="hljs my-code" data-trim style="font-size: 20px; width: 1000px">
+						function calculateRemainingArea(radius, reductionFactor) {
+							const area = PI * radius ** 2;
+							const remainingArea = area * AREA_REDUCTION_RESISTANCE / reductionFactor;
+							return Math.min(remainingArea, MINIMUM_AREA);
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>2. Remove every useless piece of code</h3>
+					<p>"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away."</p>
+					<em>Antoine de Saint-Exupéry</em>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<img src="./examples/assets/photo_2022.jpg" style="height: 400px;">
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>3. Separation of concerns</h3>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<pre data-id="code" style="height: 530px"><code data-line-numbers class="hljs" data-trim>
+						class Shape {
+							constructor(typeOfShape, length1, length2 = null) {
+							  this.type = typeOfShape;
+							  if (this.type === 'circle') {
+								this.radius = length1;
+							  } else if (this.type === 'rectangle') {
+								this.width = length1;
+								this.length = length2
+							  }
+							}
+						  
+							getArea() {
+							  if (this.type === 'circle') {
+								return Math.PI * this.radius ** 2;
+							  } else if (this.type === 'rectangle') {
+								return this.width * this.length;
+							  }
+							}
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate-unmatched="fade">
+					<pre data-id="code" style="height: 500px"><code data-line-numbers class="hljs" data-trim>
+						class Circle {
+							constructor(radius) {
+							  this.radius = radius;
+							}
+							getArea() {
+							  return 2 * Math.PI * this.radius;
+							}
+						}
+						  
+						class Rectangle {
+							constructor(width, length) {
+							  this.width = width;
+							  this.length = length;
+							}
+							getArea() {
+							  return this.width * this.length;
+							}
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h3>Advantages of more specific units</h3>
+					<p class="fragment">Easier to change</p>
+					<p class="fragment">Easier to test</p>
+					<p class="fragment">Easier to reuse</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<img src="./examples/assets/d7gzqv0rus35v4tbya8n.jpg" style="height: 400px;">
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
