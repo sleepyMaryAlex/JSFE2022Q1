@@ -4,7 +4,7 @@ import {
 } from '../types/types';
 import defaultCarImageUrl from '../assets/car1.svg';
 
-const baseUrl = 'http://localhost:3000';
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 const garageUrl = `${baseUrl}/garage`;
 const engineUrl = `${baseUrl}/engine`;
