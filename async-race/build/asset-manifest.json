@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/sleepymaryalex-JSFE2022Q1/async-race/static/css/main.6030a50d.css",
+    "main.js": "/sleepymaryalex-JSFE2022Q1/async-race/static/js/main.fcca3bfe.js",
+    "static/media/car12.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/car12.35f2cd2f2f457d955cf9c1d96e675461.svg",
+    "static/media/car6.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/car6.661d4c68a856ad17f4988654f5332100.svg",
+    "static/media/car3.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/car3.b88f8b1dab10e89b77c484265f0276ff.svg",
+    "static/media/car8.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/car8.c7470645e69925d67efa05bcc916955b.svg",
+    "static/media/car4.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/car4.a7d2ba281a711e7e60602b8ca9fdebb0.svg",
+    "static/media/car5.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/car5.6387f05ec7a145ebae34a5cd1afb2302.svg",
+    "static/media/car1.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/car1.b7b6de5e6d2c0254539405e13683a90e.svg",
+    "static/media/car11.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/car11.2822f54329ac5be4eac46fdc9252b244.svg",
+    "static/media/car9.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/car9.006155f304ce6d6e9527fd0c209b5de3.svg",
+    "static/media/car7.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/car7.5ec008425d0b7c5e66af66389992de82.svg",
+    "static/media/car10.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/car10.f21627dff3aadfb8515e2b9dda03626f.svg",
+    "static/media/car2.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/car2.10fb6e4313610945e0d6fe17d4eabe71.svg",
+    "static/media/flag.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/flag.90c52d0c1c8e8b3d0f36bd2995e0281a.svg",
+    "index.html": "/sleepymaryalex-JSFE2022Q1/async-race/index.html",
+    "static/media/close-button.svg": "/sleepymaryalex-JSFE2022Q1/async-race/static/media/close-button.e302745f1ceb591b89558fcee9c7820b.svg",
+    "main.6030a50d.css.map": "/sleepymaryalex-JSFE2022Q1/async-race/static/css/main.6030a50d.css.map",
+    "main.fcca3bfe.js.map": "/sleepymaryalex-JSFE2022Q1/async-race/static/js/main.fcca3bfe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6030a50d.css",
+    "static/js/main.fcca3bfe.js"
+  ]
+}
